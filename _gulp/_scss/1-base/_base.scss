@@ -108,6 +108,9 @@ img, .img {
   box-sizing: content-box;
   display: inline-block;
   vertical-align: middle;
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
 }
 
 .container {
