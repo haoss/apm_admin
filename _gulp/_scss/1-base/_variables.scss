@@ -29,16 +29,17 @@ $color-s-3: #2a6ca6;
 
 $color-white: #ffffff;
 $color-black: #000000;
-$color-gray: #cccccc;
-$color-red: #ff0000;
+$color-gray: #F5F5FA;
+$color-red: #EB5757;
+$color-blue: #30C4F3;
 $color-pink: #fec1cc;
 $color-green: #51b261;
 $color-orange: #ff7519;
 
-$primary-color: $color-d-5;
-$link-color: $color-d-2;
+$primary-color: #333333;
+$link-color: $color-blue;
 
 $primary-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
-$font-roboto: 'Roboto', $primary-font;
+$font-inter: 'Inter', $primary-font;
 $font-icomoon: 'icomoon';
