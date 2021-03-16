@@ -1,0 +1,40 @@
+/* breadcrumb */
+.breadcrumbs {
+  $this: &;
+  margin: 0;
+  padding: 0 0 15px 0;
+  font-size: rem(13px);
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-d-6;
+
+  @media only screen and (max-width: 991px) {
+    .breadcrumbs {
+      display: none;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    margin: 0 0 5px 0;
+    &+#{$this}__item {
+      margin-left: 15px;
+      &::before {
+        content: '›';
+        margin-right: 15px;
+      }
+    }
+    &>a,&>span {
+      display: inline-block;
+      line-height: 14px;
+      text-decoration: none;
+    }
+    &>a {
+      color: $color-black;
+      &:hover {
+        color: $link-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

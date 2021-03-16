@@ -1,0 +1,43 @@
+{
+  "name": "projectName",
+  "description": "project description",
+  "version": "4.2.0",
+  "homepage": "",
+  "author": "Dmitriy Khristoev <info@websource.in.ua> (https://websource.in.ua/)",
+  "scripts": {
+    "watch": "gulp watch",
+    "html": "gulp pug",
+    "css": "gulp scss",
+    "compress": "gulp compress",
+    "gulp": "gulp",
+    "email": "gulp emailBuilder",
+    "critical": "gulp critical",
+    "favicon": "gulp favicon-1-generate",
+    "favicon-inject": "gulp favicon-2-inject",
+    "favicon-update": "gulp favicon-3-check-for-update"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.6.0",
+    "browser-sync": "^2.26.14",
+    "emitty": "^1.4.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-email-builder": "^3.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-real-favicon": "^0.3.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-wait2": "0.0.5",
+    "normalize-scss": "^7.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "browserslist": [
+    "last 2 version"
+  ]
+}

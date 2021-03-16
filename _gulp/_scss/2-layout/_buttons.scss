@@ -1,0 +1,8 @@
+/* buttons */
+
+button {
+  @include button-reset;
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,87 @@
+// @import "node_modules/normalize-scss/sass/_normalize.scss";
+
+$root-font-size: 16px;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+$theme-colors: (
+  "primary": green,
+  "danger": pink,
+  "custom-color": yellow,
+  "custom-color2": lightblue
+);
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+// @import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/reboot";
+// @import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+// @import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/tables";
+// @import "node_modules/bootstrap/scss/forms";
+// @import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/transitions";
+// @import "node_modules/bootstrap/scss/dropdown";
+// @import "node_modules/bootstrap/scss/button-group";
+// @import "node_modules/bootstrap/scss/input-group";
+// @import "node_modules/bootstrap/scss/custom-forms";
+// @import "node_modules/bootstrap/scss/nav";
+// @import "node_modules/bootstrap/scss/navbar";
+// @import "node_modules/bootstrap/scss/card";
+// @import "node_modules/bootstrap/scss/breadcrumb";
+// @import "node_modules/bootstrap/scss/pagination";
+// @import "node_modules/bootstrap/scss/badge";
+// @import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/progress";
+// @import "node_modules/bootstrap/scss/media";
+// @import "node_modules/bootstrap/scss/list-group";
+// @import "node_modules/bootstrap/scss/close";
+// @import "node_modules/bootstrap/scss/toasts";
+// @import "node_modules/bootstrap/scss/modal";
+// @import "node_modules/bootstrap/scss/tooltip";
+// @import "node_modules/bootstrap/scss/popover";
+// @import "node_modules/bootstrap/scss/carousel";
+// @import "node_modules/bootstrap/scss/spinners";
+@import "node_modules/bootstrap/scss/utilities";
+// @import "node_modules/bootstrap/scss/print";
+
+@import "1-base/_mixin.scss";
+@import "1-base/_variables.scss";
+@import "1-base/_font.scss";
+@import "1-base/_base.scss";
+
+@import "2-layout/_breadcrumbs.scss";
+@import "2-layout/_pagination.scss";
+@import "2-layout/_buttons.scss";
+@import "2-layout/_forms.scss";
+@import "2-layout/_menu.scss";
+@import "2-layout/_header.scss";
+@import "2-layout/_footer.scss";
+
+@import "../dist/js/libs/magnific-popup/magnific-popup.scss";
+@import "../dist/js/libs/slick/slick.scss";
+@import "../dist/js/libs/slick/slick-theme.scss";
+
+@import "3-modules/_modules.scss";
+
+@import "4-utils/_clear.scss";
+@import "4-utils/_media-queries.scss";

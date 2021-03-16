@@ -1,0 +1,43 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Главная' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная' + ' - siteName' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    include ./_include/_header
+
+    .content
+      .container
+
+        h1 Главная 22
+
+        .row
+          .col-md-4 4 collumns
+          .col-md-8 8 collumns
+          .col-md-12 12 collumns
+          .col-md-12 12 collumns
+
+        .row
+          .col-md-12
+
+            button.btn.btn-primary(type="button") Button
+            button.btn.btn-danger(type="button") Button
+            button.btn.btn-custom-color(type="button") Button
+            button.btn.btn-custom-color2(type="button") Button
+
+
+    include ./_include/_footer
+    div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

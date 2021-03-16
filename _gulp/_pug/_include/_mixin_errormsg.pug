@@ -1,0 +1,17 @@
+mixin errormsg(mods)
+  //- Принимает:
+  //-   mods {string}  - стилевые модификаторы
+  //- Вызов:
+  -
+    var allMods = '';
+      if(typeof(mods) === 'string') {
+        var modsList = mods.split(',');
+        for (var i = 0; i < modsList.length; i++) {
+          allMods = allMods + ' --' + modsList[i].trim();
+        }
+      }
+  .errormsg(class=allMods, role='alert')&attributes(attributes)
+    if block
+      block
+    else
+      p Some text

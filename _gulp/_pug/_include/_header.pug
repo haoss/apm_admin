@@ -1,0 +1,15 @@
+// Header
+header.header
+  .container
+    
+    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
+    
+    nav.navigation(role="navigation")
+      ul
+        each val, key in navigation
+          if active === key
+            li.active
+              a(href=val, title=key)= key
+          else
+            li
+              a(href=val, title=key)= key

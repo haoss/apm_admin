@@ -1,0 +1,42 @@
+//- Все примеси в этом файле должны начинаться c имени блока (field-radio)
+mixin field-radio(props)
+  //- Принимает:
+  //-   props {
+  //-     title: ''         {string} - текст рядом с радиокнопкой
+  //-     isLink: false     {bool}   - является ли блок ссылкой
+  //-     mods: ''          {string} - модификаторы обертки радиокнопки
+  //-     attrs:            {object} - любые атрибуты для input
+  //-       name:           {string}
+  //-       checked:        {bool}
+  //- Вызов:
+        +field-radio({
+          title: 'Радиокнопка',
+          isLink: false,
+          mods: '',
+          attrs: {
+            name: 'radio',
+            checked: true,
+          }
+        })
+  -
+    if(typeof(props) === 'undefined') {
+      var props = {};
+    }
+    var allMods = '';
+    if(typeof(props.mods) !== 'undefined' && props.mods) {
+      var modsList = props.mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' --' + modsList[i].trim();
+      }
+    }
+  if(typeof(props.isLink) !== 'undefined' && props.isLink)
+    a.field-radio.j-checked(class=allMods, class=(typeof(props.attrs.checked) !== 'undefined' && props.attrs.checked) ? 'checked' : '', class=(typeof(props.attrs.disabled) !== 'undefined' && props.attrs.disabled) ? 'disabled' : '', href="javascript:void(0)")&attributes(attributes)
+      span.field-radio__span-input
+      span.field-radio__label!= props.title
+      block
+  else
+    label.field-radio(class=allMods)&attributes(attributes)
+      input.field-radio__input(type="radio", name=(typeof(props.attrs.name) !== 'undefined' && props.attrs.name) ? props.attrs.name : 'radio')&attributes(props.attrs)
+      span.field-radio__span-input
+      span.field-radio__label!= props.title
+      block

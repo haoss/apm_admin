@@ -1,0 +1,131 @@
+//- Все примеси в этом файле должны начинаться c имени блока (field-select)
+mixin field-select(props, attrs, options)
+  //- Принимает:
+  //-   props: {
+  //-     title: ''         {string} - название селекта
+  //-     hasJs: false      {bool}   - используется js или нет
+  //-     hasError: false   {bool}   - показаль ошибку или нет
+  //-     helpText: ''      {string} - текст подсказки
+  //-     mods: ''          {string} - модификаторы блока
+  //-   attrs: {            {object} - атрибуты селекта
+  //-     name: ''          {string}
+  //-   options {array}
+  //-     {object}
+  //-       title: ''       {string} - текст пункта
+  //-       attrs:          {object} - любые атрибуты пункта
+  //-         value:        {string}
+  //-     {object}
+  //-       attrs:          {object} - любые атрибуты пункта
+  //-         label:        {string}
+  //-       child:          {array}  - потомки (если есть этот элемент, то его родитель — optgroup)
+  //-         {object}
+  //-           title: ''   {string}
+  //-           attrs:      {object}
+  //-             value:    {string}
+  //-     {object}
+  //-       title: ''       {string} - текст пункта
+  //-       attrs:          {object} - любые атрибуты пункта
+  //-         value:        {string}
+
+  //- Вызов:
+        +field-select(
+          {
+            title: 'Название',
+            hasJs: true,
+            hasError: false,
+            helpText: 'Текст ошибки или подсказка',
+            mods: ''
+          },
+          {
+            name: 'select',
+            id: 'select'
+          },
+          [
+            {
+              title: 'Название 2',
+              attrs: {
+                selected: true,
+                hidden: true
+              }
+            },
+            {
+              title: 'Опция1',
+              attrs: {
+                value: '',
+              }
+            },
+            {
+              title: 'Опция2',
+              attrs: {
+                value: '',
+              }
+            },
+          ]
+        )
+        +field-select(
+          {
+            title: 'Название',
+            hasJs: true,
+            hasError: false,
+            helpText: 'Текст ошибки или подсказка',
+            mods: ''
+          },
+          {
+            name: '',
+            id: ''
+          },
+          [
+            {
+              attrs: {
+                label: 'Группа',
+              },
+              child: [
+                {
+                  title: 'Опция1',
+                  attrs: {
+                    value: 'val01',
+                  }
+                },
+                {
+                  title: 'Опция2',
+                  attrs: {
+                    value: 'val02',
+                  }
+                },
+              ]
+            },
+            {
+              title: 'Опция3',
+              attrs: {
+                value: 'val03',
+              }
+            }
+          ]
+        )
+  -
+    if(typeof(props) === 'undefined') {
+      var props = {};
+    }
+    var allMods = '';
+    if(typeof(props.mods) !== 'undefined' && props.mods) {
+      var modsList = props.mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' --' + modsList[i].trim();
+      }
+    }
+  label.field-select(class=allMods, class=(typeof(props.hasError) !== 'undefined' && props.hasError) ? 'has-error' : '', class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'j-field-text' : '')&attributes(attributes)
+    if(typeof(props.title) !== 'undefined' && props.title)
+      span.field-select__name(class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'css-label' : '')!= props.title
+        sup *
+    span.field-select__select-wrap
+      select.field-select__select(class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'css-input' : '')&attributes(attrs)
+        each option in options
+          //- option= option
+          if(typeof(option.child) !== 'undefined' && option.child)
+            optgroup(label=option.attrs.label)
+              each subOption in option.child
+                option&attributes(subOption.attrs)= subOption.title
+          else if(typeof(option.title) !== 'undefined' && option.title)
+            option&attributes(option.attrs)= option.title
+      if(typeof(props.helpText) !== 'undefined' && props.helpText)
+        span.field-select__help-text!= props.helpText

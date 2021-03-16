@@ -1,0 +1,42 @@
+//- Все примеси в этом файле должны начинаться c имени блока (field-checkbox)
+mixin field-checkbox(props)
+  //- Принимает:
+  //-   props {
+  //-     title: ''         {string} - текст рядом с чекбокскнопкой
+  //-     isLink: false     {bool}   - является ли блок ссылкой
+  //-     mods: ''          {string} - модификаторы обертки чекбокскнопки
+  //-     attrs:            {object} - любые атрибуты для input
+  //-       name:           {string}
+  //-       checked:        {bool}
+  //- Вызов:
+        +field-checkbox({
+          title: 'Чекбокскнопка',
+          isLink: false,
+          mods: '',
+          attrs: {
+            name: 'checkbox',
+            checked: true,
+          }
+        })
+  -
+    if(typeof(props) === 'undefined') {
+      var props = {};
+    }
+    var allMods = '';
+    if(typeof(props.mods) !== 'undefined' && props.mods) {
+      var modsList = props.mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' --' + modsList[i].trim();
+      }
+    }
+  if(typeof(props.isLink) !== 'undefined' && props.isLink)
+    a.field-checkbox.j-checked(class=allMods, class=(typeof(props.attrs.checked) !== 'undefined' && props.attrs.checked) ? 'checked' : '', class=(typeof(props.attrs.disabled) !== 'undefined' && props.attrs.disabled) ? 'disabled' : '', href="javascript:void(0)")&attributes(attributes)
+      span.field-checkbox__span-input
+      span.field-checkbox__label!= props.title
+      block
+  else
+    label.field-checkbox(class=allMods)&attributes(attributes)
+      input.field-checkbox__input(type="checkbox", name=(typeof(props.attrs.name) !== 'undefined' && props.attrs.name) ? props.attrs.name : 'checkbox')&attributes(props.attrs)
+      span.field-checkbox__span-input
+      span.field-checkbox__label!= props.title
+      block

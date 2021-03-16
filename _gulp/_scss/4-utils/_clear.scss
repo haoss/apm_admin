@@ -1,0 +1,35 @@
+/* clear */
+%clear,
+.clear-hr {
+  background: none !important;
+  border: 0 !important;
+  clear: both !important;
+  display: block !important;
+  font-size: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+@for $i from 0 through 100 {
+  @if $i==0 {
+    .clear {
+      @extend %clear;
+    }
+  }
+  @else {
+    .clear#{$i} {
+      @extend %clear;
+      height: #{$i}px !important;
+    }
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.clear-hr {
+  border-bottom: 1px solid $color-black !important;
+}
