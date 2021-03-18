@@ -1,1 +1,15 @@
 /* modules */
+.content {
+  position: relative;
+  padding-left: 60px;
+}
+aside.aside {
+  position: fixed;
+  background: $color-gray;
+  width: 60px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  touch-action: none;
+  -ms-touch-action: none;
+}
