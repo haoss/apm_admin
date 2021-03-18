@@ -6,17 +6,25 @@ $grid-gutter-width: 30px;
 
 $grid-breakpoints: (
   xs: 0,
+  xs375: 375px,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px,
+  xxxxl: 1900px
 );
 
 $container-max-widths: (
   sm: 100%,
+  xs375: 100%,
   md: 100%,
   lg: 100%,
-  xl: 100%
+  xl: 100%,
+  xxl: 100%,
+  xxxl: 100%,
+  xxxxl: 100%
 );
 
 $theme-colors: (

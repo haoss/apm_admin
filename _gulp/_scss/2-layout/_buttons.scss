@@ -1,8 +1,29 @@
 /* buttons */
-
 button {
   @include button-reset;
   &:focus {
     outline: none;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 29px;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background: $primary-color;
+  color: $color-white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 150px 0 0 150px;
+  &::before {
+    content: '\e906';
+    font-family: $font-icomoon;
+    line-height: 1;
+    left: 5px;
+    position: relative;
   }
 }

@@ -1,4 +1,28 @@
 /* header */
-.header {
-  background-color: $color-gray;
+.logo {
+  width: 32px;
+  height: 103px;
+  // background: pink;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+  img {
+    transform: rotate(-270deg);
+    width: 103px;
+    height: 32px;
+    transform-origin: 0 100%;
+    margin-top: -60px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 138px;
+    height: 43px;
+    margin-bottom: 0;
+    margin-right: 28px;
+    img {
+      width: 138px;
+      height: 43px;
+      margin: 0;
+      transform: none;
+    }
+  }
 }

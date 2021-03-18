@@ -3,7 +3,7 @@
   position: relative;
   padding-left: 60px;
 }
-aside.aside {
+.aside {
   position: fixed;
   background: $color-gray;
   width: 60px;
@@ -12,4 +12,144 @@ aside.aside {
   bottom: 0;
   touch-action: none;
   -ms-touch-action: none;
+  z-index: 10;
+  &__wrapper {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: auto;
+    -ms-touch-action: auto;
+    &-body {
+      overflow: auto;
+      min-height: 100%;
+      height: auto;
+      position: relative;
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 26px 0;
+    align-items: center;
+    width: 100%;
+  }
+  &__cart {
+    position: relative;
+    background: #F9FAFC;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
+    border-radius: 150px;
+    text-decoration: none;
+    display: block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    flex-shrink: 0;
+    .span {
+      position: absolute;
+      top: -2px;
+      right: -4px;
+      border-radius: 50%;
+      color: $color-white;
+      text-align: center;
+      width: 16px;
+      height: 15px;
+      line-height: 15px;
+      background: $color-red;
+      font-size: 7px;
+      font-weight: 700;
+    }
+    i {
+      font-size: 12px;
+      line-height: 1;
+      vertical-align: 1px;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    z-index: 160;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {}
+  @include media-breakpoint-up(xl) {
+    width: 295px;
+    &__header {
+      flex-direction: row;
+      height: 109px;
+      align-items: center;
+      justify-content: center;
+    }
+    &__cart {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      i {
+        font-size: 16px;
+        vertical-align: 0px;
+      }
+      .span {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+.exel {
+  position: fixed;
+  top: 0;
+  width: 270px;
+  right: 0;
+  bottom: 0;
+  z-index: 170;
+  text-align: center;
+  transition: all .35s;
+  text-align: left;
+  // transform: translateX(100%);
+  // visibility: hidden;
+  opacity: 0;
+  &.is-active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  &__wrapper {
+    position: absolute;
+    background: $color-white;
+    box-shadow: 0px 4px 20px rgba($color-blue,.1);
+    left: 0px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    &-body {
+      padding: 23px 30px;
+      overflow: auto;
+      min-height: 100%;
+      height: auto;
+      position: relative;
+    }
+  }
+  @include media-breakpoint-up(sm) {}
+  @include media-breakpoint-up(xs375) {
+    width: 314px;
+  }
+  @include media-breakpoint-up(md) {}
+  @include media-breakpoint-up(lg) {}
+  @include media-breakpoint-up(xl) {}
+}
+
+.base-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color-white,.7);
+  backdrop-filter: blur(6px);
+  z-index: 150;
 }
