@@ -95,6 +95,10 @@
         line-height: 20px;
         font-size: 9px;
       }
+      &:hover {
+        background: $color-blue;
+        color: $color-white;
+      }
     }
   }
 }

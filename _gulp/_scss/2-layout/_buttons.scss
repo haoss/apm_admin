@@ -26,4 +26,10 @@ button {
     left: 5px;
     position: relative;
   }
+  @include media-breakpoint-up(xl) {
+    transition: all 0.35s;
+    &:hover {
+      background: $color-blue;
+    }
+  }
 }
