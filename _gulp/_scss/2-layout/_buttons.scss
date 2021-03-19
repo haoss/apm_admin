@@ -5,7 +5,57 @@ button {
     outline: none;
   }
 }
-
+.btn {
+  background: $color-blue;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px rgba(48, 196, 243, 0.5);
+  border-radius: 150px;
+  font-size: 14px;
+  color: $color-white;
+  height: 50px;
+  min-width: 138px;
+  transition: all 0.35s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid $color-blue;
+  &.--sm {
+    height: 30px;
+    font-size: 12px;
+    text-transform: none;
+    min-width: 160px;
+    letter-spacing: 0;
+  }
+  &.--border {
+    background: $color-white;
+    color: $color-blue;
+    box-shadow: none;
+  }
+  &.--block {
+    display: block;
+    width: 100%;
+  }
+  @include media-breakpoint-up(xl) {
+    &:hover {
+      background: rgba($color-blue,.7);
+      border-color: rgba($color-blue,.7);
+      box-shadow: 0px 4px 10px rgba(48, 196, 243, 0);
+    }
+    &.--border {
+      &:hover {
+        color: $color-white;
+        background: $color-blue;
+      }
+    }
+  }
+}
+a.btn {
+  line-height: 50px;
+  &.--sm {
+    line-height: 30px;
+  }
+}
 .btn-close {
   position: absolute;
   top: 29px;

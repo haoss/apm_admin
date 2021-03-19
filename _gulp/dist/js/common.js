@@ -54,6 +54,8 @@ $(document).on('ready', function(){
     offset: '.header'
   });
 
+  $('.selectpicker').selectpicker();
+
   phoneMask();
   mobileNav();
   inputFocus();

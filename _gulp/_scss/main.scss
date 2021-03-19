@@ -27,13 +27,6 @@ $container-max-widths: (
   xxxxl: 100%
 );
 
-$theme-colors: (
-  "primary": green,
-  "danger": pink,
-  "custom-color": yellow,
-  "custom-color2": lightblue
-);
-
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
