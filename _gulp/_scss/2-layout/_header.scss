@@ -26,3 +26,141 @@
     }
   }
 }
+.search {
+  position: relative;
+  &__input {
+    background: $color-white;
+    border: 1px solid $color-blue;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px rgba($color-black,.02), inset 0 0 0 2px $color-blue;
+    border-radius: 150px;
+    height: 50px;
+    width: 100%;
+    padding-left: 28px;
+    padding-right: 60px;
+    color: $color-dark;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 500;
+  }
+  &__btn {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border-radius: 0 150px 150px 0;
+    color: $color-dark;
+    font-size: 20px;
+    text-align: center;
+    &::before {
+      content: "\e91c";
+      font-family: $font-icomoon;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &__input {
+      transition: all 0.35s;
+    }
+    &:hover {
+      .search__input {
+        box-shadow: 0px 2px 10px rgba($color-black,.02), inset 0 0 0 0 $color-blue;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxxxl) {
+    &__input {
+      padding-right: 90px;
+    }
+    &__btn {
+      width: 90px;
+    }
+  }
+}
+.header {
+  margin-bottom: 30px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__search {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__btn1, &__btn2, &__btn3 {
+    height: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 12px;
+    &[href] {
+      line-height: 30px;
+    }
+  }
+  &__btn3 {
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-up(xs375) {
+    &__btn1 {
+      width: 88px;
+      min-width: inherit;
+    }
+    &__btn2 {
+      margin-left: 8px;
+      width: calc(100% - 96px);
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__btn2 {
+      width: calc(100% - 372px);
+    }
+    &__btn3 {
+      width: 268px;
+      min-width: inherit;
+      margin-left: 8px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__search {
+      width: 275px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+    &__wrapper {
+      flex-wrap: nowrap;
+    }
+    &__btn1, &__btn2, &__btn3 {
+      margin-left: 20px;
+      height: 50px;
+      font-size: 13px;
+      margin-bottom: 0;
+      &[href] {
+        line-height: 50px;
+      }
+    }
+    &__btn1, &__btn3 {
+      flex-shrink: 0;
+    }
+    &__btn3 {
+      width: 230px;
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    &__search {
+      width: 577px;
+    }
+    &__btn3 {
+      width: 295px;
+    }
+  }
+  @include media-breakpoint-up(xxxxl) {
+    &__search {
+      width: 777px;
+    }
+    &__btn1 {
+      width: 138px;
+    }
+  }
+}

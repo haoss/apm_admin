@@ -39,19 +39,26 @@ body {
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   color: $primary-color;
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
   margin: 0 0 15px 0;
 }
 .h1, h1 {
-  font-size: rem(21px);
+  font-size: 24px;
   line-height: 1.05;
-  letter-spacing: -1px;
-  margin-bottom: 25px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  @include media-breakpoint-up(xxxl) {
+    margin-top: 10px;
+  }
 }
 .h2, h2 {
-  font-size: rem(18px);
+  font-size: 20px;
   line-height: 1.14;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
   margin-bottom: 20px;
 }
 .h3, h3 {
@@ -127,8 +134,12 @@ img, .img {
   margin: 0 auto;
   // width: 1280px;
   width: 100%;
-  min-width: 320px;
-  padding: 0 15px;
+  min-width: 260px;
+  // padding: 0 15px;
+  @include media-breakpoint-up(xxxl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 /* section */

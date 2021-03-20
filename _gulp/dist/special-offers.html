@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Главная - APMG</title>
+        <title>Special offers - APMG</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -78,7 +78,46 @@
                         </header>
                         <div class="content__row">
                             <div class="div1">
-                                <p>1</p>
+                                <h1>Special offers</h1>
+                                <!-- News-->
+                                <div class="news">
+                                    <div class="news__row">
+                                        <div class="news__block">
+                                            <div class="news__block-thumb"><a href="#!"><img src="./tmp/news-img-1.png" alt=""></a></div>
+                                            <div class="news__block-content">
+                                                <time class="news__block-time">28 Feb 2021</time><a class="news__block-title" href="#!">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </a>
+                                                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                                            </div>
+                                        </div>
+                                        <div class="news__block">
+                                            <div class="news__block-thumb"><a href="#!"><img src="./tmp/news-img-2.png" alt=""></a></div>
+                                            <div class="news__block-content">
+                                                <time class="news__block-time">28 Feb 2021</time><a class="news__block-title" href="#!">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </a>
+                                                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                                            </div>
+                                        </div>
+                                        <div class="news__block">
+                                            <div class="news__block-thumb"><a href="#!"><img src="./tmp/news-img-3.png" alt=""></a></div>
+                                            <div class="news__block-content">
+                                                <time class="news__block-time">28 Feb 2021</time><a class="news__block-title" href="#!">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </a>
+                                                <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="pagination" aria-label="Page navigation">
+                                            <ul>
+                                                <li class="pagination__prev"><a href="#!">Back</a></li>
+                                                    <li class="pagination__item"><a href="#!">1</a></li>
+                                                    <li class="pagination__item"><a href="#!">2</a></li>
+                                                    <li class="pagination__item"><span>...</span></li>
+                                                    <li class="pagination__item  active"><a href="#!">50</a></li>
+                                                    <li class="pagination__item"><span>...</span></li>
+                                                    <li class="pagination__item"><a href="#!">98</a></li>
+                                                    <li class="pagination__item"><a href="#!">99</a></li>
+                                                <li class="pagination__next"><a href="#!">Forward</a></li>
+                                            </ul>
+                                        </div>
+                                </div>
                             </div>
                             <div class="div2 d-none d-xxxl-block">
                                 <div class="h2">Last Messages</div>
@@ -93,7 +132,6 @@
                             </div>
                         </div>
                     </div>
-                    <div style="height: 1000px; background-color: #000"></div>
                 </section>
             </main>
         </div>
@@ -109,5 +147,11 @@
         <script src="./js/libs/jquery.validate.min.js"></script>
         <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
         <script src="./js/common.js"></script>
+        <script>
+            $(document).on('ready', function() {
+              $('.navigation .active').removeClass('active');
+              $('.navigation[aria-label="Main"] li:nth-child(6)').addClass('active');
+            });
+        </script>
     </body>
 </html>

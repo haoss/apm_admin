@@ -1,16 +1,24 @@
 /* forms */
 input, textarea {
   &::-webkit-input-placeholder {
-    color: $color-d-7;
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
   }
   &::-moz-placeholder {
-    color: $color-d-7;
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
   }
   &:-ms-input-placeholder {
-    color: $color-d-7;
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
   }
   &:-moz-placeholder {
-    color: $color-d-7;
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 

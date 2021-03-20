@@ -1,0 +1,89 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'News' //активный пункт меню, список в header.jade
+  -var pageTitle = 'News' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                h1 News
+                // News
+                .news
+                  .news__row
+                    .news__block
+                      .news__block-thumb
+                        a(href="#!")
+                          img(src="./tmp/news-img-1.png", alt="")
+                      .news__block-content
+                        time.news__block-time 28 Feb 2021
+                        a(href="#!").news__block-title Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        p Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                    .news__block
+                      .news__block-thumb
+                        a(href="#!")
+                          img(src="./tmp/news-img-2.png", alt="")
+                      .news__block-content
+                        time.news__block-time 28 Feb 2021
+                        a(href="#!").news__block-title Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        p Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                    .news__block
+                      .news__block-thumb
+                        a(href="#!")
+                          img(src="./tmp/news-img-3.png", alt="")
+                      .news__block-content
+                        time.news__block-time 28 Feb 2021
+                        a(href="#!").news__block-title Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        p Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                  +pagination()
+                    +pagination-item('1', '#!')
+                    +pagination-item('2', '#!')
+                    +pagination-item('...')
+                    +pagination-item('50', '#!', true)
+                    +pagination-item('...')
+                    +pagination-item('98', '#!')
+                    +pagination-item('99', '#!')
+              .div2.d-none.d-xxxl-block
+                .h2 Last Messages
+                // Last messages
+                .last-messages
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1
+                  .text-center
+                    a(href="#!").btn.--sm.--border See all messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation[aria-label="Main"] li:last-child').addClass('active');
+      });
+

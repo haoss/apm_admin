@@ -2,7 +2,7 @@
 
 $root-font-size: 16px;
 $grid-columns: 12;
-$grid-gutter-width: 30px;
+$grid-gutter-width: 40px;
 
 $grid-breakpoints: (
   xs: 0,
@@ -13,7 +13,7 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px,
   xxxl: 1600px,
-  xxxxl: 1900px
+  xxxxl: 1800px
 );
 
 $container-max-widths: (
@@ -38,7 +38,7 @@ $container-max-widths: (
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/tables";
 @import "node_modules/bootstrap/scss/forms";
-@import "node_modules/bootstrap/scss/buttons";
+// @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/dropdown";
 @import "node_modules/bootstrap/scss/button-group";

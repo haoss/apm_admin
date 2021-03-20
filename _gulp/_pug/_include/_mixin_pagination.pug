@@ -23,10 +23,10 @@ mixin pagination(mods)
   .pagination(class=allMods, aria-label='Page navigation')&attributes(attributes)
     ul
       li.pagination__prev
-        a(href="#!")
+        a(href="#!") Back
       block
       li.pagination__next
-        a(href="#!")
+        a(href="#!") Forward
 
 mixin pagination-item(text, href, active, mods)
   //- Принимает:

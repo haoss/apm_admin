@@ -16,12 +16,32 @@ html(lang="ru")
       main.content
         include ./_include/_aside
         section
-          include ./_include/_header
           .container
-            h1 Gomer Simpson
+            include ./_include/_header
+            .content__row
+              .div1
+                p 1
+              .div2.d-none.d-xxxl-block
+                .h2 Last Messages
+                // Last messages
+                .last-messages
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
+                  a(href="#!").last-messages__block
+                    span.last-messages__block-author Administrator
+                    p Good day, status changing for warehouses DWC9, KW1, CHT1
+                  .text-center
+                    a(href="#!").btn.--sm.--border See all messages
 
-          include ./_include/_footer
           div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
 
     // Load Scripts
     include ./_include/_footer-js

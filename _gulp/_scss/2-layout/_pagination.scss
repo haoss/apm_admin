@@ -1,14 +1,16 @@
 /* pagination */
 .pagination {
   $this: &;
-  font-size: rem(16px);
-  text-align: left;
-  margin-bottom: 50px;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 20px;
   ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
     &>li {
       list-style: none;
       margin: 0;
@@ -16,69 +18,49 @@
       line-height: 1;
       vertical-align: middle;
       &#{$this} {
-        &__prev, &__next {
-          font-size: rem(20px);
-          &>a, &>span {
-            border-color: $color-l-2;
-            &::before {
-              font-family: $font-icomoon;
-              vertical-align: -2px;
-              line-height: 1;
-              display: inline-block;
-            }
-          }
-        }
         &__prev {
-          margin-right: 0px;
+          order: 99;
+          width: 50%;
+          text-align: right;
           &>a, &>span {
-            &::before {
-              content: '\1f3d3';
-            }
+            width: auto;
+            padding-right: 10px;
           }
         }
         &__next {
-          margin-left: 8px;
+          order: 100;
+          width: 50%;
+          text-align: left;
           &>a, &>span {
-            &::before {
-              content: '\1f3ee';
-            }
+            width: auto;
+            padding-left: 10px;
           }
         }
       }
       &+li {
-        margin-left: 8px;
+        margin-left: 0px;
       }
       &>a, &>span {
         display: inline-block;
-        width: 40px;
+        width: auto;
+        line-height: 40px;
         height: 40px;
+        min-width: 30px;
         text-align: center;
-        line-height: 39px;
-        color: $color-black;
+        color: #828282;
         text-decoration: none;
-        border-radius: 50%;
-        border: 1px solid transparent;
-        background: $color-white;
+        border: 0;
+        background: transparent;
         transform: translateY(0px);
         position: relative;
         z-index: 1;
         overflow: hidden;
         vertical-align: middle;
       }
-      &>a {
-        &:hover {
-          z-index: 2;
-          background: $color-d-2-10;
-          color: $color-white;
-          border-color: $color-d-2-10;
-          transform: translateY(0px);
-        }
-      }
       &.active {
         &>a, &>span {
-          background: $color-d-2;
-          color: $color-white;
-          border-color: $color-d-2;
+          font-weight: bold;
+          color: $color-blue;
         }
       }
       &.disabled {
@@ -93,70 +75,50 @@
       }
     }
   }
-  &.--center {
+  @include media-breakpoint-up(xs375) {
     ul {
-      justify-content: center;
-    }
-  }
-  &.--right {
-    ul {
-      justify-content: flex-end;
-    }
-  }
-  &.--justify {
-    ul {
-      justify-content: center;
-      li {
-        flex-shrink: 0;
-      }
-    }
-    #{$this} {
-      &__prev {
-        flex-grow: 1;
-      }
-      &__next {
-        flex-grow: 1;
-        text-align: right;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 575px) {
-  .pagination {
-    $this: &;
-    ul {
-      justify-content: center;
       &>li {
-        margin: 0 !important;
+        &>a, &>span {
+          min-width: 35px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    ul {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      &>li {
+        &>a, &>span {
+          min-width: 40px;
+        }
         &#{$this} {
           &__prev, &__next {
-            &>a, &>span {
-              width: 22px;
-              border-color: transparent;
-            }
-          }
-          &__prev {
-            margin-right: 10px;
-          }
-          &__prev {
-            margin-left: 10px;
+            order: inherit;
+            width: auto;
           }
         }
-        &>a, &>span {
-          border-color: transparent;
-          width: 35px;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    ul {
+      &>li {
+        &#{$this} {
+          &__prev, &__next {
+            font-size: 13px;
+          }
         }
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    ul {
+      &>li {
         &>a {
           &:hover {
-            background: transparent;
-            border-color: transparent;
-            color: $color-d-2;
-          }
-        }
-        &.active {
-          &>a, &>span {
-            width: 40px;
+            color: $color-blue;
           }
         }
       }
