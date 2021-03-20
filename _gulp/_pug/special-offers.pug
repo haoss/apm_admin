@@ -20,7 +20,8 @@ html(lang="ru")
             include ./_include/_header
             .content__row
               .div1
-                h1 Special offers
+                .content__head
+                  h1 Special offers
                 // News
                 .news
                   .news__row
@@ -57,23 +58,7 @@ html(lang="ru")
                     +pagination-item('98', '#!')
                     +pagination-item('99', '#!')
               .div2.d-none.d-xxxl-block
-                .h2 Last Messages
-                // Last messages
-                .last-messages
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1
-                  .text-center
-                    a(href="#!").btn.--sm.--border See all messages
+                include ./_include/_last-messages
 
           //- div(style="height: 1000px; background-color: #000")
           //- include ./_include/_footer

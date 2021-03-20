@@ -1,0 +1,307 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'My Settings' //активный пункт меню, список в header.jade
+  -var pageTitle = 'My Settings' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 My Settings
+                // Form
+                .form
+                  form(action="#!" autocomplete="off")
+                    fieldset.white-block
+                      .row
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'name',
+                                placeholder: 'Name',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'surname',
+                                placeholder: 'Surname',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'country',
+                                placeholder: 'Country',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'city',
+                                placeholder: 'City',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'shipping-address',
+                                placeholder: 'Shipping address',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'phone',
+                                placeholder: 'Phone',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group.no.--m-bottom
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'email',
+                                placeholder: 'Email',
+                                required: false
+                              }
+                            })
+                    .h2
+                      b Password
+                    fieldset.white-block
+                      .row
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'old-password',
+                                placeholder: 'Old password',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'new-password',
+                                placeholder: 'New password',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group.no.--m-bottom
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'confirm-password',
+                                placeholder: 'Confirm password',
+                                required: false
+                              }
+                            })
+                    .h2
+                      b Notification settings
+                    fieldset.white-block
+                      .row
+                        .col-12
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'promo-code',
+                                placeholder: 'Promo code',
+                                required: false
+                              }
+                            })
+                        .col-12
+                          .form-group.no.--m-bottom
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'information',
+                                placeholder: 'Information',
+                                required: false
+                              }
+                            })
+                    .h2
+                      b Information
+                    fieldset.white-block
+                      .form-group
+                        +field-checkbox({
+                          title: 'Send statuses status 1',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'checkbox1',
+                            checked: true,
+                          }
+                        })
+                      .form-group
+                        +field-checkbox({
+                          title: 'Send statuses status 4',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'checkbox4',
+                            checked: true,
+                          }
+                        })
+                      .form-group
+                        +field-checkbox({
+                          title: 'Send statuses status 4',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'checkbox4',
+                            checked: true,
+                          }
+                        })
+                      .form-group
+                        +field-checkbox({
+                          title: 'Send statuses status 4',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'checkbox4',
+                            checked: true,
+                          }
+                        })
+                      .form-group
+                        +field-checkbox({
+                          title: 'Send statuses status 4',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'checkbox4',
+                            checked: true,
+                          }
+                        })
+                      .form-group
+                        +field-checkbox({
+                          title: 'Send statuses status 4',
+                          isLink: false,
+                          mods: '',
+                          attrs: {
+                            name: 'checkbox4',
+                            checked: true,
+                          }
+                        })
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation:not([aria-label="Main"]) li:first-child').addClass('active');
+      });
+
