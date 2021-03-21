@@ -2,7 +2,7 @@
 
 $root-font-size: 16px;
 $grid-columns: 12;
-$grid-gutter-width: 40px;
+$grid-gutter-width: 20px;
 
 $grid-breakpoints: (
   xs: 0,
@@ -81,6 +81,8 @@ $container-max-widths: (
 @import "../dist/js/libs/magnific-popup/magnific-popup.scss";
 @import "../dist/js/libs/slick/slick.scss";
 @import "../dist/js/libs/slick/slick-theme.scss";
+@import "../dist/js/libs/selectric/selectric.scss";
+@import "../dist/js/libs/selectric/selectric-theme.scss";
 
 @import "3-modules/_modules.scss";
 

@@ -54,6 +54,8 @@ $(document).on('ready', function(){
     offset: '.header'
   });
 
+  $('.selectric').selectric();
+
   phoneMask();
   mobileNav();
   inputFocus();

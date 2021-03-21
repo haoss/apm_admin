@@ -146,8 +146,14 @@ img, .img {
 }
 
 .container {
+  padding-left: 20px;
+  padding-right: 20px;
   .section {
     min-width: inherit;
+  }
+  @include media-breakpoint-up(xxxl) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -228,6 +234,9 @@ ol li {
   }
   &.--white {
     color: $color-white !important;
+  }
+  &.--dark-gray {
+    color: $color-dark-gray !important;
   }
 }
 

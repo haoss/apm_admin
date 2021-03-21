@@ -21,6 +21,7 @@ button {
   text-align: center;
   border: 1px solid $color-blue;
   font-weight: 700;
+  padding: 0 20px;
   &.--sm {
     height: 30px;
     font-size: 12px;
@@ -28,6 +29,7 @@ button {
     min-width: 160px;
     letter-spacing: 0;
     font-weight: 400;
+    padding: 0 10px;
   }
   &.--border {
     background: transparent;
@@ -37,6 +39,9 @@ button {
   &.--block {
     display: block;
     width: 100%;
+  }
+  &.--settings {
+    max-width: 383px;
   }
   @include media-breakpoint-up(xl) {
     &:hover {

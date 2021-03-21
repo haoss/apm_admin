@@ -25,9 +25,9 @@ html(lang="ru")
                 // Form
                 .form
                   form(action="#!" autocomplete="off")
-                    fieldset.white-block
+                    fieldset.white-block.--form
                       .row
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -43,7 +43,7 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -59,7 +59,14 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            select.selectric
+                              option(value="") Account currency
+                              option(value="") Account currency 2
+                              option(value="") Account currency 3
+                              option(value="") Account currency Account currency Account currency
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -75,7 +82,7 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -91,7 +98,7 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -107,7 +114,7 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -123,8 +130,8 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
-                          .form-group.no.--m-bottom
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
                             +field-text({
                               title: '',
                               hasJs: false,
@@ -141,9 +148,9 @@ html(lang="ru")
                             })
                     .h2
                       b Password
-                    fieldset.white-block
+                    fieldset.white-block.--form
                       .row
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -159,7 +166,7 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -175,8 +182,8 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
-                          .form-group.no.--m-bottom
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
                             +field-text({
                               title: '',
                               hasJs: false,
@@ -192,10 +199,10 @@ html(lang="ru")
                               }
                             })
                     .h2
-                      b Notification settings
-                    fieldset.white-block
+                      b Information
+                    fieldset.white-block.--form
                       .row
-                        .col-12
+                        .col-12.col-md-6.col-lg-4
                           .form-group
                             +field-text({
                               title: '',
@@ -211,8 +218,8 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12
-                          .form-group.no.--m-bottom
+                        .col-12.col-md-6.col-lg-8
+                          .form-group
                             +field-text({
                               title: '',
                               hasJs: false,
@@ -228,68 +235,87 @@ html(lang="ru")
                               }
                             })
                     .h2
-                      b Information
-                    fieldset.white-block
-                      .form-group
-                        +field-checkbox({
-                          title: 'Send statuses status 1',
-                          isLink: false,
-                          mods: '',
-                          attrs: {
-                            name: 'checkbox1',
-                            checked: true,
-                          }
-                        })
-                      .form-group
-                        +field-checkbox({
-                          title: 'Send statuses status 4',
-                          isLink: false,
-                          mods: '',
-                          attrs: {
-                            name: 'checkbox4',
-                            checked: true,
-                          }
-                        })
-                      .form-group
-                        +field-checkbox({
-                          title: 'Send statuses status 4',
-                          isLink: false,
-                          mods: '',
-                          attrs: {
-                            name: 'checkbox4',
-                            checked: true,
-                          }
-                        })
-                      .form-group
-                        +field-checkbox({
-                          title: 'Send statuses status 4',
-                          isLink: false,
-                          mods: '',
-                          attrs: {
-                            name: 'checkbox4',
-                            checked: true,
-                          }
-                        })
-                      .form-group
-                        +field-checkbox({
-                          title: 'Send statuses status 4',
-                          isLink: false,
-                          mods: '',
-                          attrs: {
-                            name: 'checkbox4',
-                            checked: true,
-                          }
-                        })
-                      .form-group
-                        +field-checkbox({
-                          title: 'Send statuses status 4',
-                          isLink: false,
-                          mods: '',
-                          attrs: {
-                            name: 'checkbox4',
-                            checked: true,
-                          }
-                        })
+                      b Notification settings
+                    fieldset.white-block.--form
+                      .row
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-checkbox({
+                              title: 'Send statuses status 1',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox1',
+                                checked: true,
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-checkbox({
+                              title: 'Send statuses status 4',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox2',
+                                checked: true,
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-checkbox({
+                              title: 'Send newsletter <span class="color --dark-gray">(no more than 1 message per week)</span>',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox3',
+                                checked: false,
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-checkbox({
+                              title: 'Send statuses status 2',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox4',
+                                checked: true,
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-checkbox({
+                              title: 'Send statuses status 5',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox5',
+                                checked: true,
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-checkbox({
+                              title: 'Send statuses status 3',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox6',
+                                checked: true,
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-checkbox({
+                              title: 'Send statuses status 6',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox7',
+                                checked: true,
+                              }
+                            })
+                    button(type="submit").btn.--block.--settings Save changes
               .div2.d-none.d-xxxl-block
                 include ./_include/_last-messages
 

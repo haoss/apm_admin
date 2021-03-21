@@ -27,6 +27,7 @@ button, input, optgroup, select, textarea {
   font: inherit;
   color: inherit;
   outline: none;
+  width: 100%;
   &:hover, &:focus, &:active {
     outline: none;
   }
@@ -159,6 +160,7 @@ legend {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: 500;
     &:hover {
       border-color: $color-blue;
       background: $color-white;
@@ -335,11 +337,11 @@ textarea.field-text__input {
 
 .field-checkbox, .field-radio {
   position: relative;
-  padding-left: 34px;
+  padding-left: 36px;
   margin: 0;
-  display: flex;
+  display: inline-flex;
   text-decoration: none;
-  min-height: 24px;
+  min-height: 16px;
   $this: &;
   &__span-input {
     position: absolute;
@@ -347,28 +349,27 @@ textarea.field-text__input {
     top: 0;
     color: $color-white;
     line-height: 1;
-    font-size: rem(19px);
-    border: 1px solid $color-l-1;
-    width: 24px;
-    height: 24px;
-    border-radius: 2px;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: $color-gray;
     &::before {
-      content: '\1f6a8';
+      content: "\e907";
       font-family: $font-icomoon;
       display: inline-block;
       vertical-align: middle;
       line-height: 1;
       position: absolute;
-      left: 2px;
-      top: 1px;
+      left: 0;
+      top: 0;
     }
   }
   &__label {
     line-height: 16px;
-    font-size: rem(14px);
+    font-size: 14px;
     color: $color-d-5;
     display: block;
-    padding: 4px 0 0 0;
+    padding: 0 0 0 0;
     cursor: pointer;
   }
   &__input {
@@ -376,12 +377,10 @@ textarea.field-text__input {
     &:checked {
       &~#{$this} {
         &__span-input {
-          color: $color-white;
-          border-color: $color-d-1;
-          background: $color-d-1;
-        }
-        &__label {
-          color: $color-d-5;
+          color: $color-blue;
+          &::before {
+            content: "\e908";
+          }
         }
       }
       &:disabled {
@@ -412,33 +411,8 @@ textarea.field-text__input {
       }
     }
   }
-
   &:focus, &:active {
     text-decoration: none;
-  }
-  &:hover {
-    text-decoration: none;
-    #{$this} {
-      &__label {
-        color: $color-d-1;
-      }
-      &__input {
-        &:checked {
-          &~#{$this} {
-            &__label {
-              color: $color-d-5;
-            }
-          }
-        }
-        &:disabled {
-          &~#{$this} {
-            &__label {
-              color: $color-d-6;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -453,13 +427,6 @@ textarea.field-text__input {
       }
       &__label {
         color: $color-d-5;
-      }
-    }
-    &:hover {
-      #{$this} {
-        &__label {
-          color: $color-d-5;
-        }
       }
     }
     &[class*="disabled"] {
@@ -487,14 +454,6 @@ textarea.field-text__input {
       &__label {
         color: $color-d-6;
         cursor: default;
-      }
-    }
-    &:hover {
-      #{$this} {
-        &__label {
-          color: $color-d-6;
-          cursor: default;
-        }
       }
     }
   }
@@ -540,43 +499,11 @@ textarea.field-text__input {
       }
     }
   }
-  &:hover {
-    text-decoration: none;
-    #{$this} {
-      &__label {
-        color: $color-d-1;
-      }
-      &__input {
-        &:checked {
-          &~#{$this} {
-            &__label {
-              color: $color-d-5;
-            }
-          }
-        }
-        &:disabled {
-          &~#{$this} {
-            &__label {
-              color: $color-d-6;
-            }
-          }
-        }
-      }
-    }
-  }
-
   &.checked {
     #{$this} {
       &__span-input {
         &::before {
           background: $color-d-1;
-        }
-      }
-    }
-    &:hover {
-      #{$this} {
-        &__label {
-          color: $color-d-5;
         }
       }
     }
@@ -595,14 +522,6 @@ textarea.field-text__input {
       &__label {
         color: $color-d-6;
         cursor: default;
-      }
-    }
-    &:hover {
-      #{$this} {
-        &__label {
-          color: $color-d-6;
-          cursor: default;
-        }
       }
     }
   }
