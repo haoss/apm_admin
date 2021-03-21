@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>My Documents - APMG</title>
+        <title>Account balance - APMG</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -79,7 +79,84 @@
                         <div class="content__row">
                             <div class="div1">
                                 <div class="content__head">
-                                    <h1>My Documents</h1>
+                                    <h1>Account balance</h1>
+                                </div>
+                                <!-- Balance-->
+                                <div class="balance">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="balance__block">
+                                                <div class="balance__total">
+                                                    <div class="div1">Balance</div>
+                                                    <div class="div2">199<small>$</small></div>
+                                                </div>
+                                                <div class="balance__table">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="first">Reserved amount of air orders</td>
+                                                                <td class="last">780<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">In work</td>
+                                                                <td class="last">22 360<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Pay before shipment</td>
+                                                                <td class="last">645<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Waiting for payment</td>
+                                                                <td class="last">844<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Maximum amount of order</td>
+                                                                <td class="last">540<small>$</small></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="balance__block">
+                                                <div class="balance__table">
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="first">Ready to send on sum</td>
+                                                                <td class="last">8765<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Credit limit</td>
+                                                                <td class="last">546<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Purchased</td>
+                                                                <td class="last">4645<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">In a warehouse in the UAE</td>
+                                                                <td class="last">323<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Packing</td>
+                                                                <td class="last">488<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Transit Dubai</td>
+                                                                <td class="last">3340<small>$</small></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="first">Reserved Shipping Amount by Sea</td>
+                                                                <td class="last">542<small>$</small></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- Form-->
                                 <div class="form">
@@ -89,23 +166,20 @@
                                                 <div class="col-12 col-md-6 col-lg-4">
                                                     <div class="form-group">
                                                             <label class="field-text"><span class="field-text__input-wrap">
-                                                                    <input class="field-text__input" type="text" value="" name="order-number" placeholder="Order Number"></span>
+                                                                    <input class="field-text__input datepicker-here" type="text" value="" name="date-from" placeholder="Date from" readonly></span>
                                                             </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-6 col-lg-4">
                                                     <div class="form-group">
-                                                        <select class="selectric">
-                                                            <option value="" disabled selected>Document type</option>
-                                                            <option value="">Xlsx</option>
-                                                            <option value="">Pdf</option>
-                                                            <option value="">Docx</option>
-                                                        </select>
+                                                            <label class="field-text"><span class="field-text__input-wrap">
+                                                                    <input class="field-text__input datepicker-here" type="text" value="" name="date-to" placeholder="Date to" readonly></span>
+                                                            </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-6 col-lg-4">
                                                     <div class="form-group">
-                                                        <button class="btn --block" type="submit">Search</button>
+                                                        <button class="btn --block" type="submit">1С calculations</button>
                                                     </div>
                                                 </div>
                                             </div>

@@ -55,6 +55,11 @@ $(document).on('ready', function(){
   });
 
   $('.selectric').selectric();
+  $('.datepicker-here').datepicker({
+    autoClose: true,
+    language: 'en',
+    dateFormat: 'mm.dd.yyyy'
+  });
 
   phoneMask();
   mobileNav();
