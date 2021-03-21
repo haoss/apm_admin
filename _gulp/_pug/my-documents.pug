@@ -1,0 +1,140 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'My Documents' //активный пункт меню, список в header.jade
+  -var pageTitle = 'My Documents' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 My Documents
+                // Form
+                .form
+                  form(action="#!" autocomplete="off")
+                    fieldset.white-block.--form
+                      .row
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'order-number',
+                                placeholder: 'Order Number',
+                                required: false
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            select.selectric
+                              option(value="" disabled selected) Document type
+                              option(value="") Xlsx
+                              option(value="") Pdf
+                              option(value="") Docx
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            button(type="submit").btn.--block Search
+                
+                // White block
+                .white-block
+                  .white-block__table
+                    table(width="100%" border="0")
+                      thead
+                        tr
+                          th.th1 Doc number
+                          th.th2 Doc type
+                          th.th3 Doc name
+                          th.th4 Doc date
+                          th.th5 &nbsp;
+                      tbody
+                        tr
+                          td.td1(data-label="Doc number")
+                            b 354654
+                          td.td2(data-label="Doc type") Xlsx
+                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                          td.td4(data-label="Doc date") 30.01.2021
+                          td.td5
+                            a(href="#!") Download
+                        tr
+                          td.td1(data-label="Doc number")
+                            b 654656
+                          td.td2(data-label="Doc type") Pdf
+                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                          td.td4(data-label="Doc date") 30.01.2021
+                          td.td5
+                            a(href="#!") Download
+                        tr
+                          td.td1(data-label="Doc number")
+                            b 744566
+                          td.td2(data-label="Doc type") Docx
+                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                          td.td4(data-label="Doc date") 30.01.2021
+                          td.td5
+                            a(href="#!") Download
+                        tr
+                          td.td1(data-label="Doc number")
+                            b 354654
+                          td.td2(data-label="Doc type") Xlsx
+                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                          td.td4(data-label="Doc date") 30.01.2021
+                          td.td5
+                            a(href="#!") Download
+                        tr
+                          td.td1(data-label="Doc number")
+                            b 354654
+                          td.td2(data-label="Doc type") Xlsx
+                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                          td.td4(data-label="Doc date") 30.01.2021
+                          td.td5
+                            a(href="#!") Download
+                        tr
+                          td.td1(data-label="Doc number")
+                            b 354654
+                          td.td2(data-label="Doc type") Xlsx
+                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+                          td.td4(data-label="Doc date") 30.01.2021
+                          td.td5
+                            a(href="#!") Download
+                  +pagination()
+                    +pagination-item('1', '#!')
+                    +pagination-item('2', '#!')
+                    +pagination-item('...')
+                    +pagination-item('50', '#!', true)
+                    +pagination-item('...')
+                    +pagination-item('98', '#!')
+                    +pagination-item('99', '#!')
+                    
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation[aria-label="Main"] li:nth-child(7)').addClass('active');
+      });
+
