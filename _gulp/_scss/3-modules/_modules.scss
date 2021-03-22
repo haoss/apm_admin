@@ -585,7 +585,7 @@
           td {
             display: block;
             padding: 0;
-            &.last {
+            &.div2 {
               font-weight: bold;
               font-size: 18px;
               color: $primary-color;
@@ -599,8 +599,54 @@
           }
           &:last-child {
             td {
-              &.last {
+              &.div2 {
                 padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    .row {
+      min-height: 100%;
+      &>div {
+        min-height: 100%;
+      }
+    }
+    &__block {
+      height: calc(100% - 20px);
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__block {
+      color: $primary-color;
+      padding-right: 30px;
+      font-size: 15px;
+    }
+    &__total {
+      margin-right: -15px;
+    }
+    &__table {
+      table {
+        display: table;
+        width: 100%;
+        tbody {
+          display: table-row-group;
+          tr {
+            display: table-row;
+            td {
+              display: table-cell;
+              padding-bottom: 10px;
+              &.div2 {
+                text-align: right;
+                padding-bottom: 10px;
+              }
+            }
+            &:last-child {
+              td {
+                padding-bottom: 0 !important;
               }
             }
           }
