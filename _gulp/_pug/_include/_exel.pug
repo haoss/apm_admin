@@ -2,11 +2,46 @@
   button.btn-close.j-btn(type='button' data-id='exel')
   .exel__wrapper
     .exel__wrapper-body
-      form(action="#!") 
-        select
-          option(value="")  Delivery period not more than days 1
-          option(value="")  Delivery period not more than days 2
-          option(value="")  Delivery 32
+      form(action="#!" autocomplete="off") 
+        .form-group
+          select.selectric
+            option(value="" selected) Delivery period not more than days 1
+            option(value="") Delivery period not more than days 2
+            option(value="") Delivery 32
+        .form-group
+          select.selectric
+            option(value="" selected) Store
+            option(value="") Store 2
+            option(value="") Store 3
+        .form-group
+          input#file-1.inputfile.inputfile-1(type='file' name='file-1[]' data-multiple-caption='{count} files selected' multiple)
+          label(for='file-1')
+            span Attach file
+
+        p.--fs12.color.--dark-gray You can attach a * .xls or * .xlsx file for searching
+        p.--fs12.color.--dark-gray Columns should be called 
+          br
+          b Part Number, Brand, Quantity, Store, Price
+        .form-group
+          +field-checkbox({
+            title: 'Display goods with a minimum price',
+            isLink: false,
+            mods: '',
+            attrs: {
+              name: 'checkbox-exel-1',
+              checked: true,
+            }
+          })
+        .form-group
+          +field-checkbox({
+            title: 'Add to basket qwickly',
+            isLink: false,
+            mods: '',
+            attrs: {
+              name: 'checkbox-exel-2',
+              checked: true,
+            }
+          })
         button(type="submit").btn.--block Search
         .clear30
         a(href="#!").btn.--border.--sm Download sample

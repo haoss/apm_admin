@@ -201,6 +201,7 @@
   z-index: 150;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.35s;
   &.is-active {
     opacity: 1;
     visibility: visible;
@@ -733,6 +734,9 @@
       cursor: default;
     }
   }
+  @include media-breakpoint-up(lg) {
+    overflow: none;
+  }
 }
 .nowrap {
   white-space: nowrap !important;
@@ -751,6 +755,42 @@
     .div2 {
       padding-top: 0;
       text-align: right;
+    }
+  }
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  &+ label {
+    min-width: 160px;
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    text-align: center;
+    color: $color-blue;
+    border: 1px solid $color-blue;
+    border-radius: 25px;
+    padding: 0 10px;
+    background: transparent;
+    max-width: 100%;
+    &:focus {
+      outline: none;
+    }
+    span {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+      overflow: hidden;
     }
   }
 }

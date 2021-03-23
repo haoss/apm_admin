@@ -22,12 +22,37 @@
                 <button class="btn-close j-btn" type="button" data-id="exel"></button>
                 <div class="exel__wrapper">
                     <div class="exel__wrapper-body">
-                        <form action="#!"> 
-                            <select>
-                                <option value=""> Delivery period not more than days 1</option>
-                                <option value=""> Delivery period not more than days 2</option>
-                                <option value=""> Delivery 32</option>
-                            </select>
+                        <form action="#!" autocomplete="off"> 
+                            <div class="form-group">
+                                <select class="selectric">
+                                    <option value="" selected>Delivery period not more than days 1</option>
+                                    <option value="">Delivery period not more than days 2</option>
+                                    <option value="">Delivery 32</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="selectric">
+                                    <option value="" selected>Store</option>
+                                    <option value="">Store 2</option>
+                                    <option value="">Store 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input class="inputfile inputfile-1" id="file-1" type="file" name="file-1[]" data-multiple-caption="{count} files selected" multiple>
+                                <label for="file-1"><span>Attach file</span></label>
+                            </div>
+                            <p class="--fs12 color --dark-gray">You can attach a * .xls or * .xlsx file for searching</p>
+                            <p class="--fs12 color --dark-gray">Columns should be called <br><b>Part Number, Brand, Quantity, Store, Price</b></p>
+                            <div class="form-group">
+                                    <label class="field-checkbox">
+                                        <input class="field-checkbox__input" type="checkbox" name="checkbox-exel-1" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Display goods with a minimum price</span>
+                                    </label>
+                            </div>
+                            <div class="form-group">
+                                    <label class="field-checkbox">
+                                        <input class="field-checkbox__input" type="checkbox" name="checkbox-exel-2" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Add to basket qwickly</span>
+                                    </label>
+                            </div>
                             <button class="btn --block" type="submit">Search</button>
                             <div class="clear30"></div><a class="btn --border --sm" href="#!">Download sample</a>
                         </form>
@@ -73,7 +98,7 @@
                                     <input class="search__input" type="search" placeholder="Enter the part number">
                                     <button class="search__btn" type="submit"></button>
                                 </form>
-                                <button class="btn header__btn1" type="button">Exel</button><a class="btn header__btn2" href="#!">Original catalogs</a><a class="btn header__btn3" href="#!">price-list APM.GROUP</a>
+                                <button class="btn header__btn1 j-btn" type="button" data-id="exel">Exel</button><a class="btn header__btn2" href="#!">Original catalogs</a><a class="btn header__btn3" href="#!">price-list APM.GROUP</a>
                             </div>
                         </header>
                         <div class="content__row">

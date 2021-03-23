@@ -62,10 +62,7 @@ $(document).on('ready', function(){
   });
 
   phoneMask();
-  mobileNav();
-  inputFocus();
-  headerScroll();
-  oneCarousel();
+  jNavigation();
 
   // Chrome Smooth Scroll
   try {
@@ -76,92 +73,13 @@ $(document).on('ready', function(){
   } catch(err) {
 
   };
-
-  // simpleForm version 2015-09-23 14:30 GMT +2
-  simpleForm('form.form-callback');
 });
 
 $(window).on('load', function() { });
 $(window).on('scroll', function() {
   headerScroll();
 });
-$(window).on('resize', function() {
-  var width = $(window).width();
-  /*var btn = $('.btn-mobile');
-  var body = $('body');
-  var nav = $('.mobile-nav');*/
-
-  if (width >= 960) {
-    /*btn.removeClass('is-active');
-    body.removeClass('is-fixed');
-    nav.removeClass('is-active');
-    $('.j-footer-nav').removeClass('is-active');*/
-  }
-});
-
-/*
-version 2015-09-23 14:30 GMT +2
-*/
-function simpleForm(form, callback) {
-  $(document).on('submit', form, function(e){
-    e.preventDefault();
-    var formData = {};
-    var hasFile = false;
-    if ($(this).find('[type=file]').length < 1) {
-      formData = $(this).serialize();
-    }
-    else {
-      formData = new FormData();
-      $(this).find('[name]').each(function(){
-
-        switch($(this).prop('type')) {
-
-          case 'file':
-            if ($(this)[0]['files'].length > 0) {
-              formData.append($(this).prop('name'), $(this)[0]['files'][0]);
-              hasFile = true;
-            }
-            break;
-
-          case 'radio':
-          case 'checkbox':
-            if (!$(this).prop('checked')) {
-              break;
-            }
-            formData.append($(this).prop('name'), $(this).val().toString());
-            break;
-
-          default:
-            formData.append($(this).prop('name'), $(this).val().toString());
-            break;
-        }
-      });
-    }
-
-    $.ajax({
-      url: $(this).prop('action'),
-      data: formData,
-      type: 'POST',
-      contentType : hasFile ? 'multipart/form-data' : 'application/x-www-form-urlencoded',
-      cache       : false,
-      processData : false,
-      success: function(response) {
-        $(form).removeClass('ajax-waiting');
-        $(form).find("[type=submit]").prop("disabled", false);
-        $(form).html($(response).find(form).html());
-
-        if (typeof callback === 'function') {
-          callback(response);
-        }
-      }
-    });
-
-    $(form).addClass('ajax-waiting');
-    $(form).find("[type=submit]").prop("disabled", true);
-
-    return false;
-  });
-}
+$(window).on('resize', function() { });
 
 function phoneMask() {
   var phone = $('.j-phone-mask');
@@ -191,101 +109,64 @@ jQuery.extend(jQuery.validator.messages, {
   min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
 });
 
-function mobileNav() {
-  /*var btn = $('.btn-mobile');
+function jNavigation() {
+  var btn = $('.j-btn');
+  var navigation = $('.j-btn-target');
   var body = $('body');
-  var nav = $('.mobile-nav');
-  var navWrapper = $('.mobile-nav__wrapper');
-
-  btn.on('click', function(){
-    var _this = $(this);
-    if (_this.hasClass('is-active')) {
-      btn.removeClass('is-active');
-      body.removeClass('is-fixed');
-      nav.removeClass('is-active');
-    } else {
-      btn.addClass('is-active');
-      body.addClass('is-fixed');
-      nav.addClass('is-active');
-    }
-  });
-
-  nav.on('click', function(){
-    btn.removeClass('is-active');
-    body.removeClass('is-fixed');
-    nav.removeClass('is-active');
-  });
-
-  navWrapper.on('click', function(e){
+  var shadow = $('.base-shadow');
+  var btnTarget;
+  
+  $(document).on('click', '.j-btn', function(e){
     e.stopPropagation();
-  })*/
-}
-
-function inputFocus(){
-  var jinput = $(".css-input");
-
-  jinput.each(function(){
     var _this = $(this);
-    var val = _this.val();
-    var field = _this.parents('.j-field-text');
-
-    if (val.length > 0 && _this.is('input') || val.length > 0 && _this.is('textarea')) {
-      field.addClass("active-full");
-    } else {
-      field.removeClass("active-full");
+    btnTarget = $('#' + _this.data('id'));
+    body.removeClass('is-fixed');
+    
+    if (btnTarget.hasClass('is-active')) {
+      btnTarget.removeClass('is-active');
+      shadow.removeClass('is-active');
+    } else if (!btnTarget.hasClass('is-active')) {
+      navigation.removeClass('is-active');
+      btnTarget.addClass('is-active');
+      body.addClass('is-fixed');
+      shadow.addClass('is-active');
     }
+  });
 
-    // input on focus
-    _this.focus(function () {
-      field.addClass("active");
-    }).blur(function () {
-      field.removeClass("active");
-    })
+  $(document).on('click', function(e){
+    navigation.removeClass('is-active');
+    shadow.removeClass('is-active');
+    body.removeClass('is-active');
+  });
 
-    _this.on('change', function () {
-      var val = _this.val();
-
-      if (val == '') {
-        field.removeClass("active-full");
-      } else {
-        field.addClass("active-full");
-      }
-    });
-  })
+  $(document).on('click', '.j-btn-target', function(e){
+    e.stopPropagation();
+  });
 }
 
-function headerScroll() {
-  var header = $('.header');
-  var width = $(window).width();
+;( function ( document, window, index ) {
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
 
-  if ($(window).scrollTop() > header.height()) {
-    header.addClass('is-scroll');
-  } else {
-    header.removeClass('is-scroll');
-  }
-}
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
 
-function oneCarousel() {
-  var width = $(window).width();
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
 
-  var $slickElementPagination = $('.one-apartment__carousel-pagination');
-  var $slickElement = $('.j-one-apartment');
-
-  if (width <= 767) {
-    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-      //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-      var i = (currentSlide ? currentSlide : 0) + 1;
-      $slickElementPagination.text(i + ' / ' + slick.slideCount);
-    });  
-    $slickElement.not('.slick-initialized').slick({
-      mobileFirst: true,
-      arrows: false,
-      infinite: true,
-      dots: false
-    });
-  } else {
-    if($slickElement.hasClass('slick-initialized')){
-      $slickElement.slick('unslick');
-    }
-  }
-}
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));

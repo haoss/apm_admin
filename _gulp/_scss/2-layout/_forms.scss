@@ -278,10 +278,11 @@ textarea.field-text__input {
   position: relative;
   padding-left: 36px;
   margin: 0;
-  display: inline-flex;
+  display: flex;
   text-decoration: none;
   min-height: 16px;
   $this: &;
+  cursor: pointer;
   &__span-input {
     position: absolute;
     left: 0;
