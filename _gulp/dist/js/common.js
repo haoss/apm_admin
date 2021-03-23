@@ -136,7 +136,7 @@ function jNavigation() {
   $(document).on('click', function(e){
     navigation.removeClass('is-active');
     shadow.removeClass('is-active');
-    body.removeClass('is-active');
+    body.removeClass('is-fixed');
   });
 
   $(document).on('click', '.j-btn-target', function(e){
