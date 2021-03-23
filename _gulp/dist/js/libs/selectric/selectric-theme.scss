@@ -76,6 +76,9 @@
 .selectric-open .selectric {
   border-radius: 25px 25px 0 0;
 }
+.selectric-open.selectric-above .selectric {
+  border-radius: 0 0 25px 25px;
+}
 
 .selectric-open .selectric-items {
   display: block;
@@ -157,6 +160,11 @@
   border-radius: 0 0 25px 25px;
   overflow: hidden;
   padding-bottom: 14px;
+  .selectric-above & {
+    border-radius: 25px 25px 0 0;
+    padding-bottom: 0;
+    padding-top: 14px;
+  }
 }
 
 .selectric-items .selectric-scroll {

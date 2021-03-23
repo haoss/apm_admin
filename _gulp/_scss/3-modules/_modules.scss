@@ -372,6 +372,9 @@
   border-radius: 6px;
   padding: 30px 20px;
   margin-bottom: 30px;
+  .tab-pane & {
+    border-radius: 0;
+  }
   &.--form {
     padding-bottom: 10px;
   }
@@ -408,15 +411,6 @@
           text-transform: uppercase;
           line-height: 20px;
         }
-        &.td1, &.td2, &.td4 {
-          color: $primary-color;
-        }
-        &.td1, &.td4 {
-          font-size: 15px;
-        }
-        &.td2 {
-          font-size: 12px;
-        }
         a {
           text-decoration: none;
           color: #828282;
@@ -451,6 +445,9 @@
     }
   }
   @include media-breakpoint-up(lg) {
+    .tab-pane & {
+      border-radius: 0 6px 6px 6px;
+    }
     &__table {
       table {
         display: table;
@@ -470,6 +467,9 @@
               &:first-child {
                 padding-left: 30px;
                 border-top-left-radius: 6px;
+                .tab-pane & {
+                  border-top-left-radius: 0px;
+                }
               }
               &:last-child {
                 padding-right: 30px;
@@ -652,6 +652,105 @@
           }
         }
       }
+    }
+  }
+}
+.account-info {
+  color: #828282;
+  font-size: 12px;
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    overflow-y: visible;
+    padding-right: 5px;
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: rgba(#C4C4C4,.4);
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-blue;
+    }
+  }
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: block;    /* undo display:none          */
+    height: 0;         /* height:0 is also invisible */
+    overflow: hidden;  /* no-overflow                */
+}
+.tab-content > .active,
+.pill-content > .active {
+    height: auto;      /* let the content decide it  */
+}
+
+.nav-tab {
+  overflow-x: auto;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color-white;
+  &__item {
+    list-style: none;
+    margin: 0;
+    &+li {
+      margin-left: -25px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-white;
+    background: $color-blue;
+    display: block;
+    overflow: hidden;
+    clip-path: polygon(calc(100% - 20px) 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+    position: relative;
+    z-index: 5;
+    border-radius: 6px 6px 0 0;
+    &:hover {
+      color: $color-white;
+      background: rgba($color-blue,.7);
+    }
+    span {
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 35px;
+    }
+    &.active {
+      background: $color-white;
+      color: $primary-color;
+      z-index: 10;
+      cursor: default;
+    }
+  }
+}
+.nowrap {
+  white-space: nowrap !important;
+}
+.account-pagination {
+  display: flex;
+  flex-direction: column;
+  .div2 {
+    padding-top: 30px;
+    text-align: center;
+  }
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .div2 {
+      padding-top: 0;
+      text-align: right;
     }
   }
 }

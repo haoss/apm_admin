@@ -132,75 +132,155 @@ html(lang="ru")
                           .form-group
                             button(type="submit").btn.--block 1С calculations
                 
-                // White block
-                .white-block
-                  .white-block__table
-                    table(width="100%" border="0")
-                      thead
-                        tr
-                          th.th1 Doc number
-                          th.th2 Doc type
-                          th.th3 Doc name
-                          th.th4 Doc date
-                          th.th5 &nbsp;
-                      tbody
-                        tr
-                          td.td1(data-label="Doc number")
-                            b 354654
-                          td.td2(data-label="Doc type") Xlsx
-                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                          td.td4(data-label="Doc date") 30.01.2021
-                          td.td5
-                            a(href="#!") Download
-                        tr
-                          td.td1(data-label="Doc number")
-                            b 654656
-                          td.td2(data-label="Doc type") Pdf
-                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                          td.td4(data-label="Doc date") 30.01.2021
-                          td.td5
-                            a(href="#!") Download
-                        tr
-                          td.td1(data-label="Doc number")
-                            b 744566
-                          td.td2(data-label="Doc type") Docx
-                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                          td.td4(data-label="Doc date") 30.01.2021
-                          td.td5
-                            a(href="#!") Download
-                        tr
-                          td.td1(data-label="Doc number")
-                            b 354654
-                          td.td2(data-label="Doc type") Xlsx
-                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                          td.td4(data-label="Doc date") 30.01.2021
-                          td.td5
-                            a(href="#!") Download
-                        tr
-                          td.td1(data-label="Doc number")
-                            b 354654
-                          td.td2(data-label="Doc type") Xlsx
-                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                          td.td4(data-label="Doc date") 30.01.2021
-                          td.td5
-                            a(href="#!") Download
-                        tr
-                          td.td1(data-label="Doc number")
-                            b 354654
-                          td.td2(data-label="Doc type") Xlsx
-                          td.td3(data-label="Doc name") Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-                          td.td4(data-label="Doc date") 30.01.2021
-                          td.td5
-                            a(href="#!") Download
-                  +pagination()
-                    +pagination-item('1', '#!')
-                    +pagination-item('2', '#!')
-                    +pagination-item('...')
-                    +pagination-item('50', '#!', true)
-                    +pagination-item('...')
-                    +pagination-item('98', '#!')
-                    +pagination-item('99', '#!')
-                    
+                ul.nav.nav-tab(role='tablist')
+                  li.nav-tab__item.first(role='presentation')
+                    a.nav-tab__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true')
+                      span.nowrap Payment history
+                  li.nav-tab__item(role='presentation')
+                    a.nav-tab__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false')
+                      span.nowrap Send notification
+                .tab-content
+                  .tab-pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+                    // White block
+                    .white-block
+                      .white-block__table
+                        table(width="100%" border="0")
+                          thead
+                            tr
+                              th.th1 № orders
+                              th.th2 Date
+                              th.th3 Payment information
+                              th.th4 Debit
+                              th.th5 Credit
+                              th.th6 &nbsp;
+                          tbody
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="№ orders")
+                                b 354654
+                              td.td2.--fs15.color.--primary(data-label="Date") 30.01.2021
+                              td.td3(data-label="Description") Toyota steering column and brake discs for Outlander
+                              td.td4.--fs15.color.--primary(data-label="Debit") 
+                                b 235.54 
+                                | &nbsp;$
+                              td.td5.--fs15.color.--primary(data-label="Credit") 
+                                b 235.54 
+                                | &nbsp;$
+                              td.td6
+                                a(href="#!") Download
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="№ orders")
+                                b 654656
+                              td.td2.--fs15.color.--primary(data-label="Date") 30.01.2021
+                              td.td3(data-label="Description") Toyota steering column and brake discs for Outlander
+                              td.td4.--fs15.color.--primary(data-label="Debit")
+                                b 235.54 
+                                | &nbsp;$
+                              td.td5.--fs15.color.--primary(data-label="Credit")
+                                b 235.54 
+                                | &nbsp;$
+                              td.td7
+                                a(href="#!") Download
+                      .account-pagination
+                        +pagination()
+                          +pagination-item('1', '#!')
+                          +pagination-item('2', '#!')
+                          +pagination-item('...')
+                          +pagination-item('50', '#!', true)
+                          +pagination-item('...')
+                          +pagination-item('98', '#!')
+                          +pagination-item('99', '#!')
+                        .div2
+                          a(href="#!").btn.--border.--sm Download balance
+                  .tab-pane#tab2(role='tabpanel' aria-labelledby='tab2-tab')
+                    // White block
+                    .white-block.--form
+                      form(action="#!" autocomplete="off").form
+                        .row
+                          .col-12.col-md-6.col-lg-4
+                            .form-group
+                              select.selectric
+                                option(value="" selected disabled) Type of payment
+                                option(value="") Type 1
+                                option(value="") Type 2
+                                option(value="") Type 3
+                                option(value="") Type 4
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: false,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'date-from-2',
+                                  placeholder: 'Date from',
+                                  required: false,
+                                  class: 'datepicker-here',
+                                  readonly: true
+                                }
+                              })
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: false,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'payer',
+                                  placeholder: 'Payer',
+                                  required: false
+                                }
+                              })
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: false,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'amount',
+                                  placeholder: 'Amount',
+                                  required: false
+                                }
+                              })
+                          .col-12.col-md-6.col-lg-4
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: true,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'comment',
+                                  placeholder: 'Comment',
+                                  required: false
+                                }
+                              })
+                            .form-group
+                              button(type="submit").btn.--block Send notification
+                          .col-12.col-lg-4
+                            .account-info
+                              p
+                                b The notification must be sent in case
+                              ol
+                                li With non-standard payment method - the lack of automatic crediting to the balance
+                                li When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.
+                                li If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)
+                                li With non-standard payment method - the lack of automatic crediting to the balance
+                                li When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.
+                                li If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)
+
               .div2.d-none.d-xxxl-block
                 include ./_include/_last-messages
 
@@ -213,6 +293,6 @@ html(lang="ru")
     script.
       $(document).on('ready', function() {
         $('.navigation .active').removeClass('active');
-        $('.navigation[aria-label="Main"] li:nth-child(7)').addClass('active');
+        $('.navigation[aria-label="Main"] li:nth-child(4)').addClass('active');
       });
 

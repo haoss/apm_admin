@@ -186,78 +186,122 @@
                                         </fieldset>
                                     </form>
                                 </div>
-                                <!-- White block-->
-                                <div class="white-block">
-                                    <div class="white-block__table">
-                                        <table width="100%" border="0">
-                                            <thead>
-                                                <tr>
-                                                    <th class="th1">Doc number</th>
-                                                    <th class="th2">Doc type</th>
-                                                    <th class="th3">Doc name</th>
-                                                    <th class="th4">Doc date</th>
-                                                    <th class="th5">&nbsp;</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="td1" data-label="Doc number"><b>354654</b></td>
-                                                    <td class="td2" data-label="Doc type">Xlsx</td>
-                                                    <td class="td3" data-label="Doc name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </td>
-                                                    <td class="td4" data-label="Doc date">30.01.2021</td>
-                                                    <td class="td5"><a href="#!">Download</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td1" data-label="Doc number"><b>654656</b></td>
-                                                    <td class="td2" data-label="Doc type">Pdf</td>
-                                                    <td class="td3" data-label="Doc name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </td>
-                                                    <td class="td4" data-label="Doc date">30.01.2021</td>
-                                                    <td class="td5"><a href="#!">Download</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td1" data-label="Doc number"><b>744566</b></td>
-                                                    <td class="td2" data-label="Doc type">Docx</td>
-                                                    <td class="td3" data-label="Doc name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </td>
-                                                    <td class="td4" data-label="Doc date">30.01.2021</td>
-                                                    <td class="td5"><a href="#!">Download</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td1" data-label="Doc number"><b>354654</b></td>
-                                                    <td class="td2" data-label="Doc type">Xlsx</td>
-                                                    <td class="td3" data-label="Doc name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </td>
-                                                    <td class="td4" data-label="Doc date">30.01.2021</td>
-                                                    <td class="td5"><a href="#!">Download</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td1" data-label="Doc number"><b>354654</b></td>
-                                                    <td class="td2" data-label="Doc type">Xlsx</td>
-                                                    <td class="td3" data-label="Doc name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </td>
-                                                    <td class="td4" data-label="Doc date">30.01.2021</td>
-                                                    <td class="td5"><a href="#!">Download</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td1" data-label="Doc number"><b>354654</b></td>
-                                                    <td class="td2" data-label="Doc type">Xlsx</td>
-                                                    <td class="td3" data-label="Doc name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </td>
-                                                    <td class="td4" data-label="Doc date">30.01.2021</td>
-                                                    <td class="td5"><a href="#!">Download</a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                        <div class="pagination" aria-label="Page navigation">
-                                            <ul>
-                                                <li class="pagination__prev"><a href="#!">Back</a></li>
-                                                    <li class="pagination__item"><a href="#!">1</a></li>
-                                                    <li class="pagination__item"><a href="#!">2</a></li>
-                                                    <li class="pagination__item"><span>...</span></li>
-                                                    <li class="pagination__item  active"><a href="#!">50</a></li>
-                                                    <li class="pagination__item"><span>...</span></li>
-                                                    <li class="pagination__item"><a href="#!">98</a></li>
-                                                    <li class="pagination__item"><a href="#!">99</a></li>
-                                                <li class="pagination__next"><a href="#!">Forward</a></li>
-                                            </ul>
+                                <ul class="nav nav-tab" role="tablist">
+                                    <li class="nav-tab__item first" role="presentation"><a class="nav-tab__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true"><span class="nowrap">Payment history</span></a></li>
+                                    <li class="nav-tab__item" role="presentation"><a class="nav-tab__link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><span class="nowrap">Send notification</span></a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                                        <!-- White block-->
+                                        <div class="white-block">
+                                            <div class="white-block__table">
+                                                <table width="100%" border="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1">№ orders</th>
+                                                            <th class="th2">Date</th>
+                                                            <th class="th3">Payment information</th>
+                                                            <th class="th4">Debit</th>
+                                                            <th class="th5">Credit</th>
+                                                            <th class="th6">&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="td1 --fs15 color --primary" data-label="№ orders"><b>354654</b></td>
+                                                            <td class="td2 --fs15 color --primary" data-label="Date">30.01.2021</td>
+                                                            <td class="td3" data-label="Description">Toyota steering column and brake discs for Outlander</td>
+                                                            <td class="td4 --fs15 color --primary" data-label="Debit"> <b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td5 --fs15 color --primary" data-label="Credit"> <b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td6"><a href="#!">Download</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td1 --fs15 color --primary" data-label="№ orders"><b>654656</b></td>
+                                                            <td class="td2 --fs15 color --primary" data-label="Date">30.01.2021</td>
+                                                            <td class="td3" data-label="Description">Toyota steering column and brake discs for Outlander</td>
+                                                            <td class="td4 --fs15 color --primary" data-label="Debit"><b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td5 --fs15 color --primary" data-label="Credit"><b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td7"><a href="#!">Download</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="account-pagination">
+                                                    <div class="pagination" aria-label="Page navigation">
+                                                        <ul>
+                                                            <li class="pagination__prev"><a href="#!">Back</a></li>
+                                                                <li class="pagination__item"><a href="#!">1</a></li>
+                                                                <li class="pagination__item"><a href="#!">2</a></li>
+                                                                <li class="pagination__item"><span>...</span></li>
+                                                                <li class="pagination__item  active"><a href="#!">50</a></li>
+                                                                <li class="pagination__item"><span>...</span></li>
+                                                                <li class="pagination__item"><a href="#!">98</a></li>
+                                                                <li class="pagination__item"><a href="#!">99</a></li>
+                                                            <li class="pagination__next"><a href="#!">Forward</a></li>
+                                                        </ul>
+                                                    </div>
+                                                <div class="div2"><a class="btn --border --sm" href="#!">Download balance</a></div>
+                                            </div>
                                         </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                                        <!-- White block-->
+                                        <div class="white-block --form">
+                                            <form class="form" action="#!" autocomplete="off">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6 col-lg-4">
+                                                        <div class="form-group">
+                                                            <select class="selectric">
+                                                                <option value="" selected disabled>Type of payment</option>
+                                                                <option value="">Type 1</option>
+                                                                <option value="">Type 2</option>
+                                                                <option value="">Type 3</option>
+                                                                <option value="">Type 4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label class="field-text"><span class="field-text__input-wrap">
+                                                                        <input class="field-text__input datepicker-here" type="text" value="" name="date-from-2" placeholder="Date from" readonly></span>
+                                                                </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label class="field-text"><span class="field-text__input-wrap">
+                                                                        <input class="field-text__input" type="text" value="" name="payer" placeholder="Payer"></span>
+                                                                </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                                <label class="field-text"><span class="field-text__input-wrap">
+                                                                        <input class="field-text__input" type="text" value="" name="amount" placeholder="Amount"></span>
+                                                                </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6 col-lg-4">
+                                                        <div class="form-group">
+                                                                <label class="field-text"><span class="field-text__input-wrap">
+                                                                        <textarea class="field-text__input" name="comment" placeholder="Comment"></textarea></span>
+                                                                </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button class="btn --block" type="submit">Send notification</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-lg-4">
+                                                        <div class="account-info">
+                                                            <p><b>The notification must be sent in case</b></p>
+                                                            <ol>
+                                                                <li>With non-standard payment method - the lack of automatic crediting to the balance</li>
+                                                                <li>When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.</li>
+                                                                <li>If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)</li>
+                                                                <li>With non-standard payment method - the lack of automatic crediting to the balance</li>
+                                                                <li>When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.</li>
+                                                                <li>If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)</li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="div2 d-none d-xxxl-block">
@@ -290,11 +334,12 @@
         <script src="./js/libs/selectric/jquery.selectric.js"></script>
         <script src="./js/libs/datepicker/datepicker.min.js"></script>
         <script src="./js/libs/datepicker/i18n/datepicker.en.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/common.js"></script>
         <script>
             $(document).on('ready', function() {
               $('.navigation .active').removeClass('active');
-              $('.navigation[aria-label="Main"] li:nth-child(7)').addClass('active');
+              $('.navigation[aria-label="Main"] li:nth-child(4)').addClass('active');
             });
         </script>
     </body>

@@ -163,6 +163,12 @@ ul li {
 ol li {
   list-style-type: decimal;
 }
+ol, ul {
+  padding-left: 20px;
+  li {
+    margin-bottom: 10px;
+  }
+}
 
 /* bg */
 .bg {
@@ -237,6 +243,9 @@ ol li {
   }
   &.--dark-gray {
     color: $color-dark-gray !important;
+  }
+  &.--primary {
+    color: $primary-color !important;
   }
 }
 
