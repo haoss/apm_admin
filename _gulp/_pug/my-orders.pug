@@ -1,0 +1,285 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'My Orders' //активный пункт меню, список в header.jade
+  -var pageTitle = 'My Orders' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 My Orders
+                // Balance
+                .balance
+                  .row
+                    .col-md-6
+                      .balance__block
+                        .balance__total
+                          .div1 Balance
+                          .div2 199
+                            small $
+                        .balance__table
+                          table()
+                            tbody
+                              tr
+                                td.div1 Reserved amount of air orders
+                                td.div2 780
+                                  small $
+                              tr
+                                td.div1 In work
+                                td.div2 22 360
+                                  small $
+                              tr
+                                td.div1 Pay before shipment
+                                td.div2 645
+                                  small $
+                              tr
+                                td.div1 Waiting for payment
+                                td.div2 844
+                                  small $
+                              tr
+                                td.div1 Maximum amount of order
+                                td.div2 540
+                                  small $
+                    .col-md-6
+                      .balance__block
+                        .balance__table
+                          table()
+                            tbody
+                              tr
+                                td.div1 Ready to send on sum
+                                td.div2 8765
+                                  small $
+                              tr
+                                td.div1 Credit limit
+                                td.div2 546
+                                  small $
+                              tr
+                                td.div1 Purchased
+                                td.div2 4645
+                                  small $
+                              tr
+                                td.div1 In a warehouse in the UAE
+                                td.div2 323
+                                  small $
+                              tr
+                                td.div1 Packing
+                                td.div2 488
+                                  small $
+                              tr
+                                td.div1 Transit Dubai
+                                td.div2 3340
+                                  small $
+                              tr
+                                td.div1 Reserved Shipping Amount by Sea
+                                td.div2 542
+                                  small $
+                // Form
+                .form
+                  form(action="#!" autocomplete="off")
+                    fieldset.white-block.--form
+                      .row
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'date-from',
+                                placeholder: 'Date from',
+                                required: false,
+                                class: 'datepicker-here',
+                                readonly: true
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'date-to',
+                                placeholder: 'Date to',
+                                required: false,
+                                class: 'datepicker-here',
+                                readonly: true
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            button(type="submit").btn.--block 1С calculations
+                
+                ul.nav.nav-tab(role='tablist')
+                  li.nav-tab__item.first(role='presentation')
+                    a.nav-tab__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true')
+                      span.nowrap Orders
+                  li.nav-tab__item(role='presentation')
+                    a.nav-tab__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false')
+                      span.nowrap Products
+                .tab-content
+                  .tab-pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+                    // White block
+                    .white-block
+                      .white-block__table
+                        table(width="100%" border="0")
+                          thead
+                            tr
+                              th.th1 № orders
+                              th.th2 Status
+                              th.th3 Comment
+                              th.th4 Amount
+                              th.th5 Weight
+                              th.th5 Date
+                              th.th6 &nbsp;
+                          tbody
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="№ orders")
+                                b 354654
+                              td.td2(data-label="Status") Waiting for payment
+                              td.td3(data-label="Comment") Toyota steering column and brake discs for Outlander
+                              td.td4(data-label="Amount") 
+                                b 235.54 
+                                | &nbsp;$
+                              td.td5(data-label="Weight") 9 453 kg
+                              td.td6(data-label="Date") 30.01.2021
+                              td.td7
+                                a(href="#!") Download
+                      .account-pagination
+                        +pagination()
+                          +pagination-item('1', '#!')
+                          +pagination-item('2', '#!')
+                          +pagination-item('...')
+                          +pagination-item('50', '#!', true)
+                          +pagination-item('...')
+                          +pagination-item('98', '#!')
+                          +pagination-item('99', '#!')
+                        .div2
+                          a(href="#!").btn.--border.--sm Download balance
+                  .tab-pane#tab2(role='tabpanel' aria-labelledby='tab2-tab')
+                    // White block
+                    .white-block.--form
+                      form(action="#!" autocomplete="off").form
+                        .row
+                          .col-12.col-md-6.col-lg-4
+                            .form-group
+                              select.selectric
+                                option(value="" selected disabled) Type of payment
+                                option(value="") Type 1
+                                option(value="") Type 2
+                                option(value="") Type 3
+                                option(value="") Type 4
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: false,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'date-from-2',
+                                  placeholder: 'Date from',
+                                  required: false,
+                                  class: 'datepicker-here',
+                                  readonly: true
+                                }
+                              })
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: false,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'payer',
+                                  placeholder: 'Payer',
+                                  required: false
+                                }
+                              })
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: false,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'amount',
+                                  placeholder: 'Amount',
+                                  required: false
+                                }
+                              })
+                          .col-12.col-md-6.col-lg-4
+                            .form-group
+                              +field-text({
+                                title: '',
+                                hasJs: false,
+                                isTextarea: true,
+                                hasError: false,
+                                helpText: '',
+                                mods: '',
+                                val: '',
+                                attrs: {
+                                  name: 'comment',
+                                  placeholder: 'Comment',
+                                  required: false
+                                }
+                              })
+                            .form-group
+                              button(type="submit").btn.--block Send notification
+                          .col-12.col-lg-4
+                            .account-info
+                              p
+                                b The notification must be sent in case
+                              ol
+                                li With non-standard payment method - the lack of automatic crediting to the balance
+                                li When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.
+                                li If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)
+                                li With non-standard payment method - the lack of automatic crediting to the balance
+                                li When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.
+                                li If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)
+
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation[aria-label="Main"] li:nth-child(4)').addClass('active');
+      });
+

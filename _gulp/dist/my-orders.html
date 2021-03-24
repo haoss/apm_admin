@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Account balance - APMG</title>
+        <title>My Orders - APMG</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -104,7 +104,7 @@
                         <div class="content__row">
                             <div class="div1">
                                 <div class="content__head">
-                                    <h1>Account balance</h1>
+                                    <h1>My Orders</h1>
                                 </div>
                                 <!-- Balance-->
                                 <div class="balance">
@@ -212,8 +212,8 @@
                                     </form>
                                 </div>
                                 <ul class="nav nav-tab" role="tablist">
-                                    <li class="nav-tab__item first" role="presentation"><a class="nav-tab__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true"><span class="nowrap">Payment history</span></a></li>
-                                    <li class="nav-tab__item" role="presentation"><a class="nav-tab__link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><span class="nowrap">Send notification</span></a></li>
+                                    <li class="nav-tab__item first" role="presentation"><a class="nav-tab__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true"><span class="nowrap">Orders</span></a></li>
+                                    <li class="nav-tab__item" role="presentation"><a class="nav-tab__link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><span class="nowrap">Products</span></a></li>
                                 </ul>
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
@@ -224,28 +224,22 @@
                                                     <thead>
                                                         <tr>
                                                             <th class="th1">№ orders</th>
-                                                            <th class="th2">Date</th>
-                                                            <th class="th3">Payment information</th>
-                                                            <th class="th4">Debit</th>
-                                                            <th class="th5">Credit</th>
+                                                            <th class="th2">Status</th>
+                                                            <th class="th3">Comment</th>
+                                                            <th class="th4">Amount</th>
+                                                            <th class="th5">Weight</th>
+                                                            <th class="th5">Date</th>
                                                             <th class="th6">&nbsp;</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <td class="td1 --fs15 color --primary" data-label="№ orders"><b>354654</b></td>
-                                                            <td class="td2 --fs15 color --primary" data-label="Date">30.01.2021</td>
-                                                            <td class="td3" data-label="Description">Toyota steering column and brake discs for Outlander</td>
-                                                            <td class="td4 --fs15 color --primary" data-label="Debit"> <b>235.54 </b>&nbsp;$</td>
-                                                            <td class="td5 --fs15 color --primary" data-label="Credit"> <b>235.54 </b>&nbsp;$</td>
-                                                            <td class="td6"><a href="#!">Download</a></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="td1 --fs15 color --primary" data-label="№ orders"><b>654656</b></td>
-                                                            <td class="td2 --fs15 color --primary" data-label="Date">30.01.2021</td>
-                                                            <td class="td3" data-label="Description">Toyota steering column and brake discs for Outlander</td>
-                                                            <td class="td4 --fs15 color --primary" data-label="Debit"><b>235.54 </b>&nbsp;$</td>
-                                                            <td class="td5 --fs15 color --primary" data-label="Credit"><b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td2" data-label="Status">Waiting for payment</td>
+                                                            <td class="td3" data-label="Comment">Toyota steering column and brake discs for Outlander</td>
+                                                            <td class="td4" data-label="Amount"> <b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td5" data-label="Weight">9 453 kg</td>
+                                                            <td class="td6" data-label="Date">30.01.2021</td>
                                                             <td class="td7"><a href="#!">Download</a></td>
                                                         </tr>
                                                     </tbody>

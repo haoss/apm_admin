@@ -793,4 +793,13 @@
       overflow: hidden;
     }
   }
+  @include media-breakpoint-up(xl) {
+    &+ label {
+      transition: all 0.35s;
+      &:hover {
+        color: $color-white;
+        background: $color-blue;
+      }
+    }
+  }
 }
