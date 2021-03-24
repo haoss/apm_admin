@@ -43,6 +43,26 @@ button {
   &.--settings {
     max-width: 383px;
   }
+  &.--cancel {
+    width: 50px;
+    font-size: 0;
+    background: transparent;
+    color: $color-red;
+    min-width: inherit;
+    border-color: $color-red;
+    box-shadow: none;
+    padding: 0;
+    &::before {
+      content: '\e906';
+      font-family: $font-icomoon;
+      font-size: 14px;
+    }
+    &:hover {
+      background: $color-red;
+      border-color: $color-red;
+      color: $color-white;
+    }
+  }
   @include media-breakpoint-up(xl) {
     &:hover {
       background: rgba($color-blue,.7);
@@ -88,6 +108,21 @@ a.btn {
     transition: all 0.35s;
     &:hover {
       background: $color-blue;
+    }
+  }
+}
+.btns-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .btn.--cancel {
+    margin-top: 30px;
+    flex-shrink: 0;
+  }
+  @include media-breakpoint-up(xs375) {
+    flex-direction: row;
+    .btn.--cancel {
+      margin: 0 0 0 30px;
     }
   }
 }

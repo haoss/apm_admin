@@ -106,83 +106,6 @@
                                 <div class="content__head">
                                     <h1>My Orders</h1>
                                 </div>
-                                <!-- Balance-->
-                                <div class="balance">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="balance__block">
-                                                <div class="balance__total">
-                                                    <div class="div1">Balance</div>
-                                                    <div class="div2">199<small>$</small></div>
-                                                </div>
-                                                <div class="balance__table">
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="div1">Reserved amount of air orders</td>
-                                                                <td class="div2">780<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">In work</td>
-                                                                <td class="div2">22 360<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Pay before shipment</td>
-                                                                <td class="div2">645<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Waiting for payment</td>
-                                                                <td class="div2">844<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Maximum amount of order</td>
-                                                                <td class="div2">540<small>$</small></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="balance__block">
-                                                <div class="balance__table">
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="div1">Ready to send on sum</td>
-                                                                <td class="div2">8765<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Credit limit</td>
-                                                                <td class="div2">546<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Purchased</td>
-                                                                <td class="div2">4645<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">In a warehouse in the UAE</td>
-                                                                <td class="div2">323<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Packing</td>
-                                                                <td class="div2">488<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Transit Dubai</td>
-                                                                <td class="div2">3340<small>$</small></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="div1">Reserved Shipping Amount by Sea</td>
-                                                                <td class="div2">542<small>$</small></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- Form-->
                                 <div class="form">
                                     <form action="#!" autocomplete="off">
@@ -191,22 +114,54 @@
                                                 <div class="col-12 col-md-6 col-lg-4">
                                                     <div class="form-group">
                                                             <label class="field-text"><span class="field-text__input-wrap">
-                                                                    <input class="field-text__input datepicker-here" type="text" value="" name="date-from" placeholder="Date from" readonly></span>
+                                                                    <input class="field-text__input" type="text" value="" name="part-number" placeholder="Enter the part number"></span>
                                                             </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-6 col-lg-4">
                                                     <div class="form-group">
                                                             <label class="field-text"><span class="field-text__input-wrap">
-                                                                    <input class="field-text__input datepicker-here" type="text" value="" name="date-to" placeholder="Date to" readonly></span>
+                                                                    <input class="field-text__input" type="text" value="" name="search-reference" placeholder="Search by reference"></span>
                                                             </label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-6 col-lg-4">
                                                     <div class="form-group">
-                                                        <button class="btn --block" type="submit">1С calculations</button>
+                                                            <label class="field-text"><span class="field-text__input-wrap">
+                                                                    <input class="field-text__input" type="text" value="" name="Search-order-number" placeholder="Search by order number"></span>
+                                                            </label>
                                                     </div>
                                                 </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <div class="form-group">
+                                                        <select class="selectric">
+                                                            <option value="" selected disabled> Product status</option>
+                                                            <option value="">Waiting</option>
+                                                            <option value="">Payment</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <div class="form-group">
+                                                        <select class="selectric">
+                                                            <option value="" selected disabled>Choose a warehouse</option>
+                                                            <option value="">1</option>
+                                                            <option value="">2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6 col-lg-4">
+                                                    <div class="form-group">
+                                                        <div class="btns-block">
+                                                            <button class="btn --block" type="submit">Search</button>
+                                                            <button class="btn --cancel" type="button">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="export-exel">
+                                                <div class="div1">Export the found results to a separate file Excel</div>
+                                                <div class="div2"><a class="btn --border --sm" href="#!">Upload to EXCEL</a></div>
                                             </div>
                                         </fieldset>
                                     </form>
@@ -235,11 +190,29 @@
                                                     <tbody>
                                                         <tr>
                                                             <td class="td1 --fs15 color --primary" data-label="№ orders"><b>354654</b></td>
-                                                            <td class="td2" data-label="Status">Waiting for payment</td>
+                                                            <td class="td2" data-label="Status"> <span class="status">Waiting for payment</span></td>
                                                             <td class="td3" data-label="Comment">Toyota steering column and brake discs for Outlander</td>
-                                                            <td class="td4" data-label="Amount"> <b>235.54 </b>&nbsp;$</td>
-                                                            <td class="td5" data-label="Weight">9 453 kg</td>
-                                                            <td class="td6" data-label="Date">30.01.2021</td>
+                                                            <td class="td4 --fs15 color --primary" data-label="Amount"> <b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td5 --fs15 color --primary" data-label="Weight">9 453 kg</td>
+                                                            <td class="td6 --fs15 color --primary" data-label="Date">30.01.2021</td>
+                                                            <td class="td7"><a href="#!">Download</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td1 --fs15 color --primary" data-label="№ orders"><b>354654</b></td>
+                                                            <td class="td2" data-label="Status"> <span class="status --payment">Payment confirmed</span></td>
+                                                            <td class="td3" data-label="Comment">Toyota steering column and brake discs for Outlander</td>
+                                                            <td class="td4 --fs15 color --primary" data-label="Amount"> <b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td5 --fs15 color --primary" data-label="Weight">9 453 kg</td>
+                                                            <td class="td6 --fs15 color --primary" data-label="Date">30.01.2021</td>
+                                                            <td class="td7"><a href="#!">Download</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td1 --fs15 color --primary" data-label="№ orders"><b>354654</b></td>
+                                                            <td class="td2" data-label="Status"> <span class="status">Waiting for payment</span></td>
+                                                            <td class="td3" data-label="Comment">Toyota steering column and brake discs for Outlander</td>
+                                                            <td class="td4 --fs15 color --primary nowrap" data-label="Amount"> <b>235.54 </b>&nbsp;$</td>
+                                                            <td class="td5 --fs15 color --primary nowrap" data-label="Weight">9 453 kg</td>
+                                                            <td class="td6 --fs15 color --primary" data-label="Date">30.01.2021</td>
                                                             <td class="td7"><a href="#!">Download</a></td>
                                                         </tr>
                                                     </tbody>
@@ -266,59 +239,7 @@
                                     <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                                         <!-- White block-->
                                         <div class="white-block --form">
-                                            <form class="form" action="#!" autocomplete="off">
-                                                <div class="row">
-                                                    <div class="col-12 col-md-6 col-lg-4">
-                                                        <div class="form-group">
-                                                            <select class="selectric">
-                                                                <option value="" selected disabled>Type of payment</option>
-                                                                <option value="">Type 1</option>
-                                                                <option value="">Type 2</option>
-                                                                <option value="">Type 3</option>
-                                                                <option value="">Type 4</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                                <label class="field-text"><span class="field-text__input-wrap">
-                                                                        <input class="field-text__input datepicker-here" type="text" value="" name="date-from-2" placeholder="Date from" readonly></span>
-                                                                </label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                                <label class="field-text"><span class="field-text__input-wrap">
-                                                                        <input class="field-text__input" type="text" value="" name="payer" placeholder="Payer"></span>
-                                                                </label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                                <label class="field-text"><span class="field-text__input-wrap">
-                                                                        <input class="field-text__input" type="text" value="" name="amount" placeholder="Amount"></span>
-                                                                </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-md-6 col-lg-4">
-                                                        <div class="form-group">
-                                                                <label class="field-text"><span class="field-text__input-wrap">
-                                                                        <textarea class="field-text__input" name="comment" placeholder="Comment"></textarea></span>
-                                                                </label>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <button class="btn --block" type="submit">Send notification</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 col-lg-4">
-                                                        <div class="account-info">
-                                                            <p><b>The notification must be sent in case</b></p>
-                                                            <ol>
-                                                                <li>With non-standard payment method - the lack of automatic crediting to the balance</li>
-                                                                <li>When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.</li>
-                                                                <li>If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)</li>
-                                                                <li>With non-standard payment method - the lack of automatic crediting to the balance</li>
-                                                                <li>When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.</li>
-                                                                <li>If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)</li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                            <p>Information</p>
                                         </div>
                                     </div>
                                 </div>

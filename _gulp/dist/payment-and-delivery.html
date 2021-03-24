@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Payment and delivery - APMG</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta content="notranslate" name="google">
+        <link rel="stylesheet" href="./js/libs/fancybox/jquery.fancybox.css">
+        <link rel="stylesheet" href="./css/style.min.css?v0">
+        <link rel="stylesheet" href="./css/add.css?v0">
+    </head>
+    <body>
+        <div class="base">
+            <!-- Preloader-->
+            <div class="exel j-btn-target" id="exel">
+                <button class="btn-close j-btn" type="button" data-id="exel"></button>
+                <div class="exel__wrapper">
+                    <div class="exel__wrapper-body">
+                        <form action="#!" autocomplete="off"> 
+                            <div class="form-group">
+                                <select class="selectric">
+                                    <option value="" selected>Delivery period not more than days 1</option>
+                                    <option value="">Delivery period not more than days 2</option>
+                                    <option value="">Delivery 32</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="selectric">
+                                    <option value="" selected>Store</option>
+                                    <option value="">Store 2</option>
+                                    <option value="">Store 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group --mb0">
+                                <input class="inputfile inputfile-1" id="file-1" type="file" name="file-1[]" data-multiple-caption="{count} files selected" multiple>
+                                <label for="file-1"><span>Attach file</span></label>
+                            </div>
+                            <p class="--fs11 color --dark-gray">You can attach a * .xls or * .xlsx file for searching</p>
+                            <p class="--fs12 color --dark-gray">Columns should be called <br><b>Part Number, Brand, Quantity, Store, Price</b></p>
+                            <div class="form-group">
+                                    <label class="field-checkbox">
+                                        <input class="field-checkbox__input" type="checkbox" name="checkbox-exel-1" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Display goods with a minimum price</span>
+                                    </label>
+                            </div>
+                            <div class="form-group">
+                                    <label class="field-checkbox">
+                                        <input class="field-checkbox__input" type="checkbox" name="checkbox-exel-2" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Add to basket qwickly</span>
+                                    </label>
+                            </div>
+                            <button class="btn --block" type="submit">Search</button>
+                            <div class="clear30"></div><a class="btn --border --sm" href="#!">Download sample</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="base-shadow"></div>
+            <main class="content">
+                <aside class="aside">
+                    <div class="aside__wrapper">
+                        <div class="aside__wrapper-body">
+                            <header class="aside__header">
+                                <div class="logo"><img src="./images/logo.png" width="103" height="32" alt=""></div><a class="aside__cart" href="#!"><i class="icon-cart"></i><span class="span">23  </span></a>
+                            </header>
+                            <nav class="navigation" aria-label="Main">
+                                <ul>
+                                    <li class="active"><span> <span class="icon"><i class="icon-menu-1"></i></span><span class="span">Personal account</span></span></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-2"></i></span><span class="span">My Orders</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><span class="icon__round"></span><i class="icon-menu-3"></i></span><span class="span">My Messages</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-4"></i></span><span class="span">Account balance</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-5"></i></span><span class="span">My bonuses</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-6"></i></span><span class="span">Special offers</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-7"></i></span><span class="span">My Documents</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-8"></i></span><span class="span">Payment and delivery</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-9"></i></span><span class="span">News</span></a></li>
+                                </ul>
+                            </nav>
+                            <nav class="navigation --bottom">
+                                <ul>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-10"></i></span><span class="span">My Settings</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-11"></i></span><span class="span">Exit</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </aside>
+                <section>
+                    <div class="container">
+                        <!-- Header-->
+                        <header class="header">
+                            <div class="header__wrapper">
+                                <form class="search header__search" action="#!" autocomplete="off">
+                                    <input class="search__input" type="search" placeholder="Enter the part number">
+                                    <button class="search__btn" type="submit"></button>
+                                </form>
+                                <button class="btn header__btn1 j-btn" type="button" data-id="exel">Exel</button><a class="btn header__btn2" href="#!">Original catalogs</a><a class="btn header__btn3" href="#!">price-list APM.GROUP</a>
+                            </div>
+                        </header>
+                        <div class="content__row">
+                            <div class="div1">
+                                <div class="content__head">
+                                    <h1>Payment and delivery</h1>
+                                </div>
+                                <div class="white-block">
+                                    <!-- Payment-->
+                                    <div class="payment">
+                                        <div class="payment__info">
+                                            <div class="div1">
+                                                <h2>Decoding of warehouses:</h2>
+                                                <p> <b>DWC </b>– stock availability in DWC<br><b>DU </b>– stock availability in Jebel Ali</p>
+                                                <p>The term from the partner's warehouses is indicated in the format minimum / guaranteed to our warehouse in DWC</p>
+                                            </div>
+                                            <div class="div2"><img src="./tmp/payment-info-img.png" alt=""></div>
+                                        </div>
+                                        <div class="payment__row">
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-1.png" alt="" width="27" height="17"><b>DU1 </b>- Dubai partner: </div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-2.png" alt="" width="27" height="17"><b>JA1 </b>- Japan partner:</div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-3.png" alt="" width="27" height="17"><b>US6 </b>- US partner: </div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-1.png" alt="" width="27" height="17"><b>DU1 </b>- Dubai partner: </div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-2.png" alt="" width="27" height="17"><b>JA1 </b>- Japan partner:</div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-3.png" alt="" width="27" height="17"><b>US6 </b>- US partner: </div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-2.png" alt="" width="27" height="17"><b>JA1 </b>- Japan partner:</div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                            <div class="partner">
+                                                <div class="partner__head"><img src="./tmp/flag-img-3.png" alt="" width="27" height="17"><b>US6 </b>- US partner: </div>
+                                                <p> <b>minimum </b>delivery time is <b>1 day </b>/ <br><b>maximum </b>delivery time is <b>7 days</b>.</p>
+                                            </div>
+                                        </div>
+                                        <div class="payment__bottom">
+                                            <p>We ship worldwide, for clarification conditions of delivery of goods to your region, you can contact us by mail <a href="#!">info@apm.group</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div2 d-none d-xxxl-block">
+                                <div class="h2">Last Messages</div>
+                                <!-- Last messages-->
+                                <div class="last-messages"><a class="last-messages__block" href="#!"><span class="last-messages__block-author">Administrator</span>
+                                        <p>Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. </p></a><a class="last-messages__block" href="#!"><span class="last-messages__block-author">Administrator</span>
+                                        <p>Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. </p></a><a class="last-messages__block" href="#!"><span class="last-messages__block-author">Administrator</span>
+                                        <p>Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. </p></a><a class="last-messages__block" href="#!"><span class="last-messages__block-author">Administrator</span>
+                                        <p>Good day, status changing for warehouses DWC9, KW1, CHT1</p></a>
+                                    <div class="text-center"><a class="btn --sm --border" href="#!">See all messages</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <!-- Load Scripts-->
+        <!-- Footer js-->
+        <script src="./js/libs/jquery/jquery.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate.min.js"></script>
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="./js/libs/jquery.maskedinput.min.js"></script>
+        <script src="./js/libs/lazysizes.min.js"></script>
+        <script src="./js/libs/jquery.malihu.PageScroll2id.min.js"></script>
+        <script src="./js/libs/jquery.validate.min.js"></script>
+        <script src="./js/libs/fancybox/jquery.fancybox.min.js"></script>
+        <script src="./js/libs/selectric/jquery.selectric.js"></script>
+        <script src="./js/libs/datepicker/datepicker.min.js"></script>
+        <script src="./js/libs/datepicker/i18n/datepicker.en.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/common.js"></script>
+        <script>
+            $(document).on('ready', function() {
+              $('.navigation .active').removeClass('active');
+              $('.navigation[aria-label="Main"] li:nth-child(4)').addClass('active');
+            });
+        </script>
+    </body>
+</html>

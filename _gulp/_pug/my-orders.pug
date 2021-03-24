@@ -22,71 +22,7 @@ html(lang="ru")
               .div1
                 .content__head
                   h1 My Orders
-                // Balance
-                .balance
-                  .row
-                    .col-md-6
-                      .balance__block
-                        .balance__total
-                          .div1 Balance
-                          .div2 199
-                            small $
-                        .balance__table
-                          table()
-                            tbody
-                              tr
-                                td.div1 Reserved amount of air orders
-                                td.div2 780
-                                  small $
-                              tr
-                                td.div1 In work
-                                td.div2 22 360
-                                  small $
-                              tr
-                                td.div1 Pay before shipment
-                                td.div2 645
-                                  small $
-                              tr
-                                td.div1 Waiting for payment
-                                td.div2 844
-                                  small $
-                              tr
-                                td.div1 Maximum amount of order
-                                td.div2 540
-                                  small $
-                    .col-md-6
-                      .balance__block
-                        .balance__table
-                          table()
-                            tbody
-                              tr
-                                td.div1 Ready to send on sum
-                                td.div2 8765
-                                  small $
-                              tr
-                                td.div1 Credit limit
-                                td.div2 546
-                                  small $
-                              tr
-                                td.div1 Purchased
-                                td.div2 4645
-                                  small $
-                              tr
-                                td.div1 In a warehouse in the UAE
-                                td.div2 323
-                                  small $
-                              tr
-                                td.div1 Packing
-                                td.div2 488
-                                  small $
-                              tr
-                                td.div1 Transit Dubai
-                                td.div2 3340
-                                  small $
-                              tr
-                                td.div1 Reserved Shipping Amount by Sea
-                                td.div2 542
-                                  small $
+
                 // Form
                 .form
                   form(action="#!" autocomplete="off")
@@ -103,11 +39,9 @@ html(lang="ru")
                               mods: '',
                               val: '',
                               attrs: {
-                                name: 'date-from',
-                                placeholder: 'Date from',
-                                required: false,
-                                class: 'datepicker-here',
-                                readonly: true
+                                name: 'part-number',
+                                placeholder: 'Enter the part number',
+                                required: false
                               }
                             })
                         .col-12.col-md-6.col-lg-4
@@ -121,17 +55,49 @@ html(lang="ru")
                               mods: '',
                               val: '',
                               attrs: {
-                                name: 'date-to',
-                                placeholder: 'Date to',
-                                required: false,
-                                class: 'datepicker-here',
-                                readonly: true
+                                name: 'search-reference',
+                                placeholder: 'Search by reference',
+                                required: false
                               }
                             })
                         .col-12.col-md-6.col-lg-4
                           .form-group
-                            button(type="submit").btn.--block 1С calculations
-                
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'Search-order-number',
+                                placeholder: 'Search by order number',
+                                required: false
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            select.selectric
+                              option(value="" selected disabled)  Product status
+                              option(value="") Waiting
+                              option(value="") Payment
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            select.selectric
+                              option(value="" selected disabled) Choose a warehouse
+                              option(value="") 1
+                              option(value="") 2
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            .btns-block
+                              button(type="submit").btn.--block Search
+                              button(type="button").btn.--cancel Cancel
+                      .export-exel
+                        .div1 Export the found results to a separate file Excel
+                        .div2
+                          a(href="#!").btn.--border.--sm Upload to EXCEL
+
                 ul.nav.nav-tab(role='tablist')
                   li.nav-tab__item.first(role='presentation')
                     a.nav-tab__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true')
@@ -158,13 +124,40 @@ html(lang="ru")
                             tr
                               td.td1.--fs15.color.--primary(data-label="№ orders")
                                 b 354654
-                              td.td2(data-label="Status") Waiting for payment
+                              td.td2(data-label="Status") 
+                                span.status Waiting for payment
                               td.td3(data-label="Comment") Toyota steering column and brake discs for Outlander
-                              td.td4(data-label="Amount") 
+                              td.td4.--fs15.color.--primary(data-label="Amount") 
                                 b 235.54 
                                 | &nbsp;$
-                              td.td5(data-label="Weight") 9 453 kg
-                              td.td6(data-label="Date") 30.01.2021
+                              td.td5.--fs15.color.--primary(data-label="Weight") 9 453 kg
+                              td.td6.--fs15.color.--primary(data-label="Date") 30.01.2021
+                              td.td7
+                                a(href="#!") Download
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="№ orders")
+                                b 354654
+                              td.td2(data-label="Status") 
+                                span.status.--payment Payment confirmed
+                              td.td3(data-label="Comment") Toyota steering column and brake discs for Outlander
+                              td.td4.--fs15.color.--primary(data-label="Amount") 
+                                b 235.54 
+                                | &nbsp;$
+                              td.td5.--fs15.color.--primary(data-label="Weight") 9 453 kg
+                              td.td6.--fs15.color.--primary(data-label="Date") 30.01.2021
+                              td.td7
+                                a(href="#!") Download
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="№ orders")
+                                b 354654
+                              td.td2(data-label="Status") 
+                                span.status Waiting for payment
+                              td.td3(data-label="Comment") Toyota steering column and brake discs for Outlander
+                              td.td4.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 235.54 
+                                | &nbsp;$
+                              td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 9 453 kg
+                              td.td6.--fs15.color.--primary(data-label="Date") 30.01.2021
                               td.td7
                                 a(href="#!") Download
                       .account-pagination
@@ -181,92 +174,7 @@ html(lang="ru")
                   .tab-pane#tab2(role='tabpanel' aria-labelledby='tab2-tab')
                     // White block
                     .white-block.--form
-                      form(action="#!" autocomplete="off").form
-                        .row
-                          .col-12.col-md-6.col-lg-4
-                            .form-group
-                              select.selectric
-                                option(value="" selected disabled) Type of payment
-                                option(value="") Type 1
-                                option(value="") Type 2
-                                option(value="") Type 3
-                                option(value="") Type 4
-                            .form-group
-                              +field-text({
-                                title: '',
-                                hasJs: false,
-                                isTextarea: false,
-                                hasError: false,
-                                helpText: '',
-                                mods: '',
-                                val: '',
-                                attrs: {
-                                  name: 'date-from-2',
-                                  placeholder: 'Date from',
-                                  required: false,
-                                  class: 'datepicker-here',
-                                  readonly: true
-                                }
-                              })
-                            .form-group
-                              +field-text({
-                                title: '',
-                                hasJs: false,
-                                isTextarea: false,
-                                hasError: false,
-                                helpText: '',
-                                mods: '',
-                                val: '',
-                                attrs: {
-                                  name: 'payer',
-                                  placeholder: 'Payer',
-                                  required: false
-                                }
-                              })
-                            .form-group
-                              +field-text({
-                                title: '',
-                                hasJs: false,
-                                isTextarea: false,
-                                hasError: false,
-                                helpText: '',
-                                mods: '',
-                                val: '',
-                                attrs: {
-                                  name: 'amount',
-                                  placeholder: 'Amount',
-                                  required: false
-                                }
-                              })
-                          .col-12.col-md-6.col-lg-4
-                            .form-group
-                              +field-text({
-                                title: '',
-                                hasJs: false,
-                                isTextarea: true,
-                                hasError: false,
-                                helpText: '',
-                                mods: '',
-                                val: '',
-                                attrs: {
-                                  name: 'comment',
-                                  placeholder: 'Comment',
-                                  required: false
-                                }
-                              })
-                            .form-group
-                              button(type="submit").btn.--block Send notification
-                          .col-12.col-lg-4
-                            .account-info
-                              p
-                                b The notification must be sent in case
-                              ol
-                                li With non-standard payment method - the lack of automatic crediting to the balance
-                                li When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.
-                                li If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)
-                                li With non-standard payment method - the lack of automatic crediting to the balance
-                                li When solving problematic issues - for example. payment is made - no transfer. If you paid in cash (at the bank cash desk, self-service terminal) - you need a check scan or a photograph.
-                                li If you made an electronic transfer (online banking, privat 24) - you need a screenshot of the payment order with the bank note. (Screenshot - screenshot)
+                      p Information
 
               .div2.d-none.d-xxxl-block
                 include ./_include/_last-messages

@@ -76,9 +76,7 @@ $(document).on('ready', function(){
 });
 
 $(window).on('load', function() { });
-$(window).on('scroll', function() {
-  headerScroll();
-});
+$(window).on('scroll', function() { });
 $(window).on('resize', function() { });
 
 function phoneMask() {

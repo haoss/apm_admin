@@ -1,0 +1,180 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Payment and delivery' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Payment and delivery' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 Payment and delivery
+                .white-block
+
+                  // Payment
+                  .payment
+                    .payment__info
+                      .div1
+                        h2 Decoding of warehouses:
+                        p 
+                          b DWC 
+                          | – stock availability in DWC
+                          br
+                          b DU 
+                          | – stock availability in Jebel Ali
+                        p The term from the partner's warehouses is indicated in the format minimum / guaranteed to our warehouse in DWC
+                      .div2
+                        img(src="./tmp/payment-info-img.png", alt="")
+                    .payment__row
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-1.png", alt="" width="27" height="17")
+                          b DU1 
+                          | - Dubai partner: 
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-2.png", alt="" width="27" height="17")
+                          b JA1 
+                          | - Japan partner:
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-3.png", alt="" width="27" height="17")
+                          b US6 
+                          | - US partner: 
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-1.png", alt="" width="27" height="17")
+                          b DU1 
+                          | - Dubai partner: 
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-2.png", alt="" width="27" height="17")
+                          b JA1 
+                          | - Japan partner:
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-3.png", alt="" width="27" height="17")
+                          b US6 
+                          | - US partner: 
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-2.png", alt="" width="27" height="17")
+                          b JA1 
+                          | - Japan partner:
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                      .partner
+                        .partner__head
+                          img(src="./tmp/flag-img-3.png", alt="" width="27" height="17")
+                          b US6 
+                          | - US partner: 
+                        p 
+                          b minimum 
+                          | delivery time is 
+                          b 1 day 
+                          | / 
+                          br 
+                          b maximum 
+                          | delivery time is 
+                          b 7 days
+                          | .
+                    .payment__bottom
+                      p We ship worldwide, for clarification conditions of delivery of goods to your region, you can contact us by mail 
+                        a(href="#!") info@apm.group
+
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation[aria-label="Main"] li:nth-child(4)').addClass('active');
+      });
+
