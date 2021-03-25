@@ -1,0 +1,75 @@
+doctype
+
+html(lang="ru")
+
+  -var active = '1 part' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 part' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head.--one-part
+                  h1 76806SL0E11 - Motor Assy, Windshield nozzle
+                  .div2
+                    a(href="#!").btn.--border.--sm Search 76806SL0E11 with analogs
+                
+                // One part
+                .one-part
+                  .one-part__thumb
+                    .one-part__thumb-logo apm.group
+                    img(src="./images/one-part-img.png", width="130" height="129" alt="")
+                    .one-part__thumb-part
+                      b 76806SL0E11
+                      span Motor Assy, Windshield nozzle
+                  .one-part__content
+                    .one-part__content-title Main Information
+                    table(width="100%" border="0").one-part__table
+                      tbody
+                        tr
+                          td.first Part number:
+                          td 76806SL0E11
+                        tr
+                          td.first Brand:
+                          td HONDA
+                        tr
+                          td.first Weight:
+                          td 0.085 kg
+                        tr
+                          td.first Minimum order quantity:
+                          td 10
+                    .one-part__price
+                      .div1
+                        b 13.80 
+                        | &nbsp;$
+                      button(type="button").btn.--block Buy
+                    h3
+                      b Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                    p Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation[aria-label="Main"] li:nth-child(4)').addClass('active');
+      });
+

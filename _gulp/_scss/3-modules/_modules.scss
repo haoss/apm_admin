@@ -17,6 +17,15 @@
       }
     }
   }
+  &__head {
+    &.--one-part {
+      margin-bottom: 20px;
+      .btn {
+        width: 100%;
+        max-width: 260px;
+      }
+    }
+  }
   @include media-breakpoint-up(xl) {
     padding-left: 295px;
   }
@@ -32,6 +41,19 @@
         }
         &.div1 {
           padding-top: 15px;
+        }
+      }
+    }
+    &__head {
+      &.--one-part {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+          flex-shrink: 0;
+        }
+        h1, .h1 {
+          margin-bottom: 0;
         }
       }
     }
@@ -933,5 +955,218 @@
   }
   @include media-breakpoint-up(xxxxl) {
     width: calc(25% - 20px);
+  }
+}
+
+.one-part {
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.02));
+  &__thumb {
+    border: 6px solid $color-white;
+    background: $color-white;
+    border-radius: 6px 6px 0 0;
+    background: $color-gray;
+    position: relative;
+    overflow: hidden;
+    height: 248px;
+    img {
+      position: absolute;
+      top: 25px;
+      left: 105px;
+    }
+    &-logo {
+      position: absolute;
+      line-height: 1;
+      top: 21px;
+      left: 24px;
+      font-size: 16px;
+      color: $color-blue;
+      &::before {
+        position: absolute;
+        content: "\e909";
+        color: $color-blue;
+        font-size: 24px;
+        right: -16px;
+        bottom: -16px;
+        font-family: $font-icomoon;
+      }
+    }
+    &-part {
+      position: absolute;
+      color: #828282;
+      font-size: 12px;
+      padding-left: 24px;
+      bottom: 23px;
+      b {
+        display: block;
+        line-height: 1;
+        font-weight: 900;
+        font-size: 20px;
+        letter-spacing: 0.2em;
+        margin-bottom: 4px;
+        color: $color-blue;
+      }
+    }
+  }
+  &__content {
+    background: $color-white;
+    border-radius: 0 0 6px 6px;
+    padding: 20px;
+    font-size: 14px;
+    &-title {
+      margin-bottom: 25px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__table {
+    margin-bottom: 35px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    tbody {
+      display: block;
+      tr {
+        display: block;
+        td {
+          display: block;
+          padding: 0;
+          padding-bottom: 5px;
+          &.first {
+            color: #828282;
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+        &:last-child {
+          td {
+            &:not([class="first"]) {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__price {
+    margin-bottom: 30px;
+    .div1 {
+      padding-bottom: 20px;
+      font-size: 30px;
+      b {
+        line-height: 1;
+        display: inline-block;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: flex-start;
+    &__thumb {
+      width: 395px;
+      height: 358px;
+      flex-shrink: 0;
+      border-width: 9px;
+      margin: 0;
+      img {
+        width: 186px;
+        height: 186px;
+        left: auto;
+        top: 35px;
+        right: 46px;
+      }
+      &-logo {
+        left: 34px;
+        top: 29px;
+      }
+      &-part {
+        bottom: 41px;
+        padding-left: 34px;
+        font-size: 16px;
+        b {
+          font-size: 24px;
+        }
+      }
+    }
+    &__content {
+      margin-left: -9px;
+      padding: 30px;
+    }
+    &__price {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      .div1 {
+        flex-grow: 1;
+        white-space: nowrap;
+        padding-bottom: 0;
+      }
+      .btn {
+        width: 260px;
+        flex-shrink: 0;
+      }
+    }
+    &__table {
+      display: table;
+      margin-bottom: 15px;
+      width: auto;
+      tbody {
+        display: table-row-group;
+        tr {
+          display: table-row;
+          td {
+            display: table-cell;
+            &.first {
+              width: 205px;
+              padding-right: 10px;
+            }
+          }
+          &:last-child {
+            td {
+              padding-bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    &__thumb {
+      width: 635px;
+      height: 575px;
+      border-width: 15px;
+      img {
+        width: 305px;
+        height: 305px;
+        top: 50px;
+        right: 70px;
+      }
+      &-logo {
+        left: 70px;
+        top: 70px;
+      }
+      &-part {
+        bottom: 70px;
+        padding-left: 70px;
+        font-size: 24px;
+        b {
+          font-size: 34px;
+        }
+      }
+    }
+    &__content {
+      margin-left: -16px;
+      padding: 40px;
+    }
+    &__table {
+      margin-bottom: 20px;
+    }
+    &__price {
+      max-width: 465px;
+    }
   }
 }
