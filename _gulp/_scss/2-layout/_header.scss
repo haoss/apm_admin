@@ -28,6 +28,9 @@
 }
 .search {
   position: relative;
+  &.--chat {
+    margin-bottom: 30px;
+  }
   &__input {
     background: $color-white;
     border: 1px solid $color-blue;
@@ -44,6 +47,11 @@
     white-space: nowrap;
     overflow: hidden;
     font-weight: 500;
+    .--chat & {
+      border-color: transparent;
+      box-shadow: none;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.03);
+    }
   }
   &__btn {
     position: absolute;

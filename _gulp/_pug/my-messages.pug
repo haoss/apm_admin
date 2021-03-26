@@ -1,0 +1,63 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'My Messages' //активный пункт меню, список в header.jade
+  -var pageTitle = 'My Messages' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 My Messages
+
+                // Chat
+                .chat
+                  .chat__row
+                    .div1
+                      form(action="#!" autocomplete="off").search.--chat
+                        input(type="search2" placeholder="Search chat").search__input
+                        button(type="submit").search__btn
+                      .chat__user
+                        .chat__user-time Last message 28 Feb
+                        .chat__user-wrapper
+                          .chat__user-thumb
+                            span 15
+                            img(src="./tmp/icon-user.png", width="70" height="70" alt="")
+                          .chat__user-content
+                            .chat__user-rank Administrator
+                            p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses
+                    .div2
+                      .chat__block
+                        .chat__block-wrapper
+                        .chat__form
+                          button(type="button").btn send a message
+
+
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation[aria-label="Main"] li:nth-child(4)').addClass('active');
+      });
+
