@@ -79,6 +79,12 @@
       }
     }
   }
+  @include media-breakpoint-up(xxxl) {
+    &.--chat {
+      width: 458px;
+      position: absolute;
+    }
+  }
   @include media-breakpoint-up(xxxxl) {
     &__input {
       padding-right: 90px;
