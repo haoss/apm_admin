@@ -828,6 +828,7 @@
 .status {
   white-space: nowrap;
   display: inline-block;
+  color: $primary-color;
   &::before {
     display: inline-block;
     content: '';
@@ -1421,6 +1422,178 @@
         margin-bottom: 4px;
         font-weight: bold;
         font-size: 16px;
+      }
+    }
+  }
+}
+.main-about {
+  &__row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  &__block {
+    margin-bottom: 20px;
+    background: #333333;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+    color: #828282;
+    font-size: 12px;
+    min-height: 140px;
+    padding: 40px 20px 40px 30px;
+    &.--two {
+      display: flex;
+      align-items: center;
+      div {
+        &:first-child {
+          flex-grow: 1;
+        }
+        &:last-child {
+          margin-left: 5px;
+          flex-shrink: 0;
+          color: $color-white;
+          font-size: 50px;
+          b {
+            font-weight: 400;
+            line-height: 1;
+          }
+        }
+      }
+    }
+    &.--three {
+      text-align: center;
+      color: $color-white;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      &::before, &::after {
+        content: '\e91e';
+        color: $color-white;
+        opacity: 0.1;
+        margin-right: 14px;
+        font-size: 80px;
+        font-family: $font-icomoon;
+      }
+      &::after {
+        margin-right: 0;
+        margin-left: 14px;
+        content: '\e91d';
+      }
+      div {
+        line-height: 30px;
+      }
+      b {
+        display: block;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .h1 {
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      color: $color-white;
+    }
+    .h2 {
+      color: $color-white;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      margin-bottom: 10px;
+      max-width: 125px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__row {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+      .div1 {
+        width: 100%;
+        padding: 0 10px;
+      }
+      .div2, .div3 {
+        width: 50%;
+        padding: 0 10px;
+      }
+    }
+    &__block {
+      min-height: inherit;
+      height: 140px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      &.--one {
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__row {
+      flex-wrap: nowrap;
+      .div2, .div3 {
+        width: auto;
+      }
+    }
+    &__block {
+      &.--three {
+        width: 175px;
+        &::before {
+          margin-right: -36px;
+        }
+        &::after {
+          margin-left: -36px;
+        }
+      }
+      &.--two {
+        div {
+          &:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+      .h2 {
+        max-width: inherit;
+        white-space: nowrap;
+      }
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &__block {
+      &.--three {
+        width: 295px;
+        &::before {
+          margin-right: 14px;
+        }
+        &::after {
+          margin-left: 14px;
+        }
+      }
+      &.--two {
+        width: 375px;
+      }
+      .h1 {
+        font-size: 30px;
+      }
+      .h2 {
+        font-size: 20px;
+      }
+    }
+    @include media-breakpoint-up(xxxxl) {
+      &__row {
+        margin: 0 -15px;
+        &>div {
+          padding: 0 15px !important;
+        }
+      }
+      &__block {
+        &.--two {
+          width: 455px;
+        }
       }
     }
   }

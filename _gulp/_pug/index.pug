@@ -20,7 +20,93 @@ html(lang="ru")
             include ./_include/_header
             .content__row
               .div1
-                p 1
+                // Main about
+                .main-about
+                  .main-about__row
+                    .div1
+                      .main-about__block.--one
+                        div
+                          .h1 Gomer Simpson
+                          p Auto Parts Sales Manager BestTru
+                    .div2
+                      .main-about__block.--two
+                        div
+                          .h2 Your own code
+                          p Clients code
+                        div
+                           b 175
+                    .div3
+                      .main-about__block.--three
+                        div Platinum
+                          b partner
+
+                // White block
+                h2 Last Orders
+                .white-block.no.--p-bottom
+                  .white-block__table.no.--border.--m-bottom
+                    table(width="100%" border="0")
+                      thead
+                        tr
+                          th.th1 № orders
+                          th.th2 Status
+                          th.th3 Short description
+                          th.th4 Amount
+                          th.th5 Weight
+                          th.th6 Paid
+                          th.th7 Date
+                      tbody
+                        tr
+                          td.td1.--fs15.color.--primary(data-label="№ orders")
+                            b 354654
+                          td.td2(data-label="Status") 
+                            span.status Waiting for payment
+                          td.td3(data-label="Description") Toyota steering column and brake discs for Outlander
+                          td.td4.--fs15.color.--primary(data-label="Amount") 
+                            b 235.54 
+                            | &nbsp;$
+                          td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 9 453 kg
+                          td.td6(data-label="Paid")
+                            span.status No paid
+                          td.td7.--fs15.color.--primary.nowrap(data-label="Date") 30.01.2021
+                        tr
+                          td.td1.--fs15.color.--primary(data-label="№ orders")
+                            b 354654
+                          td.td2(data-label="Status") 
+                            span.status Waiting for payment
+                          td.td3(data-label="Description") Toyota steering column and brake discs for Outlander
+                          td.td4.--fs15.color.--primary(data-label="Amount") 
+                            b 235.54 
+                            | &nbsp;$
+                          td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 9 453 kg
+                          td.td6(data-label="Paid")
+                            span.status No paid
+                          td.td7.--fs15.color.--primary.nowrap(data-label="Date") 30.01.2021
+                        tr
+                          td.td1.--fs15.color.--primary(data-label="№ orders")
+                            b 354654
+                          td.td2(data-label="Status") 
+                            span.status.--payment Payment confirmed
+                          td.td3(data-label="Description") Toyota steering column and brake discs for Outlander
+                          td.td4.--fs15.color.--primary(data-label="Amount") 
+                            b 235.54 
+                            | &nbsp;$
+                          td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 9 453 kg
+                          td.td6(data-label="Paid")
+                            span.status.--payment Paid up
+                          td.td7.--fs15.color.--primary.nowrap(data-label="Date") 30.01.2021
+                        tr
+                          td.td1.--fs15.color.--primary(data-label="№ orders")
+                            b 354654
+                          td.td2(data-label="Status") 
+                            span.status Waiting for payment
+                          td.td3(data-label="Description") Toyota steering column and brake discs for Outlander
+                          td.td4.--fs15.color.--primary.nowrap(data-label="Amount") 
+                            b 235.54 
+                            | &nbsp;$
+                          td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 9 453 kg
+                          td.td6(data-label="Paid")
+                            span.status No paid
+                          td.td7.--fs15.color.--primary(data-label="Date") 30.01.2021
               .div2.d-none.d-xxxl-block
                 .h2 Last Messages
                 // Last messages
@@ -40,7 +126,7 @@ html(lang="ru")
                   .text-center
                     a(href="#!").btn.--sm.--border See all messages
 
-          div(style="height: 1000px; background-color: #000")
+          //- div(style="height: 1000px; background-color: #000")
           //- include ./_include/_footer
 
     // Load Scripts
