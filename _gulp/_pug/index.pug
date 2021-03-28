@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
 
-  -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - APMG' //title страницы для генерации верстки
+  -var active = 'Main' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Main' + ' - APMG' //title страницы для генерации верстки
 
   include ./_include/_head
 
@@ -39,6 +39,35 @@ html(lang="ru")
                       .main-about__block.--three
                         div Platinum
                           b partner
+                
+                // Statistic
+                .statistic
+                  .row
+                    .col-md-6
+                      .statistic__block
+                        .statistic__block-title Statistics
+                        .statistic__table
+                          table(width="100%" border="0")
+                            tbody
+                              tr
+                                td.div1 Exchange Rates
+                                td.div2 199
+                                  small $
+                              tr
+                                td.div1 Your statistic
+                                td.div2 459
+                                  small $
+                              tr
+                                td.div1 Orders Amount
+                                td.div2 780
+                                  small $
+                              tr
+                                td.div1 Total weight
+                                td.div2 22 336
+                                  small $
+                    .col-md-6
+                      .statistic__block
+                        .statistic__block-title Statistics
 
                 // White block
                 h2 Last Orders
@@ -108,23 +137,7 @@ html(lang="ru")
                             span.status No paid
                           td.td7.--fs15.color.--primary(data-label="Date") 30.01.2021
               .div2.d-none.d-xxxl-block
-                .h2 Last Messages
-                // Last messages
-                .last-messages
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1, will be after 05.01.2021, Warehouses on inventory. 
-                  a(href="#!").last-messages__block
-                    span.last-messages__block-author Administrator
-                    p Good day, status changing for warehouses DWC9, KW1, CHT1
-                  .text-center
-                    a(href="#!").btn.--sm.--border See all messages
+                include ./_include/_last-messages
 
           //- div(style="height: 1000px; background-color: #000")
           //- include ./_include/_footer

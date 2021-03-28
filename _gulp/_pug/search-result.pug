@@ -1,0 +1,114 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Search result' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Search result' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 Search results
+                
+                // Search result found
+                .white-block
+                  .search-result__found Found 
+                    b 16 products 
+                    | matching your request - 
+                    b 76806SL0E11
+
+                // Recommend
+                .recommend
+                  .recommend__row
+                    .div1
+                      .recommend__block
+                        .recommend__block-title Recommended
+                        .recommend__block-number 76806SL0E11
+                          b MOTOR ASSY, WINDSHIELD NOZZLE
+                        .recommend__block-table
+                          table()
+                            tbody
+                              tr
+                                td In stock:
+                                td >10 
+                              tr
+                                td Delivery period: 
+                                td In stock
+                              tr
+                                td Brand
+                                td HONDA
+                        .recommend__block-price
+                          .div1
+                            b 13.80 
+                            | $
+                          .div2
+                            button(type="button").btn.--sm Buy
+                    .div2
+                      .recommend__block
+                        .recommend__block-title Recommended
+                        .recommend__block-number 76806SL0E11
+                          b MOTOR ASSY, WINDSHIELD NOZZLE
+                        .recommend__block-table
+                          table()
+                            tbody
+                              tr
+                                td In stock:
+                                td >10 
+                              tr
+                                td Delivery period: 
+                                td In stock
+                              tr
+                                td Brand
+                                td HONDA
+                        .recommend__block-price
+                          .div1
+                            b 13.80 
+                            | $
+                          .div2
+                            button(type="button").btn.--sm Buy
+                    .div3
+                      .recommend__block
+                        .recommend__block-title Recommended
+                        .recommend__block-number 76806SL0E11
+                          b MOTOR ASSY, WINDSHIELD NOZZLE
+                        .recommend__block-table
+                          table()
+                            tbody
+                              tr
+                                td In stock:
+                                td >10 
+                              tr
+                                td Delivery period: 
+                                td In stock
+                              tr
+                                td Brand
+                                td HONDA
+                        .recommend__block-price
+                          .div1
+                            b 13.80 
+                            | $
+                          .div2
+                            button(type="button").btn.--sm Buy
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+
