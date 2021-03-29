@@ -1,0 +1,164 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Cart' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Cart' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 Your Shopping Cart
+                // Form
+                .form
+                  form(action="#!" autocomplete="off")
+                    .h2
+                      b Placing an Order
+                    fieldset.white-block
+                      .h3
+                        b Enter your details
+                      .row
+                        .col-12.col-md-6.col-xxl-3
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'cart-full-name',
+                                placeholder: 'Full name',
+                                required: false
+                              }
+                            })
+                        .col-12.col-md-6.col-xxl-3
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'cart-city',
+                                placeholder: 'City',
+                                required: false
+                              }
+                            })
+                        .col-12.col-md-6.col-xxl-3
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'cart-address',
+                                placeholder: 'Address',
+                                required: false
+                              }
+                            })
+                        .col-12.col-md-6.col-xxl-3
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'cart-phone',
+                                placeholder: 'Phone',
+                                required: false
+                              }
+                            })
+                      .row
+                        .col-12.col-lg-6.col-xxl-4
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'cart-reference',
+                                placeholder: 'Reference',
+                                required: false
+                              }
+                            })
+                        .col-12.col-lg-6.col-xxl-8
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'cart-comment',
+                                placeholder: 'Comment',
+                                required: false
+                              }
+                            })
+                      .payment
+                        .payment__row
+                          .div1
+                            .h3
+                              b Payment method
+                            label.payment__label
+                              input(type="radio" name="payment" checked)
+                              .payment__label-text Payment 
+                                br
+                                | from balance
+                            label.payment__label
+                              input(type="radio" name="payment")
+                              .payment__label-text Visa /
+                                br
+                                | Mastercard
+                          .div2
+                            .h3
+                              b Delivery method
+                            label.payment__label
+                              input(type="radio" name="delivery" checked)
+                              .payment__label-text Pickup
+                            label.payment__label
+                              input(type="radio" name="delivery")
+                              .payment__label-text DHL
+                      .cart__info When ordering auto parts from a warehouse of foreign suppliers, there may be a delay for reasons beyond our control, by clicking the "Confirm" button, you confirm your consent to this condition.
+                      button(type="submit").btn Confirm
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

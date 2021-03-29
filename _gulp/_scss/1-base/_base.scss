@@ -88,7 +88,7 @@ em, i, .em, .i {
 }
 
 strong, b, .strong, .b {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 hr {
@@ -243,6 +243,15 @@ ol, ul {
   }
   &.--primary {
     color: $primary-color !important;
+  }
+  &.--red {
+    color: $color-red !important;
+  }
+  &.--blue {
+    color: $color-blue !important;
+  }
+  &.--green {
+    color: $color-green !important;
   }
 }
 

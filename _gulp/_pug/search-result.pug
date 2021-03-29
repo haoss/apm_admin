@@ -35,7 +35,9 @@ html(lang="ru")
                   .recommend__row
                     .div1
                       .recommend__block
-                        .recommend__block-title Recommended
+                        .recommend__block-title.color.--green
+                          i.icon-label-1
+                          | Recommended
                         .recommend__block-number 76806SL0E11
                           b MOTOR ASSY, WINDSHIELD NOZZLE
                         .recommend__block-table
@@ -43,13 +45,16 @@ html(lang="ru")
                             tbody
                               tr
                                 td In stock:
-                                td >10 
+                                td.color.--primary
+                                  b >10 
                               tr
                                 td Delivery period: 
-                                td In stock
+                                td.color.--primary
+                                  b In stock
                               tr
                                 td Brand
-                                td HONDA
+                                td.color.--primary
+                                  b HONDA
                         .recommend__block-price
                           .div1
                             b 13.80 
@@ -58,7 +63,9 @@ html(lang="ru")
                             button(type="button").btn.--sm Buy
                     .div2
                       .recommend__block
-                        .recommend__block-title Recommended
+                        .recommend__block-title.color.--red
+                          i.icon-label-2
+                          | Minimum price 
                         .recommend__block-number 76806SL0E11
                           b MOTOR ASSY, WINDSHIELD NOZZLE
                         .recommend__block-table
@@ -66,13 +73,16 @@ html(lang="ru")
                             tbody
                               tr
                                 td In stock:
-                                td >10 
+                                td.color.--primary
+                                  b >10 
                               tr
                                 td Delivery period: 
-                                td In stock
+                                td.color.--primary
+                                  b In stock
                               tr
                                 td Brand
-                                td HONDA
+                                td.color.--primary
+                                  b HONDA
                         .recommend__block-price
                           .div1
                             b 13.80 
@@ -81,7 +91,9 @@ html(lang="ru")
                             button(type="button").btn.--sm Buy
                     .div3
                       .recommend__block
-                        .recommend__block-title Recommended
+                        .recommend__block-title.color.--blue
+                          i.icon-label-3
+                          | Minimum term 
                         .recommend__block-number 76806SL0E11
                           b MOTOR ASSY, WINDSHIELD NOZZLE
                         .recommend__block-table
@@ -89,19 +101,163 @@ html(lang="ru")
                             tbody
                               tr
                                 td In stock:
-                                td >10 
+                                td.color.--primary
+                                  b >10 
                               tr
                                 td Delivery period: 
-                                td In stock
+                                td.color.--primary
+                                  b In stock
                               tr
                                 td Brand
-                                td HONDA
+                                td.color.--primary
+                                  b HONDA
                         .recommend__block-price
                           .div1
-                            b 13.80 
+                            b 99999.80 
                             | $
                           .div2
                             button(type="button").btn.--sm Buy
+              
+                .search-table__info Analogs (substitutes) for the requested code. (The information requires specification by the manufacturer's catalog)
+                ul.nav.nav-tab.search-table__nav(role='tablist')
+                  li.nav-tab__item.first(role='presentation')
+                    a.nav-tab__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true')
+                      span.nowrap Originals
+                  li.nav-tab__item(role='presentation')
+                    a.nav-tab__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false')
+                      span.nowrap Analogs
+                  li.nav-tab__info Analogs (substitutes) for the requested code. (The information requires specification by the manufacturer's catalog)
+                .tab-content
+                  .tab-pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+                    // White block
+                    .white-block
+                      .white-block__table.--search
+                        .search-table__sorting
+                          button(type="button").active Price
+                            i
+                          span or
+                          button(type="button") Term
+                            i
+                        table(width="100%" border="0")
+                          thead
+                            tr
+                              th.th1 Brand
+                              th.th2 Part Number
+                              th.th3 Description
+                              th.th4 Availability
+                              th.th5 Info
+                              th.th6 Weigth / Lolume
+                              th.th7
+                                button.active Term
+                                  i
+                              th.th8 Stock
+                              th.th9
+                                button.active.--up Price
+                                  i
+                              th.th10.text-center Qty
+                              th.th11 Amount
+                              th.th12 &nbsp;
+                          tbody
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td2.--fs15.color.--primary(data-label="Part Number") 76806SL0E11
+                              td.td3(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td4.--fs15.color.--primary(data-label="AV.")
+                                b >10
+                              td.td5(data-label="Info")
+                                a(href="#!").inline-block
+                                  i.icon-info.--fs15.color.--blue
+                              td.td6.--fs15.color.--primary.nowrap(data-label="WG./VL.") 0.085 / 0
+                              td.td7.--fs15.color.--primary(data-label="Term") 120/150
+                              td.td8.--fs15.color.--primary(data-label="Stock")
+                                b DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='5')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12.td-to-cart 
+                                button(type="button")
+                                  i.icon-cart
+                                  span Add cart
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td2.--fs15.color.--primary(data-label="Part Number") 76806SL0E11
+                              td.td3(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td4.--fs15.color.--primary(data-label="AV.")
+                                b >10
+                              td.td5(data-label="Info")
+                                a(href="#!") 
+                                  i.icon-info.--fs15.color.--blue
+                              td.td6.--fs15.color.--primary.nowrap(data-label="WG./VL.") 0.085 / 0
+                              td.td7.--fs15.color.--primary(data-label="Term") 120/150
+                              td.td8.--fs15.color.--primary(data-label="Stock")
+                                b DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='2')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12.td-to-cart 
+                                button(type="button")
+                                  i.icon-cart
+                                  span Add cart
+                            tr
+                              td.td1.--fs15.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td2.--fs15.color.--primary(data-label="Part Number") 76806SL0E11
+                              td.td3(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td4.--fs15.color.--primary(data-label="AV.")
+                                b >10
+                              td.td5(data-label="Info")
+                                a(href="#!") 
+                                  i.icon-info.--fs15.color.--blue
+                              td.td6.--fs15.color.--primary.nowrap(data-label="WG./VL.") 0.085 / 0
+                              td.td7.--fs15.color.--primary(data-label="Term") 120/150
+                              td.td8.--fs15.color.--primary(data-label="Stock")
+                                b DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='1')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12.td-to-cart 
+                                button(type="button")
+                                  i.icon-cart
+                                  span Add cart
+                      +pagination()
+                        +pagination-item('1', '#!')
+                        +pagination-item('2', '#!')
+                        +pagination-item('...')
+                        +pagination-item('50', '#!', true)
+                        +pagination-item('...')
+                        +pagination-item('98', '#!')
+                        +pagination-item('99', '#!')
+                  .tab-pane#tab2(role='tabpanel' aria-labelledby='tab2-tab')
+                    // White block
+                    .white-block
+                      p text
+              
               .div2.d-none.d-xxxl-block
                 include ./_include/_last-messages
 
