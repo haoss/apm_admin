@@ -129,29 +129,33 @@ html(lang="ru")
                               }
                             })
                       .payment
-                        .payment__row
+                        .payment__row2
                           .div1
                             .h3
                               b Payment method
-                            label.payment__label
-                              input(type="radio" name="payment" checked)
-                              .payment__label-text Payment 
-                                br
-                                | from balance
-                            label.payment__label
-                              input(type="radio" name="payment")
-                              .payment__label-text Visa /
-                                br
-                                | Mastercard
+                            .payment__labels
+                              label.payment__label
+                                input(type="radio" name="payment" checked)
+                                .payment__label-info *Insufficient funds on balance
+                                .payment__label-text Payment 
+                                  br
+                                  | from balance
+                              label.payment__label
+                                input(type="radio" name="payment")
+                                .payment__label-text Visa /
+                                  br
+                                  | Mastercard
                           .div2
                             .h3
                               b Delivery method
-                            label.payment__label
-                              input(type="radio" name="delivery" checked)
-                              .payment__label-text Pickup
-                            label.payment__label
-                              input(type="radio" name="delivery")
-                              .payment__label-text DHL
+                            .payment__labels
+                              label.payment__label
+                                input(type="radio" name="delivery" checked)
+                                .payment__label-text Pickup
+                              label.payment__label
+                                input(type="radio" name="delivery" disabled)
+                                .payment__label-info *temporarily unavailable
+                                .payment__label-text DHL
                       .cart__info When ordering auto parts from a warehouse of foreign suppliers, there may be a delay for reasons beyond our control, by clicking the "Confirm" button, you confirm your consent to this condition.
                       button(type="submit").btn Confirm
 

@@ -2083,7 +2083,7 @@
   }
 }
 .payment {
-  &__row {
+  &__row2 {
     border-top: 1px solid #F5F5FA;
     border-bottom: 1px solid #F5F5FA;
     padding: 20px 20px 10px 20px;
@@ -2119,6 +2119,17 @@
           border-color: $color-blue;
         }
       }
+      &:disabled {
+        &~.payment__label-text {
+          color: rgba($color-black,.3);
+        }
+        &~.payment__label-info {
+          background: $primary-color;
+          &::before {
+            border-left-color: $primary-color;
+          }
+        }
+      }
     }
     &-text {
       height: 90px;
@@ -2130,6 +2141,45 @@
       padding: 0 30px;
       overflow: hidden;
       font-style: 14px;
+    }
+    &-info {
+      position: absolute;
+      height: 20px;
+      line-height: 20px;
+      position: absolute;
+      border-radius: 25px 25px 25px 0;
+      font-size: 10px;
+      background: $color-red;
+      min-width: 150px;
+      top: -10px;
+      left: 0;
+      color: $color-white;
+      text-align: center;
+      padding: 0 10px;
+      &::before {
+        left: 0;
+        bottom: -7px;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid $color-red;
+        content: '';
+        width: 0;
+        height: 0;
+        padding: 0;
+        font-size: 0;
+        position: absolute;
+      }
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &__labels {
+      display: flex;
+      &>* {
+        width: 50%;
+        &:last-child {
+          margin-left: 20px;
+        } 
+      }
     }
   }
 }
