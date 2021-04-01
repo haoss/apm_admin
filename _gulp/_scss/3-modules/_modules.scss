@@ -434,7 +434,7 @@
           text-transform: uppercase;
           line-height: 20px;
         }
-        a {
+        a.link-download {
           text-decoration: none;
           color: #828282;
         }
@@ -497,6 +497,18 @@
     }
     &__table {
       &.--search {
+        overflow-x: auto;
+        table {
+          tbody {
+            tr {
+              td {
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+      &.--cart {
         overflow-x: auto;
         table {
           tbody {
@@ -601,6 +613,12 @@
                   }
                 }
               }
+              a {
+                &:hover {
+                  color: $color-blue;
+                  text-decoration: underline;
+                }
+              }
             }
             &:first-child {
               td {
@@ -664,6 +682,12 @@
             }
           }
         }
+      }
+      &.--search {
+        overflow-x: inherit;
+      }
+      &.--cart {
+        overflow-x: inherit;
       }
     }
   }
@@ -2008,7 +2032,7 @@
 }
 .form-count {
   width: 100px;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
   position: relative;
   height: 30px;
@@ -2066,6 +2090,8 @@
     }
   }
   @include media-breakpoint-up(lg) {
+    margin-left: auto;
+    margin-right: auto;
     button {
       transition: all 0.35s;
       &:hover {
@@ -2080,6 +2106,99 @@
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 14px;
+  }
+  &__btns {
+    display: flex;
+    button {
+      width: 16px;
+      height: 16px;
+      background: transparent;
+      i {
+        font-size: 16px;
+        transition: all 0.35s;
+        &.icon-comment {
+          color: $color-blue;
+        }
+        &.icon-close {
+          color: $color-red;
+        }
+      }
+      &+button {
+        margin-left: 20px;
+      }
+    }
+  }
+  &__delivery {
+    height: 33px;
+    width: 100px;
+    border-radius: 12px;
+    padding: 0;
+    margin: 0;
+    font-size: 33px;
+    position: relative;
+    &::before {
+      font-family: $font-icomoon;
+      content: '\e900';
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%) rotate(0);
+      z-index: 1;
+      font-size: 10px;
+      color: $color-blue;
+      transform-origin: 50%;
+      pointer-events: none;
+    }
+    li {
+      margin: 0;
+      list-style: none;
+      display: none;
+      &.active {
+        display: block;
+        order: 1;
+      }
+      a {
+        height: 33px;
+        line-height: 33px;
+        padding-left: 23px;
+        display: block;
+        text-decoration: none;
+        color: $color-blue;
+        overflow: hidden;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &:hover {
+      &::before {
+        transform: translateY(-50%) rotate(-180deg);
+      }
+      li {
+        display: block;
+        background: $color-gray;
+        order: 10;
+        &:first-child {
+          border-radius: 12px 12px 0 0;
+        }
+        &:last-child {
+          border-radius: 0 0 12px 12px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__btns {
+      button {
+        &:hover {
+          i {
+            &.icon-comment {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
   }
 }
 .payment {
@@ -2176,10 +2295,40 @@
       display: flex;
       &>* {
         width: 50%;
+        max-width: 180px;
         &:last-child {
           margin-left: 20px;
         } 
       }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__row2 {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      &>div {
+        width: 50%;
+        &.div1 {
+          padding-bottom: 0px;
+        }
+        &.div2 {
+          padding-top: 0;
+          padding-left: 30px;
+          margin-left: 30px;
+          &::before {
+            width: 1px;
+            left: 0;
+            right: auto;
+            bottom: -30px;
+            top: -30px;
+            height: auto;
+          }
+        }
+      }
+    }
+    &__label {
+      margin-bottom: 0;
     }
   }
 }

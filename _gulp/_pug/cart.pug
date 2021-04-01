@@ -25,6 +25,232 @@ html(lang="ru")
                 // Form
                 .form
                   form(action="#!" autocomplete="off")
+                    // White block
+                    fieldset.white-block
+                      .white-block__table.--cart
+                        table(width="100%" border="0")
+                          thead
+                            tr
+                              th.th1 
+                                +field-checkbox({
+                                  title: '',
+                                  isLink: false,
+                                  mods: '',
+                                  attrs: {
+                                    name: 'cart_check_all',
+                                    checked: false,
+                                  }
+                                })
+                              th.th2 Brand
+                              th.th3 Part number
+                              th.th4 Description
+                              th.th5.text-center
+                                button.active Delivery
+                                  i 
+                              th.th6 Weight/Volume
+                              th.th7 Term
+                              th.th8 Stock
+                              th.th9 Price
+                              th.th10.text-center Qty
+                              th.th11 Amount
+                              th.th12 &nbsp;
+                          tbody
+                            tr
+                              td.td1
+                                +field-checkbox({
+                                  title: '',
+                                  isLink: false,
+                                  mods: '',
+                                  attrs: {
+                                    name: 'cart_check_1',
+                                    checked: false,
+                                  }
+                                })
+                              td.td2.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td3.--fs15.color.--primary(data-label="Part number")
+                                b 76806SL0E11
+                              td.td4(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td5.color.--primary(data-label="Delivery")
+                                ul.cart__delivery.j-cart-delivery
+                                  li.active
+                                    a(href="#!")
+                                      i.icon-delivery-air
+                                  li 
+                                    a(href="#!")
+                                      i.icon-delivery-sea
+                              td.td6.color.--primary.nowrap(data-label="Brand") WG./VL./
+                              td.td7.color.--primary.nowrap(data-label="Term") 120/150
+                              td.td8.color.--primary.nowrap(data-label="Stock") DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='1')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12(width="1")
+                                .cart__btns
+                                  button(type="button" title="This div has a tooltip with HTML when you hover over it!").tooltip
+                                    i.icon-comment
+                                  button(type="button")
+                                    i.icon-close
+                            tr
+                              td.td1
+                                +field-checkbox({
+                                  title: '',
+                                  isLink: false,
+                                  mods: '',
+                                  attrs: {
+                                    name: 'cart_check_2',
+                                    checked: false,
+                                  }
+                                })
+                              td.td2.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td3.--fs15.color.--primary(data-label="Part number")
+                                b 76806SL0E11
+                              td.td4(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td5.color.--primary(data-label="Delivery")
+                                
+                              td.td6.color.--primary.nowrap(data-label="Brand") WG./VL./
+                              td.td7.color.--primary.nowrap(data-label="Term") 120/150
+                              td.td8.color.--primary.nowrap(data-label="Stock") DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='1')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12(width="1")
+                                .cart__btns
+                                  button(type="button")
+                                    i.icon-comment
+                                  button(type="button")
+                                    i.icon-close
+                            tr
+                              td.td1
+                                +field-checkbox({
+                                  title: '',
+                                  isLink: false,
+                                  mods: '',
+                                  attrs: {
+                                    name: 'cart_check_3',
+                                    checked: false,
+                                  }
+                                })
+                              td.td2.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td3.--fs15.color.--primary(data-label="Part number")
+                                b 76806SL0E11
+                              td.td4(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td5.color.--primary(data-label="Delivery")
+                                
+                              td.td6.color.--primary.nowrap(data-label="Brand") WG./VL./
+                              td.td7.color.--primary.nowrap(data-label="Term") 120/150
+                              td.td8.color.--primary.nowrap(data-label="Stock") DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='1')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12(width="1")
+                                .cart__btns
+                                  button(type="button")
+                                    i.icon-comment
+                                  button(type="button")
+                                    i.icon-close
+                            tr
+                              td.td1
+                                +field-checkbox({
+                                  title: '',
+                                  isLink: false,
+                                  mods: '',
+                                  attrs: {
+                                    name: 'cart_check_4',
+                                    checked: false,
+                                  }
+                                })
+                              td.td2.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td3.--fs15.color.--primary(data-label="Part number")
+                                b 76806SL0E11
+                              td.td4(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td5.color.--primary(data-label="Delivery")
+                                
+                              td.td6.color.--primary.nowrap(data-label="Brand") WG./VL./
+                              td.td7.color.--primary.nowrap(data-label="Term") 120/150
+                              td.td8.color.--primary.nowrap(data-label="Stock") DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='1')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12(width="1")
+                                .cart__btns
+                                  button(type="button")
+                                    i.icon-comment
+                                  button(type="button")
+                                    i.icon-close
+                            tr
+                              td.td1
+                                +field-checkbox({
+                                  title: '',
+                                  isLink: false,
+                                  mods: '',
+                                  attrs: {
+                                    name: 'cart_check_5',
+                                    checked: false,
+                                  }
+                                })
+                              td.td2.color.--primary(data-label="Brand")
+                                b Honda
+                              td.td3.--fs15.color.--primary(data-label="Part number")
+                                b 76806SL0E11
+                              td.td4(data-label="Description") MOTOR ASSY, WINDSHIELD NOZZLE
+                              td.td5.color.--primary(data-label="Delivery")
+                                
+                              td.td6.color.--primary.nowrap(data-label="Brand") WG./VL./
+                              td.td7.color.--primary.nowrap(data-label="Term") 120/150
+                              td.td8.color.--primary.nowrap(data-label="Stock") DS
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Price") 
+                                b 13.80 
+                                | $
+                              td.td10(data-label="Qty") 
+                                .form-count.j-count
+                                  button(type="button").btn-minus
+                                  button(type="button").btn-plus
+                                  input(type='text' value='1')
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Amount") 
+                                b 13.80 
+                                | $
+                              td.td12(width="1")
+                                .cart__btns
+                                  button(type="button")
+                                    i.icon-comment
+                                  button(type="button")
+                                    i.icon-close
                     .h2
                       b Placing an Order
                     fieldset.white-block
@@ -96,7 +322,7 @@ html(lang="ru")
                               }
                             })
                       .row
-                        .col-12.col-lg-6.col-xxl-4
+                        .col-12.col-lg-3.col-xxl-4
                           .form-group
                             +field-text({
                               title: '',
@@ -112,7 +338,7 @@ html(lang="ru")
                                 required: false
                               }
                             })
-                        .col-12.col-lg-6.col-xxl-8
+                        .col-12.col-lg-9.col-xxl-8
                           .form-group
                             +field-text({
                               title: '',
@@ -157,7 +383,7 @@ html(lang="ru")
                                 .payment__label-info *temporarily unavailable
                                 .payment__label-text DHL
                       .cart__info When ordering auto parts from a warehouse of foreign suppliers, there may be a delay for reasons beyond our control, by clicking the "Confirm" button, you confirm your consent to this condition.
-                      button(type="submit").btn Confirm
+                      button(type="submit").btn.cart-btn Confirm
 
           //- div(style="height: 1000px; background-color: #000")
           //- include ./_include/_footer

@@ -283,6 +283,9 @@ textarea.field-text__input {
   min-height: 16px;
   $this: &;
   cursor: pointer;
+  .--cart & {
+    padding-left: 0px;
+  }
   &__span-input {
     position: absolute;
     left: 0;
@@ -293,6 +296,9 @@ textarea.field-text__input {
     width: 16px;
     height: 16px;
     color: $color-gray;
+    .--cart th & {
+      color: $color-white;
+    }
     &::before {
       content: "\e907";
       font-family: $font-icomoon;
