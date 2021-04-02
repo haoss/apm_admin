@@ -474,6 +474,55 @@
         }
       }
     }
+    &.--cart {
+      table {
+        tbody {
+          tr {
+            td {
+              padding-bottom: 10px;
+              .selectric {
+                border-radius: 12px;
+                .label {
+                  line-height: 30px;
+                  height: 30px;
+                  margin: 0 20px 0 23px;
+                  font-size: 12px;
+                }
+                .button {
+                  height: 30px;
+                  width: 40px;
+                }
+                &-items {
+                  padding-bottom: 5px;
+                  border-radius: 0 0 12px 12px;
+                  li {
+                    height: 30px;
+                    line-height: 30px;
+                    min-height: auto;
+                    padding-left: 23px;
+                    font-size: 12px;
+                  }
+                }
+                &-open .selectric {
+                  border-radius: 12px 12px 0 0;
+                }
+                &-wrapper {
+                  width: 100px;
+                }
+              }
+              &.td1 {
+                &::before {
+                  display: none;
+                }
+              }
+              &.td12 {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .pagination {
     margin-left: -20px;
@@ -520,6 +569,38 @@
             tr {
               td {
                 vertical-align: middle;
+                padding-bottom: 10px;
+                .selectric {
+                  border-radius: 12px;
+                  margin: 0 auto;
+                  .label {
+                    line-height: 30px;
+                    height: 30px;
+                    margin: 0 20px 0 23px;
+                    font-size: 12px;
+                  }
+                  .button {
+                    height: 30px;
+                    width: 40px;
+                  }
+                  &-items {
+                    padding-bottom: 5px;
+                    border-radius: 0 0 12px 12px;
+                    li {
+                      height: 30px;
+                      line-height: 30px;
+                      min-height: auto;
+                      padding-left: 23px;
+                      font-size: 12px;
+                    }
+                  }
+                  &-open .selectric {
+                    border-radius: 12px 12px 0 0;
+                  }
+                }
+                &.td12 {
+                  width: 1px;
+                }
               }
             }
           }

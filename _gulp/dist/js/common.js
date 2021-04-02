@@ -46,11 +46,6 @@ $(document).on('ready', function(){
   });
 
   $('.selectric').selectric();
-  $('.selectric-delivery').selectric({
-    optionsItemBuilder: function(itemData, element, index) {
-      return element.val().length ? '<span class="icon-' + element.val() +  '"></span>' + itemData.text : itemData.text;
-    }
-  });
 
   $('.datepicker-here').datepicker({
     autoClose: true,
