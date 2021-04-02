@@ -45,15 +45,6 @@ $(document).on('ready', function(){
     }, 'xml');
   });
 
-  $('[data-fancybox]').fancybox({
-    protect: true,
-    backFocus: false
-  });
-
-  $("a[href*='#'].anchor").mPageScroll2id({
-    offset: '.header'
-  });
-
   $('.selectric').selectric();
   $('.selectric-delivery').selectric({
     optionsItemBuilder: function(itemData, element, index) {
