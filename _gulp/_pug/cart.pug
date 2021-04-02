@@ -259,14 +259,24 @@ html(lang="ru")
                         .div1
                           .cart__bottom-top
                             .div1
-                              p You can place an order for these prices in the current: 
+                              .cart__bottom-counter You can place an order for these prices in the current: 
                                 strong.--fs20 6 ds. 21 h. 21 min.
                             .div2
+                              .cart__bottom-info
+                                .div1 Pieces: 
+                                  b 99 pc
+                                .div2 Weight / volume: 
+                                  b 0.34 kg
+                                .div3 Total: 
+                                  span
+                                    b 68.14 
+                                    | $
                         .div2
                           .cart__bottom-bottom
-                            .div1
-                              a(href="#!").btn.--border Unload in excel 
-                            .div2
+                            a(href="#!").btn.--border.--block.cart-btn-excel Unload in excel 
+                            button(type="submit").btn.--block.cart-btn-checkout Checkout
+                            button(type="button").cart-btn-save
+                            button(type="button").cart-btn-close
                     .h2
                       b Placing an Order
                     fieldset.white-block

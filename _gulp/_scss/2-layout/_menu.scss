@@ -1,7 +1,7 @@
 /* menu */
 .navigation {
   width: 60px;
-  margin-bottom: 120px;
+  margin-bottom: 180px;
   ul {
     margin: 0;
     padding: 0;
@@ -32,6 +32,11 @@
         }
         .span {
           display: none;
+          .icon-arrow-down {
+            margin-left: 5px;
+            font-size: 8px;
+            vertical-align: middle;
+          }
         }
         .icon {
           width: 20px;
@@ -51,12 +56,20 @@
             top: -6px;
             z-index: 1;
           }
-        }
-        i {
-          position: absolute;
-          font-size: 20px;
-          left: 0;
-          top: 0;
+          i {
+            position: absolute;
+            font-size: 20px;
+            left: 0;
+            top: 0;
+          }
+          b {
+            position: absolute;
+            font-size: 14px;
+            left: 0;
+            top: 0;
+            color: $color-blue;
+            line-height: 20px;
+          }
         }
       }
       &.active {

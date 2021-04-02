@@ -11,7 +11,7 @@
         <meta name="format-detection" content="address=no">
         <meta name="format-detection" content="email=no">
         <meta content="notranslate" name="google">
-        <link rel="stylesheet" href="./css/style.min.css?v1">
+        <link rel="stylesheet" href="./css/style.min.css?v2">
         <link rel="stylesheet" href="./css/add.css?v0">
     </head>
     <body>
@@ -81,6 +81,7 @@
                             </nav>
                             <nav class="navigation --bottom">
                                 <ul>
+                                    <li><a href="#!"> <span class="icon"><b>EN</b></span><span class="span">English<i class="icon-arrow-down"></i></span></a></li>
                                     <li><a href="#!"> <span class="icon"><i class="icon-menu-10"></i></span><span class="span">My Settings</span></a></li>
                                     <li><a href="#!"> <span class="icon"><i class="icon-menu-11"></i></span><span class="span">Exit</span></a></li>
                                 </ul>
@@ -312,15 +313,22 @@
                                                 <div class="div1">
                                                     <div class="cart__bottom-top">
                                                         <div class="div1">
-                                                            <p>You can place an order for these prices in the current: <strong class="--fs20">6 ds. 21 h. 21 min.</strong></p>
+                                                            <div class="cart__bottom-counter">You can place an order for these prices in the current: <strong class="--fs20">6 ds. 21 h. 21 min.</strong></div>
                                                         </div>
-                                                        <div class="div2"></div>
+                                                        <div class="div2">
+                                                            <div class="cart__bottom-info">
+                                                                <div class="div1">Pieces: <b>99 pc</b></div>
+                                                                <div class="div2">Weight / volume: <b>0.34 kg</b></div>
+                                                                <div class="div3">Total: <span><b>68.14 </b>$</span></div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="div2">
-                                                    <div class="cart__bottom-bottom">
-                                                        <div class="div1"><a class="btn --border" href="#!">Unload in excel </a></div>
-                                                        <div class="div2"></div>
+                                                    <div class="cart__bottom-bottom"><a class="btn --border --block cart-btn-excel" href="#!">Unload in excel </a>
+                                                        <button class="btn --block cart-btn-checkout" type="submit">Checkout</button>
+                                                        <button class="cart-btn-save" type="button"></button>
+                                                        <button class="cart-btn-close" type="button"></button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -427,6 +435,7 @@
         <script src="./js/libs/selectric/jquery.selectric.js"></script>
         <script src="./js/libs/datepicker/datepicker.min.js"></script>
         <script src="./js/libs/datepicker/i18n/datepicker.en.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>
