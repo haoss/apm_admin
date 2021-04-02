@@ -395,6 +395,11 @@
   border-radius: 6px;
   padding: 30px 20px;
   margin-bottom: 30px;
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   .tab-pane & {
     border-radius: 0;
   }
@@ -2331,4 +2336,31 @@
       margin-bottom: 0;
     }
   }
+}
+.register {
+  &__row {
+    display: flex;
+    flex-direction: column;
+  }
+  &__promo, &__btn {
+    max-width: 383px;
+  }
+  @include media-breakpoint-up(xxxl) {
+    &__row {
+      flex-direction: row;
+      &>div {
+        &.div1 {
+          flex-grow: 1;
+        }
+        &.div2 {
+          flex-shrink: 0;
+          width: 679px;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+.captcha {
+  margin-bottom: 25px;
 }

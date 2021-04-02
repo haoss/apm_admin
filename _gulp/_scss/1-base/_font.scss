@@ -59,11 +59,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../font/icomoon/fonts/icomoon.eot?j752w3');
-  src:  url('../font/icomoon/fonts/icomoon.eot?j752w3#iefix') format('embedded-opentype'),
-    url('../font/icomoon/fonts/icomoon.ttf?j752w3') format('truetype'),
-    url('../font/icomoon/fonts/icomoon.woff?j752w3') format('woff'),
-    url('../font/icomoon/fonts/icomoon.svg?j752w3#icomoon') format('svg');
+  src:  url('../font/icomoon/fonts/icomoon.eot?fvye92');
+  src:  url('../font/icomoon/fonts/icomoon.eot?fvye92#iefix') format('embedded-opentype'),
+    url('../font/icomoon/fonts/icomoon.ttf?fvye92') format('truetype'),
+    url('../font/icomoon/fonts/icomoon.woff?fvye92') format('woff'),
+    url('../font/icomoon/fonts/icomoon.svg?fvye92#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -84,6 +84,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu-12:before {
+  content: "\e920";
+}
+.icon-menu-13:before {
+  content: "\e921";
+}
+.icon-menu-14:before {
+  content: "\e922";
+}
 .icon-info:before {
   content: "\e91f";
 }

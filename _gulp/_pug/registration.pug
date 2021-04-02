@@ -1,0 +1,283 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Registration' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Registration' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        aside.aside
+          .aside__wrapper
+            .aside__wrapper-body
+              header.aside__header
+                .logo
+                  img(src="./images/logo.png", width="103" height="32" alt="")
+              nav.navigation(aria-label="Main")
+                ul
+                  li.active
+                    span 
+                      span.icon
+                        i.icon-menu-12
+                      span.span Home page
+                  li
+                    a(href="#!") 
+                      span.icon
+                        i.icon-menu-13
+                      span.span About us
+                  li
+                    a(href="#!") 
+                      span.icon
+                        i.icon-menu-9
+                      span.span News
+                  li
+                    a(href="#!") 
+                      span.icon
+                        i.icon-menu-14
+                      span.span Contacts
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 Registration in online store
+                // Form
+                .form
+                  form(action="#!" autocomplete="off")
+                    .white-block.--fs14
+                      p To register in the online store, please complete this form. If you have any problems with registration, please email us at 
+                        a(href="mailto:") info@apm.group
+                    .register__row
+                      .div1
+                        .content__head
+                          .h1 Country
+                        fieldset.white-block.--form
+                          .row
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'country',
+                                    placeholder: 'Country',
+                                    required: false
+                                  }
+                                })
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'city',
+                                    placeholder: 'City',
+                                    required: false
+                                  }
+                                })
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'company-name',
+                                    placeholder: 'Company Name',
+                                    required: false
+                                  }
+                                })
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'shipping-address',
+                                    placeholder: 'Shipping address',
+                                    required: false
+                                  }
+                                })
+
+                        .content__head
+                          .h1 Name
+                        fieldset.white-block.--form
+                          .row
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'surname',
+                                    placeholder: 'Surname',
+                                    required: false
+                                  }
+                                })
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'name',
+                                    placeholder: 'Name',
+                                    required: false
+                                  }
+                                })
+
+                        .content__head
+                          .h1 Contacts
+                        fieldset.white-block.--form
+                          .row
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'phone',
+                                    placeholder: 'Phone',
+                                    required: false
+                                  }
+                                })
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'email',
+                                    placeholder: 'Email',
+                                    required: false
+                                  }
+                                })
+
+                        .content__head
+                          .h1 Password
+                        fieldset.white-block.--form
+                          .row
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'password',
+                                    placeholder: 'Password',
+                                    required: false
+                                  }
+                                })
+                            .col-12.col-md-6
+                              .form-group
+                                +field-text({
+                                  title: '',
+                                  hasJs: false,
+                                  isTextarea: false,
+                                  hasError: false,
+                                  helpText: '',
+                                  mods: '',
+                                  val: '',
+                                  attrs: {
+                                    name: 'password',
+                                    placeholder: 'Confirm password',
+                                    required: false
+                                  }
+                                })
+                      .div2
+                        .content__head
+                          .h1 &nbsp;
+                        fieldset.white-block.--form
+                          .captcha
+                            img(src="./tmp/captcha.png", alt="").img-fluid
+                          .form-group.register__promo
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'prome',
+                                placeholder: 'Promo code if available',
+                                required: false
+                              }
+                            })
+                          .form-group
+                            +field-checkbox({
+                              title: 'I authorize apm.group to receive, store and use my personal data: name, name, postal address, phone numbers, e-mail address in order to secure registration of contracts with trade organizations, alerts, payments (mutual settlements)',
+                              isLink: false,
+                              mods: '',
+                              attrs: {
+                                name: 'checkbox7',
+                                checked: true,
+                              }
+                            })
+                          .form-group
+                            button(type="submit").btn.register__btn Sign up online
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+      });
+
