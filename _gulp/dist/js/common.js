@@ -55,7 +55,8 @@ $(document).on('ready', function(){
 
   $('.tooltip').tooltipster({
     theme: 'default',
-    position: 'bottom'
+    position: 'bottom',
+    trigger: 'click'
   });
 
   phoneMask();
