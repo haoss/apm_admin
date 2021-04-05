@@ -2633,3 +2633,17 @@
     color: $color-white;
   }
 }
+
+.tooltipster-sidetip .tooltipster-box {
+  border: 0;
+  background: $primary-color;
+  .tooltipster-content {
+    font-size: 12px;
+  }
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
+  border-bottom-color: $primary-color;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+  border-bottom-color: $primary-color;
+}

@@ -53,6 +53,11 @@ $(document).on('ready', function(){
     dateFormat: 'mm.dd.yyyy'
   });
 
+  $('.tooltip').tooltipster({
+    theme: 'default',
+    position: 'bottom'
+  });
+
   phoneMask();
   jNavigation();
 
