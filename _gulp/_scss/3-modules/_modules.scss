@@ -2549,6 +2549,14 @@
       margin-bottom: 0;
     }
   }
+  @include media-breakpoint-up(xxxl) {
+    &__row2 {
+      margin-left: -30px;
+      margin-right: -30px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
 }
 .register {
   &__row {

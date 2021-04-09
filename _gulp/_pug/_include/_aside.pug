@@ -58,12 +58,20 @@ aside.aside
 
       nav.navigation.--bottom
         ul
+          //- li
+          //-   a(href="#!") 
+          //-     span.icon
+          //-       b EN
+          //-     span.span English
+          //-       i.icon-arrow-down
           li
-            a(href="#!") 
+            label(for="lang-select") 
               span.icon
                 b EN
-              span.span English
-                i.icon-arrow-down
+              select#lang-select
+                option(value="English") English
+                option(value="Russian") Russian
+                option(value="Ukrainian") Ukrainian
           li
             a(href="#!") 
               span.icon
