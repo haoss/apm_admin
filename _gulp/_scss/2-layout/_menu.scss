@@ -129,9 +129,9 @@
             font-weight: 500;
             left: -1px;
             cursor: pointer;
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 7' height='6' width='11'%3E%3Cpath fill='%23333' d='M8.82.394L5 4.214 1.18.394 0 1.573l5 5 5-5z'/%3E%3C/svg%3E");
-            background-position: right center;
-            background-repeat: no-repeat;
+            // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 7' height='6' width='11'%3E%3Cpath fill='%23333' d='M8.82.394L5 4.214 1.18.394 0 1.573l5 5 5-5z'/%3E%3C/svg%3E");
+            // background-position: right center;
+            // background-repeat: no-repeat;
             transition: color 0.35s;
             &:hover {
               color: $color-blue;

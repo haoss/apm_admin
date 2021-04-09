@@ -45,8 +45,12 @@ html(lang="ru")
                               th.th3 Part number
                               th.th4 Description
                               th.th5.text-center
-                                button.active Delivery
-                                  i 
+                                //- button.active Delivery
+                                //-   i 
+                                select.selectric
+                                  option(value="" selected disabled) Delivery
+                                  option(value="delivery-sea") Sea 
+                                  option(value="delivery-air") Air
                               th.th6 Weight/Volume
                               th.th7 Term
                               th.th8 Stock

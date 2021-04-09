@@ -12,7 +12,7 @@
         <meta name="format-detection" content="email=no">
         <meta content="notranslate" name="google">
         <link rel="stylesheet" href="./js/libs/tooltipster/css/tooltipster.bundle.css">
-        <link rel="stylesheet" href="./css/style.min.css?v4">
+        <link rel="stylesheet" href="./css/style.min.css?v6">
         <link rel="stylesheet" href="./css/add.css?v0">
     </head>
     <body>
@@ -133,7 +133,11 @@
                                                             <th class="th3">Part number</th>
                                                             <th class="th4">Description</th>
                                                             <th class="th5 text-center">
-                                                                <button class="active">Delivery<i> </i></button>
+                                                                <select class="selectric">
+                                                                    <option value="" selected disabled>Delivery</option>
+                                                                    <option value="delivery-sea">Sea </option>
+                                                                    <option value="delivery-air">Air</option>
+                                                                </select>
                                                             </th>
                                                             <th class="th6">Weight/Volume</th>
                                                             <th class="th7">Term</th>

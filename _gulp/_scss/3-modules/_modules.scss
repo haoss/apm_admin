@@ -668,6 +668,37 @@
                   }
                 }
               }
+              .selectric {
+                display: inline-block;
+                min-width: 100px;
+                vertical-align: middle;
+                .label {
+                  color: $color-blue;
+                  height: 30px;
+                  line-height: 30px;
+                  font-size: 10px;
+                  margin-left: 0;
+                  margin-right: 25px;
+                  display: block;
+                  vertical-align: middle;
+                }
+                .button {
+                  height: 30px;
+                  width: 25px;
+                  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 7' height='8' width='13'%3E%3Cpath fill='%2330c4f3' d='M8.82.394L5 4.214 1.18.394 0 1.573l5 5 5-5z'/%3E%3C/svg%3E");
+                }
+              }
+              .selectric-items {
+                padding-bottom: 0;
+                min-width: 145px;
+                border-radius: 0 0 12px 12px;
+                li {
+                  font-size: 10px;
+                  min-height: 30px;
+                  line-height: 30px;
+                  padding: 0;
+                }
+              }
             }
           }
         }
