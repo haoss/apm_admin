@@ -1688,6 +1688,14 @@
     }
   }
   @include media-breakpoint-up(xxxl) {
+    &__question {
+      &-btn {
+        transition: all 0.35s;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
     &__block {
       padding-left: 30px;
       padding-right: 30px;
