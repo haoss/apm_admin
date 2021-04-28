@@ -1499,24 +1499,31 @@
     box-shadow: 0px 2px 10px rgba($color-black, 0.02);
     border-radius: 6px;
     padding: 40px 20px;
+    &-wrapper {
+      @include clearfix;
+    }
   }
   &__form {
     display: block;
   }
   &__question {
     padding-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
+    position: relative;
+    float: left;
+    clear: both;
+    min-width: 170px;
     &.--answer {
       padding-left: 0;
       padding-right: 10px;
       text-align: right;
+      float: right;
     }
     &-block {
       background: #F9FAFC;
       border-radius: 10px 10px 10px 0px;
       position: relative;
       padding: 20px;
-      margin-bottom: 10px;
       font-size: 14px;
       display: inline-block;
       text-align: left;
@@ -1544,8 +1551,54 @@
       color: #828282;
       font-size: 12px;
       line-height: 1;
+      position: absolute;
+      margin-top: 10px;
       .--answer & {
         text-align: right;
+        right: 0;
+      }
+    }
+    &-btn {
+      position: absolute;
+      right: 0;
+      font-size: 12px;
+      text-decoration: none;
+      color: $color-dark-gray;
+      width: auto;
+      top: auto;
+      bottom: -25px;
+      i {
+        font-size: 15px;
+        margin-right: 10px;
+        opacity: 0.5;
+      }
+    }
+    &-answer {
+      position: relative;
+      padding-left: 13px;
+      margin-bottom: 10px;
+      height: 41px;
+      overflow: hidden;
+      &::before {
+        left: 0;
+        width: 3px;
+        top: 0;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        background: $color-white;
+        border-radius: 5px;
+      }
+      b {
+        display: block;
+      }
+      &>div {
+        text-overflow: ellipsis;
+        position: absolute;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
       }
     }
   }
@@ -1602,12 +1655,13 @@
     }
     &__question {
       padding-left: 13px;
-      margin-bottom: 40px;
+      margin-bottom: 65px;
       &.--answer {
         padding-left: 0;
         padding-right: 13px;
       }
       &-block {
+        padding-left: 30px;
         &::before {
           border-width: 13px;
           left: -13px;
