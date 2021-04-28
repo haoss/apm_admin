@@ -2740,3 +2740,78 @@
 .tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
   border-bottom-color: $primary-color;
 }
+
+.select2-container {
+  display: block;
+  .select2-selection--multiple {
+    min-height: 50px;
+    border-radius: 25px;
+    border-color: $color-gray !important;
+    background: $color-gray url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 7' height='8' width='13'%3E%3Cpath fill='%23333' d='M8.82.394L5 4.214 1.18.394 0 1.573l5 5 5-5z'/%3E%3C/svg%3E") calc(100% - 23px) center no-repeat;
+    padding: 11px 66px 11px 0;
+  }
+  .select2-search {
+    // margin-top: 16px;
+    margin-left: 30px;
+    display: block;
+    .select2-search__field {
+      font-size: 14px;
+      font-weight: 700;
+      display: none;
+    }
+  }
+}
+.select2-dropdown {
+  background: $color-gray;
+  border-radius: 0 0 25px 25px;
+  border-color: $color-gray !important;
+}
+.select2-results__option {
+  margin: 0;
+  padding: 0 10px 0 30px;
+  font-size: 14px;
+  line-height: 40px;
+  min-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  margin: 0;
+  background: transparent;
+  border: 0;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  text-align: left;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0;
+  font-size: 14px;
+  span {
+    line-height: 1;
+    display: inline-block;
+    vertical-align: 1px;
+  }
+}
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+  padding-left: 30px;
+  display: inline-block;
+  margin: 0;
+  &:empty {
+    display: none;
+  }
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+  padding-left: 0;
+  padding-right: 0;
+  margin-right: 15px;
+  font-size: 14px;
+  vertical-align: 2px;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable, .select2-container--default .select2-results__option--selected {
+  background: transparent;
+  color: $color-blue;
+}

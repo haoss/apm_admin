@@ -46,6 +46,7 @@ $(document).on('ready', function(){
   });
 
   $('.selectric').selectric();
+  $('.select2-multiple').select2();
 
   $('.datepicker-here').datepicker({
     autoClose: true,
@@ -57,6 +58,13 @@ $(document).on('ready', function(){
     theme: 'default',
     position: 'bottom',
     trigger: 'click'
+  });
+
+  $("select").on("select2:unselect", function (evt) {
+    if (!evt.params.originalEvent) {
+      return;
+    }
+    evt.params.originalEvent.stopPropagation();
   });
 
   phoneMask();
