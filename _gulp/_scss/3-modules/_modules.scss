@@ -411,6 +411,7 @@
     font-size: 13px;
     margin: -30px -20px 10px -20px;
     color: #828282;
+    overflow: auto;
     table {
       display: block;
       thead {
@@ -978,7 +979,16 @@
     list-style: none;
     margin: 0;
     &+li {
-      margin-left: -25px;
+      margin-left: -20px;
+    }
+    &:first-child {
+      .nav-tab__link {
+        clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
+        border-radius: 6px 0 0 0;
+        span {
+          padding-left: 20px;
+        }
+      }
     }
   }
   &__info {
@@ -998,10 +1008,11 @@
     background: $color-blue;
     display: block;
     overflow: hidden;
-    clip-path: polygon(calc(100% - 20px) 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
+    // clip-path: polygon(calc(100% - 20px) 0, 100% 100%, 100% 100%, 0 100%, 0 0);
     position: relative;
     z-index: 5;
-    border-radius: 6px 6px 0 0;
+    border-radius: 0;
     &:hover {
       color: $color-white;
       background: rgba($color-blue,.7);
@@ -1010,7 +1021,8 @@
       display: block;
       height: 50px;
       line-height: 50px;
-      padding: 0 35px;
+      padding-left: 40px;
+      padding-right: 35px;
     }
     &.active {
       background: $color-white;
@@ -1021,8 +1033,28 @@
   }
   @include media-breakpoint-up(lg) {
     overflow: none;
+    &__item {
+      &:first-child {
+        .nav-tab__link {
+          span {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
     &__info {
       display: flex;
+    }
+  }
+  @include media-breakpoint-up(xxxl) {
+    &__item {
+      &:first-child {
+        .nav-tab__link {
+          span {
+            padding-left: 40px;
+          }
+        }
+      }
     }
   }
 }
