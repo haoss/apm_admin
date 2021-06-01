@@ -1,62 +1,6 @@
 /* fonts */
 // google webfont https://google-webfonts-helper.herokuapp.com/fonts
 
-/* inter-regular - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-display: block;
-  font-weight: 400;
-  src: url('../font/inter/inter-v3-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../font/inter/inter-v3-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../font/inter/inter-v3-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../font/inter/inter-v3-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../font/inter/inter-v3-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../font/inter/inter-v3-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
-}
-/* inter-500 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-display: block;
-  font-weight: 500;
-  src: url('../font/inter/inter-v3-latin-500.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../font/inter/inter-v3-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../font/inter/inter-v3-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../font/inter/inter-v3-latin-500.woff') format('woff'), /* Modern Browsers */
-       url('../font/inter/inter-v3-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../font/inter/inter-v3-latin-500.svg#Inter') format('svg'); /* Legacy iOS */
-}
-/* inter-700 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-display: block;
-  font-weight: 700;
-  src: url('../font/inter/inter-v3-latin-700.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../font/inter/inter-v3-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../font/inter/inter-v3-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../font/inter/inter-v3-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('../font/inter/inter-v3-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../font/inter/inter-v3-latin-700.svg#Inter') format('svg'); /* Legacy iOS */
-}
-/* inter-900 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 900;
-  src: url('../font/inter/inter-v3-latin-900.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../font/inter/inter-v3-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../font/inter/inter-v3-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../font/inter/inter-v3-latin-900.woff') format('woff'), /* Modern Browsers */
-       url('../font/inter/inter-v3-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../font/inter/inter-v3-latin-900.svg#Inter') format('svg'); /* Legacy iOS */
-}
-
 @font-face {
   font-family: 'icomoon';
   src:  url('../font/icomoon/fonts/icomoon.eot?ocs3wr');
@@ -67,6 +11,59 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
+}
+
+/* inter-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/inter/inter-v3-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/inter/inter-v3-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/inter/inter-v3-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/inter/inter-v3-latin_cyrillic-regular.svg#Inter') format('svg'); /* Legacy iOS */
+}
+/* inter-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../font/inter/inter-v3-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/inter/inter-v3-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/inter/inter-v3-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/inter/inter-v3-latin_cyrillic-500.svg#Inter') format('svg'); /* Legacy iOS */
+}
+/* inter-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/inter/inter-v3-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/inter/inter-v3-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/inter/inter-v3-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/inter/inter-v3-latin_cyrillic-700.svg#Inter') format('svg'); /* Legacy iOS */
+}
+/* inter-900 - latin_cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/inter/inter-v3-latin_cyrillic-900.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/inter/inter-v3-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/inter/inter-v3-latin_cyrillic-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-900.woff') format('woff'), /* Modern Browsers */
+       url('../font/inter/inter-v3-latin_cyrillic-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/inter/inter-v3-latin_cyrillic-900.svg#Inter') format('svg'); /* Legacy iOS */
 }
 
 [class^="icon-"], [class*=" icon-"] {
