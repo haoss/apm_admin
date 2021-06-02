@@ -46,6 +46,15 @@ $(document).on('ready', function(){
   });
 
   $('.selectric').selectric();
+  $('.lang-selectric').selectric({
+    disableOnMobile: true,
+    onOpen: function() {
+      $('.navigation.--bottom').addClass('--hidden');
+    },
+    onClose: function() {
+      $('.navigation.--bottom').removeClass('--hidden');
+    }
+  });
   $('.select2-multiple').select2();
 
   $('.datepicker-here').datepicker({

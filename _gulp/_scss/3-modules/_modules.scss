@@ -89,7 +89,7 @@
     touch-action: auto;
     -ms-touch-action: auto;
     &-body {
-      overflow: auto;
+      overflow: hidden;
       min-height: 100%;
       height: auto;
       position: relative;
