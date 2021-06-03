@@ -52,7 +52,7 @@
           display: inline-block;
           position: relative;
           flex-shrink: 0;
-          // background: pink;
+          margin-bottom: 0;
           &__round {
             position: absolute;
             width: 10px;
@@ -79,7 +79,7 @@
           }
         }
       }
-      &>label[for="lang-select"] {
+      &>span[data-lang="lang-select"] {
         overflow: inherit;
       }
       &.active {
@@ -91,11 +91,15 @@
           i {
             color: $color-blue;
           }
+          &[data-lang="lang-select"] {
+            background: none;
+          }
         }
       }
     }
   }
   .selectric {
+    border-radius: 0;
     .label {
       padding-left: 0;
       margin-left: 0;
@@ -122,9 +126,13 @@
     &.--hidden {
       ul {
         li {
-          &>a, &>span {
+          &>span, &>a {
             opacity: 0;
             visibility: hidden;
+          }
+          &>span[data-lang="lang-select"] {
+            opacity: 1;
+            visibility: visible;
           }
         }
       }
@@ -148,6 +156,7 @@
           }
           .icon {
             margin-right: 19px;
+            margin-bottom: 0;
           }
           select {
             opacity: 1;
