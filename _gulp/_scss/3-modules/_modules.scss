@@ -1123,25 +1123,6 @@
     }
   }
 }
-.status {
-  white-space: nowrap;
-  display: inline-block;
-  color: $primary-color;
-  &::before {
-    display: inline-block;
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: $color-red;
-    margin-right: 10px;
-  }
-  &.--payment {
-    &::before {
-      background: $color-green;
-    }
-  }
-}
 .export-exel {
   text-align: center;
   color: #828282;

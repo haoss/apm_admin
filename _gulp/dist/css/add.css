@@ -1,1 +1,15 @@
 /* additional.css */
+.status {
+  white-space: nowrap;
+  display: inline-block;
+  color: #fff;
+  line-height: 2;
+  white-space: nowrap;
+  padding: 0 5px;
+  text-transform: uppercase;
+  background: #ff7519;
+  font-size: 10px;
+}
+.status.--payment {
+  background: #27AE60;
+}
