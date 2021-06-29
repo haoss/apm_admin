@@ -44,6 +44,8 @@
           position: absolute;
           right: 0;
           bottom: 0;
+          left: 0;
+          top: 0;
         }
         .icon {
           width: 20px;
@@ -77,10 +79,22 @@
             color: $color-blue;
             line-height: 20px;
           }
+          // &[for="lang-select"] {
+          //   height: 60px;
+          //   width: 60px;
+          //   b {
+          //     left: 50%;
+          //     top: 50%;
+          //     transform: translate(-50%,-50%);
+          //   }
+          // }
         }
       }
       &>span[data-lang="lang-select"] {
         overflow: inherit;
+        .selectric-wrapper {
+          display: none;
+        }
       }
       &.active {
         &>a, &>span {
@@ -180,6 +194,11 @@
                 color: $primary-color;
               }
             }
+          }
+        }
+        &>span[data-lang="lang-select"] {
+          .selectric-wrapper {
+            display: block;
           }
         }
         &>a {
