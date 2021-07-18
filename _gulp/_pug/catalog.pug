@@ -1,0 +1,138 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Catalog' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Catalog' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 Catalog
+
+                // Form
+                .form
+                  form(action="#!" autocomplete="off")
+                    fieldset.white-block.--form
+                      .row
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            select.selectric
+                              option(value="" selected disabled) Brand
+                              option(value="") Brand 1
+                              option(value="") Brand 2
+                              option(value="") Brand 3
+                              option(value="") Brand 4
+                              option(value="") Brand 5
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            select.selectric
+                              option(value="" selected disabled) Car type
+                              option(value="") Car type 1
+                              option(value="") Car type 2
+                              option(value="") Car type 3
+                              option(value="") Car type 4
+                              option(value="") Car type 5
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            select.selectric
+                              option(value="" selected disabled) Modification
+                              option(value="") Modification 1
+                              option(value="") Modification 2
+                              option(value="") Modification 3
+                              option(value="") Modification 4
+                              option(value="") Modification 5
+                      .vin-separator
+                        .div or try searching through VIN
+                      .row
+                        .col-12.col-md-6.col-lg-8
+                          .form-group
+                            +field-text({
+                              title: '',
+                              hasJs: false,
+                              isTextarea: false,
+                              hasError: false,
+                              helpText: '',
+                              mods: '',
+                              val: '',
+                              attrs: {
+                                name: 'search-vin',
+                                placeholder: 'VIN/FRAME',
+                                required: false
+                              }
+                            })
+                        .col-12.col-md-6.col-lg-4
+                          .form-group
+                            .btns-block
+                              button(type="submit").btn.--block Search
+                              button(type="button").btn.--cancel Cancel
+                
+                // Catalog
+                .catalog
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 27.png", alt="")
+                    span.catalog__block-title kia
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 28.png", alt="")
+                    span.catalog__block-title hyundai
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 29.png", alt="")
+                    span.catalog__block-title hohda
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 30.png", alt="")
+                    span.catalog__block-title mitsubishi
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 31.png", alt="")
+                    span.catalog__block-title toyota
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 32.png", alt="")
+                    span.catalog__block-title lexus
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 33.png", alt="")
+                    span.catalog__block-title nissan
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 34.png", alt="")
+                    span.catalog__block-title infinity
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 35.png", alt="")
+                    span.catalog__block-title mazda
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 36.png", alt="")
+                    span.catalog__block-title suzuki
+                  a(href="#!").catalog__block
+                    span.catalog__block-thumb
+                      img(src="./tmp/image 37.png", alt="")
+                    span.catalog__block-title SUBARU
+
+              .div2.d-none.d-xxxl-block
+                include ./_include/_last-messages
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js?v3")

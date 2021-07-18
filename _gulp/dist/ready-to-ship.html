@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Ready to ship - APMG</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta content="notranslate" name="google">
+        <link rel="stylesheet" href="./js/libs/tooltipster/css/tooltipster.bundle.css">
+        <link rel="stylesheet" href="./css/style.min.css?v10">
+        <link rel="stylesheet" href="./css/add.css?v1">
+    </head>
+    <body>
+        <div class="base">
+            <!-- Preloader-->
+            <div class="exel j-btn-target" id="exel">
+                <button class="btn-close j-btn" type="button" data-id="exel"></button>
+                <div class="exel__wrapper">
+                    <div class="exel__wrapper-body">
+                        <form action="#!" autocomplete="off"> 
+                            <div class="form-group">
+                                <select class="selectric">
+                                    <option value="" selected>Delivery period not more than days 1</option>
+                                    <option value="">Delivery period not more than days 2</option>
+                                    <option value="">Delivery 32</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="selectric">
+                                    <option value="" selected>Store</option>
+                                    <option value="">Store 2</option>
+                                    <option value="">Store 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="select2-multiple" multiple="multiple" name="exel[]">
+                                    <option value="">Store</option>
+                                    <option value="">Store 2</option>
+                                    <option value="">Store 3</option>
+                                </select>
+                            </div>
+                            <div class="form-group --mb0">
+                                <input class="inputfile inputfile-1" id="file-1" type="file" name="file-1[]" data-multiple-caption="{count} files selected" multiple>
+                                <label for="file-1"><span>Attach file</span></label>
+                            </div>
+                            <p class="--fs11 color --dark-gray">You can attach a * .xls or * .xlsx file for searching</p>
+                            <p class="--fs12 color --dark-gray">Columns should be called <br><b>Part Number, Brand, Quantity, Store, Price</b></p>
+                            <div class="form-group">
+                                    <label class="field-checkbox">
+                                        <input class="field-checkbox__input" type="checkbox" name="checkbox-exel-1" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Display goods with a minimum price</span>
+                                    </label>
+                            </div>
+                            <div class="form-group">
+                                    <label class="field-checkbox">
+                                        <input class="field-checkbox__input" type="checkbox" name="checkbox-exel-2" checked><span class="field-checkbox__span-input"></span><span class="field-checkbox__label">Add to basket qwickly</span>
+                                    </label>
+                            </div>
+                            <button class="btn --block" type="submit">Search</button>
+                            <div class="clear30"></div><a class="btn --border --sm" href="#!">Download sample</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="base-shadow"></div>
+            <main class="content">
+                <aside class="aside">
+                    <div class="aside__wrapper">
+                        <div class="aside__wrapper-body">
+                            <header class="aside__header">
+                                <div class="logo"><img src="./images/logo.png" width="103" height="32" alt=""></div><a class="aside__cart" href="#!"><i class="icon-cart"></i><span class="span">23  </span></a>
+                            </header>
+                            <nav class="navigation" aria-label="Main">
+                                <ul>
+                                    <li class="active"><span> <span class="icon"><i class="icon-menu-1"></i></span><span class="span">Personal account</span></span></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-2"></i></span><span class="span">My Orders</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><span class="icon__round"></span><i class="icon-menu-3"></i></span><span class="span">My Messages</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-4"></i></span><span class="span">Account balance</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-15"></i></span><span class="span">Ready to ship</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-6"></i></span><span class="span">Special offers</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-7"></i></span><span class="span">My Documents</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-8"></i></span><span class="span">Payment and delivery</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-9"></i></span><span class="span">News</span></a></li>
+                                </ul>
+                            </nav>
+                            <nav class="navigation --bottom">
+                                <ul>
+                                    <li><span data-lang="lang-select">
+                                            <label class="icon" for="lang-select"><b>EN</b></label>
+                                            <select class="lang-selectric" id="lang-select">
+                                                <option value="English">English</option>
+                                                <option value="Russian">Russian</option>
+                                                <option value="Ukrainian">Ukrainian</option>
+                                            </select></span></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-10"></i></span><span class="span">My Settings</span></a></li>
+                                    <li><a href="#!"> <span class="icon"><i class="icon-menu-11"></i></span><span class="span">Exit</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </aside>
+                <section>
+                    <div class="container">
+                        <!-- Header-->
+                        <header class="header">
+                            <div class="header__wrapper">
+                                <form class="search header__search" action="#!" autocomplete="off">
+                                    <input class="search__input" type="search" placeholder="Enter the part number">
+                                    <button class="search__btn" type="submit"></button>
+                                </form>
+                                <button class="btn header__btn1 j-btn" type="button" data-id="exel">Exel</button><a class="btn header__btn2" href="#!">Original catalogs</a><a class="btn header__btn3" href="#!">price-list APM.GROUP</a>
+                            </div>
+                        </header>
+                        <div class="content__row">
+                            <div class="div1">
+                                <div class="content__head">
+                                    <h1>Ready to ship</h1>
+                                </div>
+                                <!-- Ready-->
+                                <div class="ready">
+                                    <div class="ready__top">
+                                        <div class="div1">
+                                            <div class="ready__block">
+                                                <div class="ready__block-head">
+                                                    <div><b>By plane</b><i class="icon-delivery-air"></i></div>
+                                                    <div>
+                                                        <div class="ready__block-price"><b>52.00</b><small>$</small></div>
+                                                    </div>
+                                                </div>
+                                                <div class="ready__block-body">
+                                                    <div class="ready__table">
+                                                        <div class="ready__table-row">
+                                                            <div>Weight</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>25.000</b><small>kg</small></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ready__table-row">
+                                                            <div>Volume weight</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>56.000</b><small>kg</small></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ready__table-row">
+                                                            <div>Places</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>1</b><small>pl</small></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="export-exel">
+                                                <div class="div1">Export the found results to a separate file Excel</div>
+                                                <div class="div2"><a class="btn --border --sm" href="#!">Upload to EXCEL</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="div2">
+                                            <div class="ready__block">
+                                                <div class="ready__block-head">
+                                                    <div><b>By ship</b><i class="icon-delivery-sea"></i></div>
+                                                    <div>
+                                                        <div class="ready__block-price"><b>675.00</b><small>$</small></div>
+                                                    </div>
+                                                </div>
+                                                <div class="ready__block-body">
+                                                    <div class="ready__table">
+                                                        <div class="ready__table-row">
+                                                            <div>Weight</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>33.000</b><small>kg</small></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ready__table-row">
+                                                            <div>Volume weight</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>456.000</b><small>kg</small></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ready__table-row">
+                                                            <div>Places</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>1</b><small>pl</small></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="export-exel">
+                                                <div class="div1">Export the found results to a separate file Excel</div>
+                                                <div class="div2"><a class="btn --border --sm" href="#!">Upload to EXCEL</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="div3">
+                                            <div class="ready__block">
+                                                <div class="ready__block-head">
+                                                    <div><b>Total</b></div>
+                                                    <div>
+                                                        <div class="ready__block-price"><b>727.00</b><small>$</small></div>
+                                                    </div>
+                                                </div>
+                                                <div class="ready__block-body">
+                                                    <div class="ready__table">
+                                                        <div class="ready__table-row">
+                                                            <div>By plane</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>52.000</b><small>$</small></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ready__table-row">
+                                                            <div>By ship</div>
+                                                            <div>
+                                                                <div class="ready__block-price"><b>675.000</b><small>$</small></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Form-->
+                                <div class="form">
+                                    <form action="#!" autocomplete="off">
+                                        <!-- White block-->
+                                        <fieldset class="white-block --pb10">
+                                            <div class="white-block__table --ready">
+                                                <table width="100%" border="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1">&nbsp;</th>
+                                                            <th class="th2">Box No.</th>
+                                                            <th class="th3">Date</th>
+                                                            <th class="th4 color --blue">DELIVERY</th>
+                                                            <th class="th5">Weight</th>
+                                                            <th class="th6">Length</th>
+                                                            <th class="th7">Height</th>
+                                                            <th class="th8">Width</th>
+                                                            <th class="th9">Volume weight</th>
+                                                            <th class="th10">Status</th>
+                                                            <th class="th11 --pr0">Cost of parts</th>
+                                                            <th class="th12 --pr0 --td-button">&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="td1 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1"><span>Expand order</span></a></td>
+                                                            <td class="td2 --fs15 color --primary nowrap" data-label="Brand" width="1"><b>339</b></td>
+                                                            <td class="td3 color --primary nowrap" data-label="Date" width="1">2021-06-16 13:31:20</td>
+                                                            <td class="td4 --fs35 color --blue nowrap" data-label="Delivery" width="1"><i class="icon-delivery-air"></i></td>
+                                                            <td class="td5 --fs15 color --primary nowrap" data-label="Weight">456.000  kg</td>
+                                                            <td class="td6 --fs15 color --primary nowrap" data-label="Length">100.00 sm</td>
+                                                            <td class="td7 --fs15 color --primary nowrap" data-label="Height">20.00 sm</td>
+                                                            <td class="td8 --fs15 color --primary nowrap" data-label="Width">50.00 sm</td>
+                                                            <td class="td9 --fs15 color --primary nowrap" data-label="Volume weight">3.24 kg</td>
+                                                            <td class="td10 color --primary nowrap" data-label="Status" width="1"><span class="status">Formed</span></td>
+                                                            <td class="td11 --pr0 --fs15 color --primary nowrap" data-label="Cost of parts" width="1"> <b>1 256.00 </b>&nbsp;$</td>
+                                                            <td class="td12 --pr0 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1"><span>Expand order</span></a></td>
+                                                        </tr>
+                                                        <tr class="expand-tr collapse" id="collapseExample1">
+                                                            <td colspan="12">
+                                                                <div class="expand-body">
+                                                                    <table width="100%" border="0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="th1"><i class="icon-delivery-air"></i>Part number</th>
+                                                                                <th class="th2">Brand</th>
+                                                                                <th class="th3">Name of detail</th>
+                                                                                <th class="th4">Order</th>
+                                                                                <th class="th5">Number of</th>
+                                                                                <th class="th6">PRICE</th>
+                                                                                <th class="th7">Weight</th>
+                                                                                <th class="th8">Reference</th>
+                                                                                <th class="th9">&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                        <div class="pagination" aria-label="Page navigation">
+                                                                            <ul>
+                                                                                <li class="pagination__prev"><a href="#!">Back</a></li>
+                                                                                    <li class="pagination__item"><a href="#!">1</a></li>
+                                                                                    <li class="pagination__item"><a href="#!">2</a></li>
+                                                                                    <li class="pagination__item"><span>...</span></li>
+                                                                                    <li class="pagination__item  active"><a href="#!">50</a></li>
+                                                                                    <li class="pagination__item"><span>...</span></li>
+                                                                                    <li class="pagination__item"><a href="#!">98</a></li>
+                                                                                    <li class="pagination__item"><a href="#!">99</a></li>
+                                                                                <li class="pagination__next"><a href="#!">Forward</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    <div class="export-exel">
+                                                                        <div class="div1">Export the found results to a separate file Excel</div>
+                                                                        <div class="div2"><a class="btn --border --sm" href="#!">Upload to EXCEL</a></div>
+                                                                    </div><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1"><span>Expand order</span></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td1 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2"><span>Expand order</span></a></td>
+                                                            <td class="td2 --fs15 color --primary nowrap" data-label="Brand" width="1"><b>339</b></td>
+                                                            <td class="td3 color --primary nowrap" data-label="Date" width="1">2021-06-16 13:31:20</td>
+                                                            <td class="td4 --fs35 color --blue nowrap" data-label="Delivery" width="1"><i class="icon-delivery-air"></i></td>
+                                                            <td class="td5 --fs15 color --primary nowrap" data-label="Weight">456.000  kg</td>
+                                                            <td class="td6 --fs15 color --primary nowrap" data-label="Length">100.00 sm</td>
+                                                            <td class="td7 --fs15 color --primary nowrap" data-label="Height">20.00 sm</td>
+                                                            <td class="td8 --fs15 color --primary nowrap" data-label="Width">50.00 sm</td>
+                                                            <td class="td9 --fs15 color --primary nowrap" data-label="Volume weight">3.24 kg</td>
+                                                            <td class="td10 color --primary nowrap" data-label="Status" width="1"><span class="status">Formed</span></td>
+                                                            <td class="td11 --pr0 --fs15 color --primary nowrap" data-label="Cost of parts" width="1"> <b>1 256.00 </b> $</td>
+                                                            <td class="td12 --pr0 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2"><span>Expand order</span></a></td>
+                                                        </tr>
+                                                        <tr class="expand-tr collapse" id="collapseExample2">
+                                                            <td colspan="12">
+                                                                <div class="expand-body">
+                                                                    <table width="100%" border="0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="th1"><i class="icon-delivery-air"></i>Part number</th>
+                                                                                <th class="th2">Brand</th>
+                                                                                <th class="th3">Name of detail</th>
+                                                                                <th class="th4">Order</th>
+                                                                                <th class="th5">Number of</th>
+                                                                                <th class="th6">PRICE</th>
+                                                                                <th class="th7">Weight</th>
+                                                                                <th class="th8">Reference</th>
+                                                                                <th class="th9">&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2"><span>Expand order</span></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td1 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3"><span>Expand order</span></a></td>
+                                                            <td class="td2 --fs15 color --primary nowrap" data-label="Brand" width="1"><b>339</b></td>
+                                                            <td class="td3 color --primary nowrap" data-label="Date" width="1">2021-06-16 13:31:20</td>
+                                                            <td class="td4 --fs35 color --blue nowrap" data-label="Delivery" width="1"><i class="icon-delivery-air"></i></td>
+                                                            <td class="td5 --fs15 color --primary nowrap" data-label="Weight">456.000  kg</td>
+                                                            <td class="td6 --fs15 color --primary nowrap" data-label="Length">100.00 sm</td>
+                                                            <td class="td7 --fs15 color --primary nowrap" data-label="Height">20.00 sm</td>
+                                                            <td class="td8 --fs15 color --primary nowrap" data-label="Width">50.00 sm</td>
+                                                            <td class="td9 --fs15 color --primary nowrap" data-label="Volume weight">3.24 kg</td>
+                                                            <td class="td10 color --primary nowrap" data-label="Status" width="1"><span class="status">Formed</span></td>
+                                                            <td class="td11 --pr0 --fs15 color --primary nowrap" data-label="Cost of parts" width="1"> <b>1 256.00 </b>&nbsp;$</td>
+                                                            <td class="td12 --pr0 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3"><span>Expand order</span></a></td>
+                                                        </tr>
+                                                        <tr class="expand-tr collapse" id="collapseExample3">
+                                                            <td colspan="12">
+                                                                <div class="expand-body">
+                                                                    <table width="100%" border="0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="th1"><i class="icon-delivery-air"></i>Part number</th>
+                                                                                <th class="th2">Brand</th>
+                                                                                <th class="th3">Name of detail</th>
+                                                                                <th class="th4">Order</th>
+                                                                                <th class="th5">Number of</th>
+                                                                                <th class="th6">PRICE</th>
+                                                                                <th class="th7">Weight</th>
+                                                                                <th class="th8">Reference</th>
+                                                                                <th class="th9">&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3"><span>Expand order</span></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td1 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4"><span>Expand order</span></a></td>
+                                                            <td class="td2 --fs15 color --primary nowrap" data-label="Brand" width="1"><b>339</b></td>
+                                                            <td class="td3 color --primary nowrap" data-label="Date" width="1">2021-06-16 13:31:20</td>
+                                                            <td class="td4 --fs35 color --blue nowrap" data-label="Delivery" width="1"><i class="icon-delivery-air"></i></td>
+                                                            <td class="td5 --fs15 color --primary nowrap" data-label="Weight">456.000  kg</td>
+                                                            <td class="td6 --fs15 color --primary nowrap" data-label="Length">100.00 sm</td>
+                                                            <td class="td7 --fs15 color --primary nowrap" data-label="Height">20.00 sm</td>
+                                                            <td class="td8 --fs15 color --primary nowrap" data-label="Width">50.00 sm</td>
+                                                            <td class="td9 --fs15 color --primary nowrap" data-label="Volume weight">3.24 kg</td>
+                                                            <td class="td10 color --primary nowrap" data-label="Status" width="1"><span class="status">Formed</span></td>
+                                                            <td class="td11 --pr0 --fs15 color --primary nowrap" data-label="Cost of parts" width="1"> <b>1 256.00 </b>&nbsp;$</td>
+                                                            <td class="td12 --pr0 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4"><span>Expand order</span></a></td>
+                                                        </tr>
+                                                        <tr class="expand-tr collapse" id="collapseExample4">
+                                                            <td colspan="12">
+                                                                <div class="expand-body">
+                                                                    <table width="100%" border="0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="th1"><i class="icon-delivery-air"></i>Part number</th>
+                                                                                <th class="th2">Brand</th>
+                                                                                <th class="th3">Name of detail</th>
+                                                                                <th class="th4">Order</th>
+                                                                                <th class="th5">Number of</th>
+                                                                                <th class="th6">PRICE</th>
+                                                                                <th class="th7">Weight</th>
+                                                                                <th class="th8">Reference</th>
+                                                                                <th class="th9">&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td1 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5"><span>Expand order</span></a></td>
+                                                            <td class="td2 --fs15 color --primary nowrap" data-label="Brand" width="1"><b>339</b></td>
+                                                            <td class="td3 color --primary nowrap" data-label="Date" width="1">2021-06-16 13:31:20</td>
+                                                            <td class="td4 --fs35 color --blue nowrap" data-label="Delivery" width="1"><i class="icon-delivery-air"></i></td>
+                                                            <td class="td5 --fs15 color --primary nowrap" data-label="Weight">456.000  kg</td>
+                                                            <td class="td6 --fs15 color --primary nowrap" data-label="Length">100.00 sm</td>
+                                                            <td class="td7 --fs15 color --primary nowrap" data-label="Height">20.00 sm</td>
+                                                            <td class="td8 --fs15 color --primary nowrap" data-label="Width">50.00 sm</td>
+                                                            <td class="td9 --fs15 color --primary nowrap" data-label="Volume weight">3.24 kg</td>
+                                                            <td class="td10 color --primary nowrap" data-label="Status" width="1"><span class="status">Formed</span></td>
+                                                            <td class="td11 --pr0 --fs15 color --primary nowrap" data-label="Cost of parts" width="1"> <b>1 256.00 </b>&nbsp;$</td>
+                                                            <td class="td12 --pr0 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5"><span>Expand order</span></a></td>
+                                                        </tr>
+                                                        <tr class="expand-tr collapse" id="collapseExample5">
+                                                            <td colspan="12">
+                                                                <div class="expand-body">
+                                                                    <table width="100%" border="0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="th1"><i class="icon-delivery-air"></i>Part number</th>
+                                                                                <th class="th2">Brand</th>
+                                                                                <th class="th3">Name of detail</th>
+                                                                                <th class="th4">Order</th>
+                                                                                <th class="th5">Number of</th>
+                                                                                <th class="th6">PRICE</th>
+                                                                                <th class="th7">Weight</th>
+                                                                                <th class="th8">Reference</th>
+                                                                                <th class="th9">&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </fieldset>
+                                        <!-- White block-->
+                                        <fieldset class="white-block --pb10">
+                                            <div class="white-block__table --ready">
+                                                <table width="100%" border="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="th1">&nbsp;</th>
+                                                            <th class="th2">Box No.</th>
+                                                            <th class="th3">Date</th>
+                                                            <th class="th4 color --blue">DELIVERY</th>
+                                                            <th class="th5">Weight</th>
+                                                            <th class="th6">Length</th>
+                                                            <th class="th7">Height</th>
+                                                            <th class="th8">Width</th>
+                                                            <th class="th9">Volume weight</th>
+                                                            <th class="th10">Status</th>
+                                                            <th class="th11 --pr0">Cost of parts</th>
+                                                            <th class="th12 --pr0 --td-button">&nbsp;</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="td1 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21"><span>Expand order</span></a></td>
+                                                            <td class="td2 --fs15 color --primary nowrap" data-label="Brand" width="1"><b>339</b></td>
+                                                            <td class="td3 color --primary nowrap" data-label="Date" width="1">2021-06-16 13:31:20</td>
+                                                            <td class="td4 --fs35 color --blue nowrap" data-label="Delivery" width="1"><i class="icon-delivery-sea"></i></td>
+                                                            <td class="td5 --fs15 color --primary nowrap" data-label="Weight">456.000  kg</td>
+                                                            <td class="td6 --fs15 color --primary nowrap" data-label="Length">100.00 sm</td>
+                                                            <td class="td7 --fs15 color --primary nowrap" data-label="Height">20.00 sm</td>
+                                                            <td class="td8 --fs15 color --primary nowrap" data-label="Width">50.00 sm</td>
+                                                            <td class="td9 --fs15 color --primary nowrap" data-label="Volume weight">3.24 kg</td>
+                                                            <td class="td10 color --primary nowrap" data-label="Status" width="1"><span class="status">Formed</span></td>
+                                                            <td class="td11 --fs15 color --primary nowrap" data-label="Cost of parts" width="1"> <b>1 256.00 </b>&nbsp;$</td>
+                                                            <td class="td12 --pr0 --td-button" width="1"><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21"><span>Expand order</span></a></td>
+                                                        </tr>
+                                                        <tr class="expand-tr collapse" id="collapseExample21">
+                                                            <td colspan="12">
+                                                                <div class="expand-body">
+                                                                    <table width="100%" border="0">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="th1"><i class="icon-delivery-sea"></i>Part number</th>
+                                                                                <th class="th2">Brand</th>
+                                                                                <th class="th3">Name of detail</th>
+                                                                                <th class="th4">Order</th>
+                                                                                <th class="th5">Number of</th>
+                                                                                <th class="th6">PRICE</th>
+                                                                                <th class="th7">Weight</th>
+                                                                                <th class="th8">Reference</th>
+                                                                                <th class="th9">&nbsp;</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="td1 --fs15 color --primary nowrap" data-label="Part number" width="1">351554555</td>
+                                                                                <td class="td2 color --primary nowrap" data-label="Brand" width="1"> <b>Toyota</b></td>
+                                                                                <td class="td3" data-label="Name of detail">detail 444</td>
+                                                                                <td class="td4 color --primary nowrap" data-label="Order" width="1">3444/678678</td>
+                                                                                <td class="td5 color --primary nowrap" data-label="Number of" width="1">4</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="PRICE" width="1"><b>45.12 </b>&nbsp;$</td>
+                                                                                <td class="td6 --fs15 color --primary nowrap" data-label="Weight" width="1">3.24 kg</td>
+                                                                                <td class="td6 --fs15 color --primary" data-label="Reference">sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf</td>
+                                                                                <td class="td7 --fs12 --pr0 nowrap" width="1"><a class="link --reverse" href="#!">Watch order</a></td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table><a class="expand j-expand-tr" data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21"><span>Expand order</span></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <!-- Load Scripts-->
+        <!-- Footer js-->
+        <script src="./js/libs/jquery/jquery.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate.min.js"></script>
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/jquery.maskedinput.min.js"></script>
+        <script src="./js/libs/jquery.validate.min.js"></script>
+        <script src="./js/libs/selectric/jquery.selectric.js"></script>
+        <script src="./js/libs/datepicker/datepicker.min.js"></script>
+        <script src="./js/libs/datepicker/i18n/datepicker.en.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/tooltipster/js/tooltipster.bundle.min.js"></script>
+        <script src="./js/libs/select2/select2.full.min.js"></script>
+        <script src="./js/common.js?v3"></script>
+    </body>
+</html>

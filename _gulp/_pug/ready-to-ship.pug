@@ -1,0 +1,710 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Ready to ship' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Ready to ship' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 Ready to ship
+                
+                // Ready
+                .ready
+                  .ready__top
+                    .div1
+                      .ready__block
+                        .ready__block-head
+                          div
+                            b By plane
+                            i.icon-delivery-air
+                          div
+                            .ready__block-price
+                              b 52.00
+                              small $
+                        .ready__block-body
+                          .ready__table
+                            .ready__table-row
+                              div Weight
+                              div
+                                .ready__block-price
+                                  b 25.000
+                                  small kg
+                            .ready__table-row
+                              div Volume weight
+                              div
+                                .ready__block-price
+                                  b 56.000
+                                  small kg
+                            .ready__table-row
+                              div Places
+                              div
+                                .ready__block-price
+                                  b 1
+                                  small pl
+                      .export-exel
+                        .div1 Export the found results to a separate file Excel
+                        .div2
+                          a(href="#!").btn.--border.--sm Upload to EXCEL
+                    .div2
+                      .ready__block
+                        .ready__block-head
+                          div
+                            b By ship
+                            i.icon-delivery-sea
+                          div
+                            .ready__block-price
+                              b 675.00
+                              small $
+                        .ready__block-body
+                          .ready__table
+                            .ready__table-row
+                              div Weight
+                              div
+                                .ready__block-price
+                                  b 33.000
+                                  small kg
+                            .ready__table-row
+                              div Volume weight
+                              div
+                                .ready__block-price
+                                  b 456.000
+                                  small kg
+                            .ready__table-row
+                              div Places
+                              div
+                                .ready__block-price
+                                  b 1
+                                  small pl
+                      .export-exel
+                        .div1 Export the found results to a separate file Excel
+                        .div2
+                          a(href="#!").btn.--border.--sm Upload to EXCEL
+                    .div3
+                      .ready__block
+                        .ready__block-head
+                          div
+                            b Total
+                          div
+                            .ready__block-price
+                              b 727.00
+                              small $
+                        .ready__block-body
+                          .ready__table
+                            .ready__table-row
+                              div By plane
+                              div
+                                .ready__block-price
+                                  b 52.000
+                                  small $
+                            .ready__table-row
+                              div By ship
+                              div
+                                .ready__block-price
+                                  b 675.000
+                                  small $
+
+                // Form
+                .form
+                  form(action="#!" autocomplete="off")
+                    // White block
+                    fieldset.white-block.--pb10
+                      .white-block__table.--ready
+                        table(width="100%" border="0")
+                          thead
+                            tr
+                              th.th1 &nbsp;
+                              th.th2 Box No.
+                              th.th3 Date
+                              th.th4.color.--blue DELIVERY
+                              th.th5 Weight
+                              th.th6 Length
+                              th.th7 Height
+                              th.th8 Width
+                              th.th9 Volume weight
+                              th.th10 Status
+                              th.th11.--pr0 Cost of parts
+                              th.th12.--pr0.--td-button &nbsp;
+                          tbody
+                            tr
+                              td.td1.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1").expand.j-expand-tr
+                                  span Expand order
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                                b 339
+                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                                i.icon-delivery-air
+                              td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
+                              td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
+                              td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
+                              td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
+                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                                span.status Formed
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                                b 1 256.00 
+                                | &nbsp;$
+                              td.td12.--pr0.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1").expand.j-expand-tr
+                                  span Expand order
+                            tr.expand-tr.collapse#collapseExample1
+                              td(colspan="12")
+                                .expand-body
+                                  table(width="100%" border="0")
+                                    thead
+                                      tr
+                                        th.th1
+                                          i.icon-delivery-air
+                                          | Part number
+                                        th.th2 Brand
+                                        th.th3 Name of detail
+                                        th.th4 Order
+                                        th.th5 Number of
+                                        th.th6 PRICE
+                                        th.th7 Weight
+                                        th.th8 Reference
+                                        th.th9 &nbsp;
+                                    tbody
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                  +pagination()
+                                    +pagination-item('1', '#!')
+                                    +pagination-item('2', '#!')
+                                    +pagination-item('...')
+                                    +pagination-item('50', '#!', true)
+                                    +pagination-item('...')
+                                    +pagination-item('98', '#!')
+                                    +pagination-item('99', '#!')
+                                  .export-exel
+                                    .div1 Export the found results to a separate file Excel
+                                    .div2
+                                      a(href="#!").btn.--border.--sm Upload to EXCEL
+                                  a(data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1").expand.j-expand-tr
+                                    span Expand order
+                            tr
+                              td.td1.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2").expand.j-expand-tr
+                                  span Expand order
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                                b 339
+                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                                i.icon-delivery-air
+                              td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
+                              td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
+                              td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
+                              td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
+                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                                span.status Formed
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                                b 1 256.00 
+                                |  $
+                              td.td12.--pr0.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2").expand.j-expand-tr
+                                  span Expand order
+                            tr.expand-tr.collapse#collapseExample2
+                              td(colspan="12")
+                                .expand-body
+                                  table(width="100%" border="0")
+                                    thead
+                                      tr
+                                        th.th1
+                                          i.icon-delivery-air
+                                          | Part number
+                                        th.th2 Brand
+                                        th.th3 Name of detail
+                                        th.th4 Order
+                                        th.th5 Number of
+                                        th.th6 PRICE
+                                        th.th7 Weight
+                                        th.th8 Reference
+                                        th.th9 &nbsp;
+                                    tbody
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                  a(data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2").expand.j-expand-tr
+                                    span Expand order
+                            tr
+                              td.td1.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3").expand.j-expand-tr
+                                  span Expand order
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                                b 339
+                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                                i.icon-delivery-air
+                              td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
+                              td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
+                              td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
+                              td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
+                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                                span.status Formed
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                                b 1 256.00 
+                                | &nbsp;$
+                              td.td12.--pr0.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3").expand.j-expand-tr
+                                  span Expand order
+                            tr.expand-tr.collapse#collapseExample3
+                              td(colspan="12")
+                                .expand-body
+                                  table(width="100%" border="0")
+                                    thead
+                                      tr
+                                        th.th1
+                                          i.icon-delivery-air
+                                          | Part number
+                                        th.th2 Brand
+                                        th.th3 Name of detail
+                                        th.th4 Order
+                                        th.th5 Number of
+                                        th.th6 PRICE
+                                        th.th7 Weight
+                                        th.th8 Reference
+                                        th.th9 &nbsp;
+                                    tbody
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                  a(data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3").expand.j-expand-tr
+                                    span Expand order
+                            tr
+                              td.td1.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4").expand.j-expand-tr
+                                  span Expand order
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                                b 339
+                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                                i.icon-delivery-air
+                              td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
+                              td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
+                              td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
+                              td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
+                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                                span.status Formed
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                                b 1 256.00 
+                                | &nbsp;$
+                              td.td12.--pr0.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4").expand.j-expand-tr
+                                  span Expand order
+                            tr.expand-tr.collapse#collapseExample4
+                              td(colspan="12")
+                                .expand-body
+                                  table(width="100%" border="0")
+                                    thead
+                                      tr
+                                        th.th1
+                                          i.icon-delivery-air
+                                          | Part number
+                                        th.th2 Brand
+                                        th.th3 Name of detail
+                                        th.th4 Order
+                                        th.th5 Number of
+                                        th.th6 PRICE
+                                        th.th7 Weight
+                                        th.th8 Reference
+                                        th.th9 &nbsp;
+                                    tbody
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                            tr
+                              td.td1.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5").expand.j-expand-tr
+                                  span Expand order
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                                b 339
+                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                                i.icon-delivery-air
+                              td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
+                              td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
+                              td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
+                              td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
+                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                                span.status Formed
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                                b 1 256.00 
+                                | &nbsp;$
+                              td.td12.--pr0.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5").expand.j-expand-tr
+                                  span Expand order
+                            tr.expand-tr.collapse#collapseExample5
+                              td(colspan="12")
+                                .expand-body
+                                  table(width="100%" border="0")
+                                    thead
+                                      tr
+                                        th.th1
+                                          i.icon-delivery-air
+                                          | Part number
+                                        th.th2 Brand
+                                        th.th3 Name of detail
+                                        th.th4 Order
+                                        th.th5 Number of
+                                        th.th6 PRICE
+                                        th.th7 Weight
+                                        th.th8 Reference
+                                        th.th9 &nbsp;
+                                    tbody
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+
+                    // White block
+                    fieldset.white-block.--pb10
+                      .white-block__table.--ready
+                        table(width="100%" border="0")
+                          thead
+                            tr
+                              th.th1 &nbsp;
+                              th.th2 Box No.
+                              th.th3 Date
+                              th.th4.color.--blue DELIVERY
+                              th.th5 Weight
+                              th.th6 Length
+                              th.th7 Height
+                              th.th8 Width
+                              th.th9 Volume weight
+                              th.th10 Status
+                              th.th11.--pr0 Cost of parts
+                              th.th12.--pr0.--td-button &nbsp;
+                          tbody
+                            tr
+                              td.td1.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21").expand.j-expand-tr
+                                  span Expand order
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                                b 339
+                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                                i.icon-delivery-sea
+                              td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
+                              td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
+                              td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
+                              td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
+                              td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
+                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                                span.status Formed
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                                b 1 256.00 
+                                | &nbsp;$
+                              td.td12.--pr0.--td-button(width="1")
+                                a(data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21").expand.j-expand-tr
+                                  span Expand order
+                            tr.expand-tr.collapse#collapseExample21
+                              td(colspan="12")
+                                .expand-body
+                                  table(width="100%" border="0")
+                                    thead
+                                      tr
+                                        th.th1
+                                          i.icon-delivery-sea
+                                          | Part number
+                                        th.th2 Brand
+                                        th.th3 Name of detail
+                                        th.th4 Order
+                                        th.th5 Number of
+                                        th.th6 PRICE
+                                        th.th7 Weight
+                                        th.th8 Reference
+                                        th.th9 &nbsp;
+                                    tbody
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                      tr
+                                        td.td1.--fs15.color.--primary.nowrap(data-label="Part number" width="1") 351554555
+                                        td.td2.color.--primary.nowrap(data-label="Brand" width="1") 
+                                          b Toyota
+                                        td.td3(data-label="Name of detail") detail 444
+                                        td.td4.color.--primary.nowrap(data-label="Order" width="1") 3444/678678
+                                        td.td5.color.--primary.nowrap(data-label="Number of" width="1") 4
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="PRICE" width="1")
+                                          b 45.12 
+                                          | &nbsp;$
+                                        td.td6.--fs15.color.--primary.nowrap(data-label="Weight" width="1") 3.24 kg
+                                        td.td6.--fs15.color.--primary(data-label="Reference") sdff fsdfsdff fsdfsdff fsdfsdff fsdfsdff fsdf
+                                        td.td7.--fs12.--pr0.nowrap(width="1")
+                                          a(href="#!").link.--reverse Watch order
+                                  a(data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21").expand.j-expand-tr
+                                    span Expand order
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js?v3")
+

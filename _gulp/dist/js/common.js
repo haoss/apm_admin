@@ -78,6 +78,7 @@ $(document).on('ready', function(){
 
   phoneMask();
   jNavigation();
+  expandReady();
 
   countTest();
 
@@ -206,5 +207,22 @@ function countTest() {
       value = parseFloat(value) - 1;
       input.val(value);
     });
+  });
+}
+
+function expandReady() {
+  var btn = $('.j-expand-tr');
+
+  btn.on('click', function(){
+    var _this = $(this);
+    var ariaControls = _this.attr('aria-controls');
+    console.log(ariaControls);
+    if (_this.attr('aria-expanded') == 'false') {
+      $('a[aria-controls='+ariaControls+']').find('span').text('Roll up order');
+      $('a[aria-controls='+ariaControls+']').addClass('is-active');
+    } else if (_this.attr('aria-expanded') == 'true') {
+      $('a[aria-controls='+ariaControls+']').find('span').text('Expand order');
+      $('a[aria-controls='+ariaControls+']').removeClass('is-active');
+    }
   });
 }

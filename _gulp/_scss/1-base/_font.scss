@@ -3,11 +3,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../font/icomoon/fonts/icomoon.eot?ocs3wr');
-  src:  url('../font/icomoon/fonts/icomoon.eot?ocs3wr#iefix') format('embedded-opentype'),
-    url('../font/icomoon/fonts/icomoon.ttf?ocs3wr') format('truetype'),
-    url('../font/icomoon/fonts/icomoon.woff?ocs3wr') format('woff'),
-    url('../font/icomoon/fonts/icomoon.svg?ocs3wr#icomoon') format('svg');
+  src:  url('../font/icomoon/fonts/icomoon.eot?cdmtdi');
+  src:  url('../font/icomoon/fonts/icomoon.eot?cdmtdi#iefix') format('embedded-opentype'),
+    url('../font/icomoon/fonts/icomoon.ttf?cdmtdi') format('truetype'),
+    url('../font/icomoon/fonts/icomoon.woff?cdmtdi') format('woff'),
+    url('../font/icomoon/fonts/icomoon.svg?cdmtdi#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -81,6 +81,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu-15:before {
+  content: "\e924";
+}
 .icon-back:before {
   content: "\e923";
 }
