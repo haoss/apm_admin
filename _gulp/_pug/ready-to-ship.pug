@@ -127,39 +127,41 @@ html(lang="ru")
                         table(width="100%" border="0")
                           thead
                             tr
-                              th.th1 &nbsp;
-                              th.th2 Box No.
+                              th.th1(width="1")
+                                a(data-toggle="collapse" href="#collapseExample01" role="button" aria-expanded="true" aria-controls="collapseExample01").expand.j-expand-tr.is-active
+                                  span Roll up order
+                              th.th2(width="1") Box No.
                               th.th3 Date
-                              th.th4.color.--blue DELIVERY
+                              th.th4.color.--blue(width="1") DELIVERY
                               th.th5 Weight
                               th.th6 Length
                               th.th7 Height
                               th.th8 Width
                               th.th9 Volume weight
-                              th.th10 Status
-                              th.th11.--pr0 Cost of parts
-                              th.th12.--pr0.--td-button &nbsp;
-                          tbody
+                              th.th10(width="1") Status
+                              th.th11.--pr10(width="1") Cost of parts
+                              th.th12.--pr10.--td-button(width="1") &nbsp;
+                          tbody.collapse.show#collapseExample01
                             tr
-                              td.td1.--td-button(width="1")
+                              td.td1.--td-button
                                 a(data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1").expand.j-expand-tr
                                   span Expand order
-                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand")
                                 b 339
-                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
-                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                              td.td3.color.--primary.nowrap(data-label="Date") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery")
                                 i.icon-delivery-air
                               td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
                               td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
                               td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
                               td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
                               td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
-                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                              td.td10.color.--primary.nowrap(data-label="Status")
                                 span.status Formed
-                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts") 
                                 b 1 256.00 
-                                | &nbsp;$
-                              td.td12.--pr0.--td-button(width="1")
+                                | $
+                              td.td12.--pr0.--td-button
                                 a(data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1").expand.j-expand-tr
                                   span Expand order
                             tr.expand-tr.collapse#collapseExample1
@@ -335,25 +337,25 @@ html(lang="ru")
                                   a(data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1").expand.j-expand-tr
                                     span Expand order
                             tr
-                              td.td1.--td-button(width="1")
+                              td.td1.--td-button
                                 a(data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2").expand.j-expand-tr
                                   span Expand order
-                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand")
                                 b 339
-                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
-                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                              td.td3.color.--primary.nowrap(data-label="Date") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery")
                                 i.icon-delivery-air
                               td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
                               td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
                               td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
                               td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
                               td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
-                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                              td.td10.color.--primary.nowrap(data-label="Status")
                                 span.status Formed
-                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts") 
                                 b 1 256.00 
-                                |  $
-                              td.td12.--pr0.--td-button(width="1")
+                                | $
+                              td.td12.--pr0.--td-button
                                 a(data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2").expand.j-expand-tr
                                   span Expand order
                             tr.expand-tr.collapse#collapseExample2
@@ -405,25 +407,25 @@ html(lang="ru")
                                   a(data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2").expand.j-expand-tr
                                     span Expand order
                             tr
-                              td.td1.--td-button(width="1")
+                              td.td1.--td-button
                                 a(data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3").expand.j-expand-tr
                                   span Expand order
-                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand")
                                 b 339
-                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
-                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                              td.td3.color.--primary.nowrap(data-label="Date") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery")
                                 i.icon-delivery-air
                               td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
                               td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
                               td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
                               td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
                               td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
-                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                              td.td10.color.--primary.nowrap(data-label="Status")
                                 span.status Formed
-                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts") 
                                 b 1 256.00 
-                                | &nbsp;$
-                              td.td12.--pr0.--td-button(width="1")
+                                | $
+                              td.td12.--pr0.--td-button
                                 a(data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3").expand.j-expand-tr
                                   span Expand order
                             tr.expand-tr.collapse#collapseExample3
@@ -475,25 +477,25 @@ html(lang="ru")
                                   a(data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3").expand.j-expand-tr
                                     span Expand order
                             tr
-                              td.td1.--td-button(width="1")
+                              td.td1.--td-button
                                 a(data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4").expand.j-expand-tr
                                   span Expand order
-                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand")
                                 b 339
-                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
-                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                              td.td3.color.--primary.nowrap(data-label="Date") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery")
                                 i.icon-delivery-air
                               td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
                               td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
                               td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
                               td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
                               td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
-                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                              td.td10.color.--primary.nowrap(data-label="Status")
                                 span.status Formed
-                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts") 
                                 b 1 256.00 
-                                | &nbsp;$
-                              td.td12.--pr0.--td-button(width="1")
+                                | $
+                              td.td12.--pr0.--td-button
                                 a(data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4").expand.j-expand-tr
                                   span Expand order
                             tr.expand-tr.collapse#collapseExample4
@@ -543,25 +545,25 @@ html(lang="ru")
                                         td.td7.--fs12.--pr0.nowrap(width="1")
                                           a(href="#!").link.--reverse Watch order
                             tr
-                              td.td1.--td-button(width="1")
+                              td.td1.--td-button
                                 a(data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5").expand.j-expand-tr
                                   span Expand order
-                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand")
                                 b 339
-                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
-                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                              td.td3.color.--primary.nowrap(data-label="Date") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery")
                                 i.icon-delivery-air
                               td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
                               td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
                               td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
                               td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
                               td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
-                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                              td.td10.color.--primary.nowrap(data-label="Status")
                                 span.status Formed
-                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                              td.td11.--pr0.--fs15.color.--primary.nowrap(data-label="Cost of parts") 
                                 b 1 256.00 
-                                | &nbsp;$
-                              td.td12.--pr0.--td-button(width="1")
+                                | $
+                              td.td12.--pr0.--td-button
                                 a(data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5").expand.j-expand-tr
                                   span Expand order
                             tr.expand-tr.collapse#collapseExample5
@@ -617,39 +619,41 @@ html(lang="ru")
                         table(width="100%" border="0")
                           thead
                             tr
-                              th.th1 &nbsp;
-                              th.th2 Box No.
+                              th.th1(width="1")
+                                a(data-toggle="collapse" href="#collapseExample02" role="button" aria-expanded="true" aria-controls="collapseExample02").expand.j-expand-tr.is-active
+                                  span Roll up order
+                              th.th2(width="1") Box No.
                               th.th3 Date
-                              th.th4.color.--blue DELIVERY
+                              th.th4.color.--blue(width="1") DELIVERY
                               th.th5 Weight
                               th.th6 Length
                               th.th7 Height
                               th.th8 Width
                               th.th9 Volume weight
-                              th.th10 Status
-                              th.th11.--pr0 Cost of parts
-                              th.th12.--pr0.--td-button &nbsp;
-                          tbody
+                              th.th10(width="1") Status
+                              th.th11.--pr10(width="1") Cost of parts
+                              th.th12.--pr10.--td-button(width="1") &nbsp;
+                          tbody.collapse.show#collapseExample02
                             tr
-                              td.td1.--td-button(width="1")
+                              td.td1.--td-button
                                 a(data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21").expand.j-expand-tr
                                   span Expand order
-                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand" width="1")
+                              td.td2.--fs15.color.--primary.nowrap(data-label="Brand")
                                 b 339
-                              td.td3.color.--primary.nowrap(data-label="Date" width="1") 2021-06-16 13:31:20
-                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery" width="1")
+                              td.td3.color.--primary.nowrap(data-label="Date") 2021-06-16 13:31:20
+                              td.td4.--fs35.color.--blue.nowrap(data-label="Delivery")
                                 i.icon-delivery-sea
                               td.td5.--fs15.color.--primary.nowrap(data-label="Weight") 456.000  kg
                               td.td6.--fs15.color.--primary.nowrap(data-label="Length") 100.00 sm
                               td.td7.--fs15.color.--primary.nowrap(data-label="Height") 20.00 sm
                               td.td8.--fs15.color.--primary.nowrap(data-label="Width") 50.00 sm
                               td.td9.--fs15.color.--primary.nowrap(data-label="Volume weight") 3.24 kg
-                              td.td10.color.--primary.nowrap(data-label="Status" width="1")
+                              td.td10.color.--primary.nowrap(data-label="Status")
                                 span.status Formed
-                              td.td11.--fs15.color.--primary.nowrap(data-label="Cost of parts" width="1") 
+                              td.td11.--fs15.color.--primary.nowrap(data-label="Cost of parts") 
                                 b 1 256.00 
-                                | &nbsp;$
-                              td.td12.--pr0.--td-button(width="1")
+                                | $
+                              td.td12.--pr0.--td-button
                                 a(data-toggle="collapse" href="#collapseExample21" role="button" aria-expanded="false" aria-controls="collapseExample21").expand.j-expand-tr
                                   span Expand order
                             tr.expand-tr.collapse#collapseExample21

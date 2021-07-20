@@ -550,6 +550,26 @@
       border-bottom: 0;
       margin-bottom: 0;
       table {
+        &>thead {
+          display: block;
+          &>tr {
+            display: block;
+            padding: 0;
+            &>th {
+              display: none;
+              &.th1 {
+                width: 100%;
+                padding: 0;
+                padding: 20px 0 10px 20px;
+                border: 0;
+                display: block;
+                white-space: nowrap;
+                background: $color-gray;
+                border-radius: 6px 6px 0 0;
+              }
+            }
+          }
+        }
         &>tbody {
           &>tr {
             padding-top: 0;
@@ -565,7 +585,7 @@
               padding-bottom: 0;
             }
             &:first-child {
-              padding-top: 30px;
+              padding-top: 20px;
             }
             &.expand-tr {
               padding-top: 0;
@@ -903,6 +923,26 @@
       }
       &.--ready {
         table {
+          &>thead {
+            display: table-header-group;
+            &>tr {
+              display: table-row;
+              &>th {
+                display: table-cell;
+                &:first-child {
+                  border-radius: 6px 0 0 0 !important;
+                }
+                &:last-child {
+                  border-radius: 0 6px 0 0 !important;
+                }
+                &.th1 {
+                  width: 65px;
+                  padding: 2px 0 0 30px;
+                  display: table-cell;
+                }
+              }
+            }
+          }
           &>tbody {
             &>tr {
               &>td {
@@ -975,7 +1015,7 @@
                       }
                       &:last-child {
                         &>td {
-                          border-bottom: 1px solid #F5F5FA;
+                          border-bottom: 1px solid #ececec;
                         }
                       }
                     }
@@ -997,6 +1037,7 @@
               &.td-to-cart {
                 button {
                   transition: all 0.35s;
+                  margin-bottom: 30px;
                   &:hover {
                     opacity: 0.5;
                   }
@@ -1047,6 +1088,19 @@
       &.--cart {
         overflow-x: inherit;
         padding-bottom: 10px;
+      }
+      &.--ready {
+        table {
+          &>thead {
+            &>tr {
+              &>th {
+                &.th1 {
+                  padding-left: 40px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -2769,8 +2823,8 @@
 }
 .payment {
   &__row2 {
-    border-top: 1px solid #F5F5FA;
-    border-bottom: 1px solid #F5F5FA;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
     padding: 20px 20px 10px 20px;
     margin: 0 -20px 20px -20px;
     &>div {
@@ -2787,7 +2841,7 @@
           left: -20px;
           right: -20px;
           height: 1px;
-          background: #F5F5FA;
+          background: #ececec;
         }
       }
     }
@@ -2819,8 +2873,8 @@
     }
     &-text {
       height: 90px;
-      background: #F5F5FA;
-      border: 1px solid #F5F5FA;
+      background: #ececec;
+      border: 1px solid #ececec;
       border-radius: 6px;
       display: flex;
       align-items: center;
@@ -3081,7 +3135,7 @@
 }
 
 .vin-separator {
-  background: #F5F5FA;
+  background: #ececec;
   height: 1px;
   margin: 17px 0 37px 0;
   position: relative;
