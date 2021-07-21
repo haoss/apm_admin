@@ -671,6 +671,11 @@
                   margin-top: 20px;
                   margin-left: 17px;
                 }
+                &>table {
+                  &>thead {
+                    display: none;
+                  }
+                }
               }
             }
           }
@@ -981,6 +986,11 @@
                   }
                   .expand {
                     display: none;
+                  }
+                  &>table {
+                    &>thead {
+                      display: table-header-group;
+                    }
                   }
                 }
                 table {
