@@ -560,12 +560,23 @@
               &.th1 {
                 width: 100%;
                 padding: 0;
-                padding: 20px 0 10px 20px;
+                padding: 10px 0 10px 60px;
                 border: 0;
                 display: block;
                 white-space: nowrap;
                 background: $color-gray;
                 border-radius: 6px 6px 0 0;
+                i {
+                  position: absolute;
+                  font-size: 32px;
+                  left: 10px;
+                  transform: translateY(-6px);
+                  // width: 26px;
+                  overflow: hidden;
+                  display: flex;
+                  justify-content: flex-end;
+                  color: $color-blue;
+                }
               }
             }
           }
@@ -944,6 +955,14 @@
                   width: 65px;
                   padding: 2px 0 0 30px;
                   display: table-cell;
+                }
+                &.th1 {
+                  position: relative;
+                  i {
+                    width: 22px;
+                    transform: translateY(-10px);
+                    left: 0;
+                  }
                 }
               }
             }
