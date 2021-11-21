@@ -26,23 +26,22 @@ html(lang="ru")
                 // White block
                 .nav-document
                   .div1
-                    select.selectric
-                      option() How to begin
-                      option() How to pay
-                      option() Discount schemes
-                      option() Pricelist
-                      option() How to order
-                      option() How to send goods
-                      option(selected) Privacy policy
+                    select.selectric(onchange="location = this.value;")
+                      option(value="privacy-policy.html") How to pay
+                      option(value="privacy-policy.html") Discount schemes
+                      option(value="privacy-policy.html") Pricelist
+                      option(value="privacy-policy.html") How to order
+                      option(value="privacy-policy.html") How to send goods
+                      option(selected value="privacy-policy.html") Privacy policy
                   .div2
                     ul
-                      li: a(href="#!") How to begin
-                      li: a(href="#!") How to pay
-                      li: a(href="#!") Discount schemes
-                      li: a(href="#!") Pricelist
-                      li: a(href="#!") How to order
-                      li: a(href="#!") How to send goods
-                      li.active: a(href="#!") Privacy policy
+                      li: a(href="privacy-policy.html") How to begin
+                      li: a(href="privacy-policy.html") How to pay
+                      li: a(href="privacy-policy.html") Discount schemes
+                      li: a(href="privacy-policy.html") Pricelist
+                      li: a(href="privacy-policy.html") How to order
+                      li: a(href="privacy-policy.html") How to send goods
+                      li.active: a(href="privacy-policy.html") Privacy policy
                 .white-block.--document
                   h2 1. User information
                   p We collect, retain and process information about our customers that are displayed in transport, customs, financial documents and reports to ensure in the above activity.
