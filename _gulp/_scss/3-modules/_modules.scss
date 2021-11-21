@@ -699,6 +699,13 @@
     margin-right: -20px;
     margin-bottom: -10px;
   }
+  &.--document {
+    font-size: 14px;
+    font-size: rem(14px);
+    .h1, h2 {
+      letter-spacing: 0;
+    }
+  }
   @include media-breakpoint-up(xs375) {
     &__table {
       table {
@@ -3401,6 +3408,90 @@
       &-body {
         padding-left: 25px;
         padding-right: 25px;
+      }
+    }
+  }
+}
+
+.nav-document {
+  margin-bottom: 20px;
+  .div2 {
+    display: none;
+  }
+  .selectric {
+    background: $color-white;
+    .label {
+      color: $color-blue;
+    }
+    .button {
+      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 7' height='8' width='13'%3E%3Cpath fill='%2330C4F3' d='M8.82.394L5 4.214 1.18.394 0 1.573l5 5 5-5z'/%3E%3C/svg%3E") center center no-repeat;
+    }
+  }
+  ul {
+    display: flex;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    li {
+      margin: 0;
+      list-style: none;
+      &+li {
+        margin-left: 10px;
+      }
+      &>a, &>span {
+        line-height: 42px;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+        color: rgba(51, 51, 51, 0.3);
+        padding: 0 5px;
+        display: block;
+        &::before {
+          content: '';
+          position: absolute;
+          height: 6px;
+          width: 100%;
+          bottom: -3px;
+          left: 0;
+          border-radius: 15px;
+          background: $color-blue;
+          opacity: 0;
+        }
+      }
+      &.active {
+        &>a, &>span {
+          color: $color-blue;
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+    .div2 {
+      display: block;
+    }
+    .div1 {
+      display: none;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    ul {
+      li {
+        &+li {
+          margin-left: 20px;
+        }
+        &>a, &>span {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        &>a {
+          &:hover {
+            color: $color-blue;
+          }
+        }
       }
     }
   }

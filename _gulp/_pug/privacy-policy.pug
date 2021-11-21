@@ -1,0 +1,72 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Privacy policy' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Privacy policy' + ' - APMG' //title страницы для генерации верстки
+
+  include ./_include/_head
+
+  body
+    .base
+      // Preloader
+      include ./_include/_preloader
+      include ./_include/_exel
+
+      main.content
+        include ./_include/_aside
+        section
+          .container
+            include ./_include/_header
+            .content__row
+              .div1
+                .content__head
+                  h1 Privacy policy
+
+                // White block
+                .nav-document
+                  .div1
+                    select.selectric
+                      option() How to begin
+                      option() How to pay
+                      option() Discount schemes
+                      option() Pricelist
+                      option() How to order
+                      option() How to send goods
+                      option(selected) Privacy policy
+                  .div2
+                    ul
+                      li: a(href="#!") How to begin
+                      li: a(href="#!") How to pay
+                      li: a(href="#!") Discount schemes
+                      li: a(href="#!") Pricelist
+                      li: a(href="#!") How to order
+                      li: a(href="#!") How to send goods
+                      li.active: a(href="#!") Privacy policy
+                .white-block.--document
+                  h2 1. User information
+                  p We collect, retain and process information about our customers that are displayed in transport, customs, financial documents and reports to ensure in the above activity.
+                  p We collect only those personal data that you personally and voluntarily indicate on our website, providing by e-mail or transmit information with other options. The number of data collected on the site includes: Name of the company, full name and telephone number of the general manager, full name and phone number of the manager for work with us, e-mail address for contacts, country and address of the company, company website address, taxpayer identification number (required only for customers from UAE), the addresses for the delivery of your goods.
+                  p In order to increase the convenience and safety of your work on our website, we collect data: the language of your communication with the website, the IP address from which you visit our website, the type of your browser, the time and data of orders placed by you, the payment transactions, time, texts and attached correspondence details with our company's support team.
+                  p In order to increase the convenience and safety of your work on our website, we use cookies (ссылка на потитику кукис)
+                  p We do not publish your information in any public profiles or networks.
+
+                  h2 2. Aggregated information
+                  p We monitor and analyze on our website statistical information about the number of visits, the countries from which visits are made, in order to understand better our visitors and their preferences. The collected information is not of a personal nature and does not allow you to identify individually.
+                  p We collect, retain and process information about our customers that are displayed in transport, customs, financial documents and reports to ensure in the above activity.
+                  p We collect only those personal data that you personally and voluntarily indicate on our website, providing by e-mail or transmit information with other options. The number of data collected on the site includes: Name of the company, full name and telephone number of the general manager, full name and phone number of the manager for work with us, e-mail address for contacts, country and address of the company, company website address, taxpayer identification number (required only for customers from UAE), the addresses for the delivery of your goods.
+                  p In order to increase the convenience and safety of your work on our website, we collect data: the language of your communication with the website, the IP address from which you visit our website, the type of your browser, the time and data of orders placed by you, the payment transactions, time, texts and attached correspondence details with our company's support team.
+                  p In order to increase the convenience and safety of your work on our website, we use cookies (ссылка на потитику кукис)
+
+          //- div(style="height: 1000px; background-color: #000")
+          //- include ./_include/_footer
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js?v3")
+    script.
+      $(document).on('ready', function() {
+        $('.navigation .active').removeClass('active');
+        $('.navigation[aria-label="Main"] li:nth-child(7)').addClass('active');
+      });
+
